@@ -1,12 +1,9 @@
 import { motion } from 'framer-motion';
-import { Flex, Text } from '@chakra-ui/react';
-import Banner from 'components/Banner';
-import stageBanner from 'assets/images/stagesPage/stageBanner.jpg';
-import StagesGrid from 'components/stages/StagesGrid';
+import { Box } from '@chakra-ui/react';
 
-const MotionFlex = motion(Flex);
+const MotionFlex = motion(Box);
 
-export function StagesPage() {
+const PageMotion = props => {
   const pageMotion = {
     initial: { opacity: 0, x: 0 },
     animate: { opacity: 1, transition: { duration: 0.2 } },
@@ -21,14 +18,12 @@ export function StagesPage() {
       bg="white"
       w="100%"
       direction="column"
+      // justify="center"
+      {...props}
     >
-      <Banner
-        backgroundImage={stageBanner}
-        title="礦山事務所"
-        subtitle="地景藝術季"
-      />
-
-      <StagesGrid />
+      {props.children}
     </MotionFlex>
   );
-}
+};
+
+export default PageMotion;
