@@ -14,10 +14,11 @@ const Badge = props => {
     >
       <Text
         h="220px"
-        lineHeight="45px"
+        lineHeight="40px"
         style={{ writingMode: 'vertical-lr' }}
         fontWeight="900"
-        fontSize="36px"
+        fontSize="35px"
+        textAlign="center"
         color="blue.500"
         {...props}
       >

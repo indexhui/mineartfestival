@@ -49,7 +49,7 @@ const Views = () => {
 const Intro = () => {
   return (
     <Flex w="100%" direction="column" align="center">
-      <Badge text="青 春 山 海 線" />
+      <Badge h="255px">青 春 山 海 線</Badge>
       <RevealFlex>
         <Text
           whiteSpace="pre-wrap"

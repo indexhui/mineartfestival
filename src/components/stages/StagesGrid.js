@@ -17,6 +17,8 @@ import {
 import useCsv from 'hooks/useCsv';
 import stageCsv from 'assets/csv/stage.csv';
 import { FaMapMarker } from 'react-icons/fa';
+import { CloseIcon } from '@chakra-ui/icons';
+import intro from 'assets/images/stagesPage/intro.svg';
 
 const StageModal = props => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,10 +42,22 @@ const StageModal = props => {
       >
         More
       </Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
         <ModalContent bg="yellow.700">
-          <ModalBody p="45px">123</ModalBody>
+          <ModalBody p="45px">
+            <Flex align="flex-start" justify="space-between">
+              {props.name} <CloseIcon cursor="pointer" onClick={onClose} />
+            </Flex>
+            <Flex borderBottom="1px solid black" py="12px" mb="24px">
+              <Image src={intro} />
+            </Flex>
+            <Flex>
+              <Text fontSize="16px" fontWeight="500" lineHeight="30px">
+                {props.content}
+              </Text>
+            </Flex>
+          </ModalBody>
         </ModalContent>
       </Modal>
     </>
@@ -55,7 +69,13 @@ const StagesGrid = () => {
 
   return (
     <Flex w="100%" justify="center">
-      <Grid py="45px" w="1280px" templateColumns="repeat(3, 1fr)" gap="80px">
+      <Grid
+        py="45px"
+        px="30px"
+        w="1280px"
+        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
+        gap="80px"
+      >
         {stageData.map(stage => (
           <GridItem key={stage.id}>
             <Text
@@ -77,7 +97,7 @@ const StagesGrid = () => {
                 <Icon as={FaMapMarker} size="24px" color="yellow.700" />
                 <Text color="grey.900">{stage.location}</Text>
               </HStack>
-              <StageModal />
+              <StageModal {...stage} />
             </Flex>
           </GridItem>
         ))}

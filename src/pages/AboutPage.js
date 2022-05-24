@@ -93,7 +93,7 @@ export function AboutPage() {
         </Flex>
       </Flex>
       <Flex w="100%" justify="center">
-        <Badge h="180px">礦 山 結 晶</Badge>
+        <Badge h="195px">礦 山 結 晶</Badge>
       </Flex>
       <Flex justify="center" py="48px" color="grey.900">
         <VStack spacing="16px" maxW="840px" textAlign="left" align="flex-start">

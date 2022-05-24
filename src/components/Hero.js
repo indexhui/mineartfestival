@@ -46,6 +46,7 @@ const Hero = () => {
           left="0"
           right="0"
           top="170px"
+          color="#3551A2"
           animate={{
             color: isDark ? '#fff' : '#3551A2',
           }}

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 const MotionFlex = motion(Flex);
 
 const RevealFlex = props => {
+  const { children, once, ...rest } = props;
   const variants = {
     visible: custom => ({
       opacity: 1,
@@ -28,10 +29,10 @@ const RevealFlex = props => {
       }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 1 }}
+      viewport={{ once: props.once || false, amount: 1 }}
       variants={variants}
       transition={transition}
-      {...props}
+      {...rest}
     >
       {props.children}
     </MotionFlex>
