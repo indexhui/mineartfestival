@@ -20,12 +20,12 @@ export function PartnerPage() {
       <Heading
         my="50px"
         fontWeight="900"
-        fontSize="72px"
+        fontSize={{ base: '40px', lg: '72px' }}
         color="blue.600"
         letterSpacing="0.02em"
-        px="40px"
-        pb="24px"
-        borderBottom="5px solid #3E5EBD"
+        px={{ base: '15px', lg: '30px' }}
+        pb={{ base: '12px', lg: '24px' }}
+        borderBottom={{ base: '3px solid #3E5EBD', lg: '5px solid #3E5EBD' }}
       >
         周邊夥伴
       </Heading>
@@ -38,7 +38,12 @@ export function PartnerPage() {
         bgRepeat="no-repeat"
       >
         <PartnerLabel label="民宿夥伴" />
-        <Flex px="30px" w="1280px" justify="flex-start" mt="35px">
+        <Flex
+          px="30px"
+          w={{ base: '100%', lg: '1280px' }}
+          justify="flex-start"
+          mt="35px"
+        >
           <RevealFlex maxW="500px" p="20px" rounded="xl" bg="yellow.500">
             新北市民宿協會響應礦山藝術季，精選14家在地民宿夥伴，於111年6月11日至8月31日止，與以下民宿預定住宿，可享9折優惠＋黃金博物館免費門票。
             預訂方式請洽以下民宿夥伴：

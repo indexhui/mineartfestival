@@ -24,39 +24,57 @@ const PartnerGrid = ({ partnerData }) => {
         px="30px"
         w="1280px"
         templateColumns={{ base: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
-        gap="30px"
+        gap={{ base: '20px', lg: '30px' }}
       >
         {partnerData.map(partner => (
           <GridItem as={Link} href={partner.link} isExternal key={partner.id}>
             <RevealFlex
               position="relative"
-              w="100%"
-              justify="flex-end"
+              w="100%
+              "
+              justify={{ base: 'center', lg: 'flex-end' }}
               pb="6%"
               once={true}
             >
-              <AspectRatio w="92%" ratio={1}>
+              <AspectRatio w={{ base: '100%', lg: '92%' }} ratio={1}>
                 <MotionImage
                   w="100%"
                   src={partner.image}
                   whileHover={{ rotate: -4, transition: { duration: 0.25 } }}
                   shadow="lg"
-                  border="20px solid white"
+                  border={{ base: '5px solid white', lg: '20px solid white' }}
                 />
               </AspectRatio>
-              <Text
+              <Flex
+                justify={{ base: 'center', lg: 'flex-start' }}
                 position="absolute"
-                left="0"
                 bottom="0"
-                color="white"
-                textAlign="center"
-                fontSize="18px"
-                px="20px"
-                py="10px"
-                fontWeight="700"
-                bg="blue.600"
+                w="100%"
               >
-                {partner.name}
+                <Text
+                  color="white"
+                  textAlign="center"
+                  fontSize={{ base: '13px', lg: '18px' }}
+                  px={{ base: '8px', lg: '20px' }}
+                  py={{ base: '5px', lg: '10px' }}
+                  fontWeight="700"
+                  bg="blue.600"
+                >
+                  {partner.name}
+                </Text>
+              </Flex>
+            </RevealFlex>
+            <RevealFlex>
+              <Text
+                w="100%"
+                px="5px"
+                fontSize={{ base: '14px', lg: '18px' }}
+                fontWeight="700"
+                color="grey.900"
+                pt={{ base: '20px', lg: '10px' }}
+                textAlign="center"
+              >
+                {partner.content}
               </Text>
             </RevealFlex>
           </GridItem>
