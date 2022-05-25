@@ -1,7 +1,21 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Flex, Image, Text, HStack, Button, Box, Link } from '@chakra-ui/react';
+import {
+  Flex,
+  Image,
+  Text,
+  HStack,
+  Button,
+  Box,
+  Link,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  useDisclosure,
+} from '@chakra-ui/react';
+import { CloseIcon } from '@chakra-ui/icons';
 
 import useCsv from 'hooks/useCsv';
 import travelerCsv from 'assets/csv/traveler.csv';
@@ -22,7 +36,46 @@ import flag from 'assets/images/travelerPage/flag.svg';
 
 const MotionFlex = motion(Flex);
 
-const TravelModal = () => {};
+const TravelModal = props => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Button
+        display={{ base: 'block', lg: 'none' }}
+        fontWeight="500"
+        fontSize={{ base: '12px', lg: '14px' }}
+        rounded="full"
+        lineHeight="auto"
+        py={{ base: '4px', lg: '8px' }}
+        px={{ base: '10px', lg: '16px' }}
+        h="auto"
+        onClick={onOpen}
+        _hover={{ bg: isOpen ? '#7C8DC6' : '#7C8DC6' }}
+        color={isOpen ? 'white' : 'black'}
+        bg={
+          isOpen
+            ? 'linear-gradient(90deg, #7C8DC6 0%, #7487C3 28%, #5D78BA 72.01%, #4B6CB3 100.01%)'
+            : 'yellow.500'
+        }
+      >
+        簡介
+      </Button>
+      <Modal isOpen={isOpen} onClose={onClose} size="xs" isCentered>
+        <ModalOverlay />
+        <ModalContent bg="blue.500" rounded="0">
+          <ModalBody p="30px">
+            <Flex w="100%" justify="flex-end" color="white" mb="10px">
+              <CloseIcon cursor="pointer" onClick={onClose} />
+            </Flex>
+            <Text whiteSpace="pre-wrap" color="white">
+              {props.content}
+            </Text>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
+  );
+};
 
 const Traveler01 = () => {
   const order = 0;
@@ -164,6 +217,7 @@ const Traveler01 = () => {
             </Text>
             <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
               <Button
+                display={{ base: 'none', lg: 'flex' }}
                 fontWeight="500"
                 fontSize={{ base: '12px', lg: '14px' }}
                 rounded="full"
@@ -182,6 +236,7 @@ const Traveler01 = () => {
               >
                 簡介
               </Button>
+              <TravelModal content={travelerData[order]?.content} />
               <Link
                 h="auto"
                 fontSize={{ base: '12px', lg: '14px' }}
@@ -216,6 +271,8 @@ const Traveler01 = () => {
               py="30px"
               color="white"
               bg="blue.500"
+              whiteSpace="pre-wrap"
+              textAlign="left"
               initial={{ x: '150%', opacity: 1 }}
               animate={{
                 opacity: 1,
@@ -384,6 +441,7 @@ const Traveler02 = () => {
             </Text>
             <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
               <Button
+                display={{ base: 'none', lg: 'flex' }}
                 fontWeight="500"
                 fontSize={{ base: '12px', lg: '14px' }}
                 rounded="full"
@@ -402,6 +460,7 @@ const Traveler02 = () => {
               >
                 簡介
               </Button>
+              <TravelModal content={travelerData[order]?.content} />
               <Link
                 h="auto"
                 fontSize={{ base: '12px', lg: '14px' }}
@@ -436,6 +495,8 @@ const Traveler02 = () => {
               py="30px"
               color="white"
               bg="blue.500"
+              whiteSpace="pre-wrap"
+              textAlign="left"
               initial={{ x: '-150%', opacity: 1 }}
               animate={{
                 opacity: 1,
@@ -604,6 +665,7 @@ const Traveler03 = () => {
             </Text>
             <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
               <Button
+                display={{ base: 'none', lg: 'flex' }}
                 fontWeight="500"
                 fontSize={{ base: '12px', lg: '14px' }}
                 rounded="full"
@@ -622,6 +684,7 @@ const Traveler03 = () => {
               >
                 簡介
               </Button>
+              <TravelModal content={travelerData[order]?.content} />
               <Link
                 h="auto"
                 fontSize={{ base: '12px', lg: '14px' }}
@@ -656,6 +719,8 @@ const Traveler03 = () => {
               py="30px"
               color="white"
               bg="blue.500"
+              whiteSpace="pre-wrap"
+              textAlign="left"
               initial={{ x: '150%', opacity: 1 }}
               animate={{
                 opacity: 1,
