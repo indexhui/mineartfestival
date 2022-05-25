@@ -2,7 +2,6 @@ import {
   Flex,
   Grid,
   GridItem,
-  Heading,
   Text,
   Image,
   Icon,
