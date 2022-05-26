@@ -14,6 +14,10 @@ const customTheme = {
       },
       html: {
         scrollBehavior: 'smooth',
+        '.simplebar-scrollbar::before': {
+          backgroundColor: 'blue.500',
+          opacity: 0.2,
+        },
       },
     },
   },

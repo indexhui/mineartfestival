@@ -113,7 +113,10 @@ export function BureauPage() {
       ))} */}
 
       <ArtCenter {...artData[0]} />
-      <ArtListItem {...artData[1]} />
+      {artList.map((art, i) => (
+        <ArtListItem key={art.id} {...art} reverse={i % 2 !== 0} />
+      ))}
+      {/* <ArtListItem {...artData[1]} /> */}
     </PageMotion>
   );
 }
