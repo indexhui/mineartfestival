@@ -3,6 +3,20 @@ import { extendTheme } from '@chakra-ui/react';
 const customTheme = {
   initialColorMode: 'light',
   useSystemColorMode: false,
+  styles: {
+    global: {
+      '::selection': {
+        color: 'white',
+        backgroundColor: 'blue.500',
+      },
+      ':target': {
+        scrollMarginTop: '100px',
+      },
+      html: {
+        scrollBehavior: 'smooth',
+      },
+    },
+  },
   fonts: {
     heading: "'Noto Sans TC', Sans-serif",
     body: "'Noto Sans TC', Sans-serif",
@@ -29,7 +43,7 @@ const customTheme = {
       500: '#C6CFE5',
       400: '#E8E8E8',
       300: '#F5F5F5',
-      100: '',
+      100: '#F5F7FF',
     },
   },
   components: {

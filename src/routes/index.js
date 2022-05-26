@@ -25,6 +25,7 @@ const Router = () => {
     <AnimatePresence exitBeforeEnter>
       <Wrapper>
         <Routes location={location} key={location.pathname}>
+          <Route path="/jinguashi-mining-bureau" element={<BureauPage />} />
           <Route path="/partner" element={<PartnerPage />} />
           <Route path="/traveler" element={<TravelerPage />} />
           <Route path="/stages" element={<StagesPage />} />
