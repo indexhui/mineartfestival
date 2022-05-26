@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useState, useRef, useEffect, useLayoutEffect } from 'react';
 import { Flex, Box, Image } from '@chakra-ui/react';
 import useScrollPosition from '@react-hook/window-scroll';
 import {
@@ -20,25 +20,43 @@ const MotionFlex = motion(Flex);
 const MotionImage = motion(Image);
 
 const Hero = () => {
+  const ref = useRef(null);
+  const [elementBoundary, setElementBoundary] = useState({});
+  const [scrollPercentage, setScrollPercentage] = useState(0);
   const scrollY = useScrollPosition(60 /*fps*/);
   const isDark = scrollY > window.innerHeight * 0.5;
 
-  return (
-    <MotionFlex h={window.innerHeight * 2} position="relative" mb="100px">
-      {/* <Box position={isDark ? 'absolute' : 'fixed'} top="200px">
-        scroll pos: {scrollY}
-      </Box> */}
+  useLayoutEffect(() => {
+    const element = ref.current;
+    setElementBoundary({
+      top: element.offsetTop,
+      height: element.offsetHeight,
+    });
+  }, [ref]);
 
+  useEffect(() => {
+    setScrollPercentage(scrollY / elementBoundary.height);
+    console.log(scrollY, elementBoundary.height);
+  }, [scrollY, elementBoundary.top, elementBoundary.height]);
+
+  return (
+    <MotionFlex
+      // mt="60px"
+      ref={ref}
+      h={window.innerHeight * 2}
+      position="relative"
+      mb="100px"
+    >
       <MotionFlex
         position="absolute"
         top="0"
         w="100%"
         h="100%"
         initial={{ opacity: 0 }}
-        animate={{ opacity: isDark ? 1 : 0 }}
+        animate={{ opacity: scrollPercentage * 2 }}
         bg="#0A3B51"
       ></MotionFlex>
-      <Box position="sticky" w="100%" h="100vh" top="0">
+      <Box position="sticky" w="100%" h="100vh" top="100px">
         {/* logo center */}
         <MotionFlex
           position="absolute"
