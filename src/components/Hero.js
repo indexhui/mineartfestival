@@ -43,7 +43,7 @@ const Hero = () => {
     <MotionFlex
       // mt="60px"
       ref={ref}
-      h={window.innerHeight * 2}
+      h={window.innerHeight * 2.25}
       position="relative"
       mb="100px"
     >
@@ -53,7 +53,7 @@ const Hero = () => {
         w="100%"
         h="100%"
         initial={{ opacity: 0 }}
-        animate={{ opacity: scrollPercentage * 2 }}
+        animate={{ opacity: scrollPercentage * 2.5 }}
         bg="#0A3B51"
       ></MotionFlex>
       <Box position="sticky" w="100%" h="100vh" top="100px">

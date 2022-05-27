@@ -25,7 +25,7 @@ const ArtMarker = props => {
   const { number, to, ...rest } = props;
   const element = document.getElementById(to);
   const handleScroll = () => {
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
   return (
     <Flex
@@ -56,22 +56,13 @@ const ArtMarker = props => {
   );
 };
 
-// const ArtAnchor = props => {
-//     const element = document.getElementById(to);
-//     const handleScroll = () => {
-//       element.scrollIntoView({ behavior: 'smooth' });
-//     };
-//     return (
-//     )
-// }
-
 export function BureauPage() {
   const { data: artData } = useCsv(artCsv);
   const artList = artData.slice(1);
 
   const handleScroll = id => {
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
   return (

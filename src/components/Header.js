@@ -2,6 +2,7 @@ import { Flex, Link, Image, HStack, StackDivider } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 
 import logo from 'assets/images/logo.svg';
+import menu from 'assets/images/menu.svg';
 
 const navList = [
   {
@@ -71,19 +72,20 @@ const Header = () => {
     <Flex
       position="sticky"
       top="0"
-      h="100px"
+      h={{ base: '60px', lg: '100px' }}
       w="100%"
       bg="white"
       zIndex="20"
       align="center"
-      px="80px"
+      px={{ base: '20px', lg: '80px' }}
       shadow="md"
       justifyContent="space-between"
     >
       <NavLink to="/">
-        <Image src={logo} h="65px" />
+        <Image src={logo} h={{ base: '32px', lg: '65px' }} />
       </NavLink>
       <HeaderNav />
+      <Image src={menu} display={{ base: 'block', lg: 'none' }} />
     </Flex>
   );
 };
