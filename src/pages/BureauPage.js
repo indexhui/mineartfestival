@@ -23,10 +23,14 @@ import artFestivalLogo from 'assets/images/bureauPage/artFestivalLogo.svg';
 
 const ArtMarker = props => {
   const { number, to, ...rest } = props;
+  const element = document.getElementById(to);
+  const handleScroll = () => {
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <Flex
-      as={Link}
-      href={'#' + to}
+      onClick={handleScroll}
+      cursor="pointer"
       w={{ base: '16px', lg: '45px' }}
       h={{ base: '16px', lg: '45px' }}
       rounded="full"
@@ -52,11 +56,26 @@ const ArtMarker = props => {
   );
 };
 
+// const ArtAnchor = props => {
+//     const element = document.getElementById(to);
+//     const handleScroll = () => {
+//       element.scrollIntoView({ behavior: 'smooth' });
+//     };
+//     return (
+//     )
+// }
+
 export function BureauPage() {
   const { data: artData } = useCsv(artCsv);
   const artList = artData.slice(1);
+
+  const handleScroll = id => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <PageMotion align="center">
+    <PageMotion align="center" style={{ scrollBehavior: 'smooth' }}>
       <Banner
         backgroundImage={bureauBanner}
         title="礦山事務所"
@@ -105,9 +124,8 @@ export function BureauPage() {
         >
           {artData.map((art, i) => (
             <GridItem
-              as={Link}
-              href={`#${art.id}`}
-              key={art.id}
+              cursor="pointer"
+              onClick={() => handleScroll(art.id)}
               area={{
                 lg: `${(i + 1) % 3} / ${i <= 2 ? 1 : 2} / ${
                   ((i + 1) % 3) + 1

@@ -14,7 +14,7 @@ import {
 const Wrapper = ({ children }) => {
   const location = useLocation();
   useLayoutEffect(() => {
-    document.documentElement.scrollTo(0, 0);
+    document.documentElement.scrollTo({ top: 0, behavior: 'auto' });
   }, [location.pathname]);
   return children;
 };

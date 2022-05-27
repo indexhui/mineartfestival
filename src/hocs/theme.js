@@ -13,7 +13,7 @@ const customTheme = {
         scrollMarginTop: '100px',
       },
       html: {
-        scrollBehavior: 'smooth',
+        // scrollBehavior: 'auto',
         '.simplebar-scrollbar::before': {
           backgroundColor: 'blue.500',
           opacity: 0.2,
@@ -54,6 +54,7 @@ const customTheme = {
     //setting components theme
     Link: {
       baseStyle: {
+        scrollBehavior: 'smooth',
         transition: '.2s ease-in-out',
         letterSpacing: '0.15em',
         _hover: {
