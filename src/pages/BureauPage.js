@@ -8,6 +8,7 @@ import {
   GridItem,
   HStack,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import Banner from 'components/Banner';
 import PageMotion from 'components/PageMotion';
@@ -20,6 +21,37 @@ import bureauBanner from 'assets/images/bureauPage/bureauBanner.jpg';
 import map from 'assets/images/bureauPage/map.jpg';
 import artFestivalLogo from 'assets/images/bureauPage/artFestivalLogo.svg';
 
+const ArtMarker = props => {
+  const { number, to, ...rest } = props;
+  return (
+    <Flex
+      as={Link}
+      href={'#' + to}
+      w={{ base: '16px', lg: '45px' }}
+      h={{ base: '16px', lg: '45px' }}
+      rounded="full"
+      align="center"
+      justify="center"
+      position="absolute"
+      border="1px solid white"
+      bgColor="yellow.600"
+      {...rest}
+    >
+      <Text
+        color="blue.500"
+        mt="-1px"
+        fontFamily="Roboto"
+        fontWeight="700"
+        fontSize={{ base: '10px', lg: '32px' }}
+        lineHeight={{ base: '10px', lg: '32px' }}
+        letterSpacing="0"
+      >
+        {number}
+      </Text>
+    </Flex>
+  );
+};
+
 export function BureauPage() {
   const { data: artData } = useCsv(artCsv);
   const artList = artData.slice(1);
@@ -31,6 +63,7 @@ export function BureauPage() {
         subtitle="地景藝術"
       />
       <Image
+        w={{ base: '220px', lg: '495px' }}
         mt={{ base: '16px', lg: '60px' }}
         mb={{ base: '16px', lg: '36px' }}
         src={artFestivalLogo}
@@ -38,32 +71,26 @@ export function BureauPage() {
       <Flex px={{ base: '30px', lg: '0' }} w={{ base: '100%', lg: '1060px' }}>
         <AspectRatio w="100%" ratio={1060 / 680}>
           <Flex bgImage={`url('${map}')`} bgSize="cover">
-            <Flex
-              w={{ base: '16px', lg: '45px' }}
-              h={{ base: '16px', lg: '45px' }}
-              rounded="full"
-              align="center"
-              justify="center"
-              position="absolute"
-              border="1px solid white"
-              bgColor="yellow.500"
-              left="6%"
-              top="36%"
-            >
-              <Text
-                color="blue.500"
-                mt="-1px"
-                fontFamily="Roboto"
-                fontWeight="700"
-                fontSize={{ base: '10px', lg: '32px' }}
-                lineHeight={{ base: '10px', lg: '32px' }}
-                letterSpacing="0"
-              >
-                1
-              </Text>
-            </Flex>
+            <ArtMarker number={1} to="art01" left="6%" top="36%" />
+            <ArtMarker number={2} to="art02" right="36%" bottom="17%" />
+            <ArtMarker number={3} to="art03" right="10%" top="28%" />
+            <ArtMarker number={4} to="art04" right="34%" top="34%" />
+            <ArtMarker number={5} to="art05" right="37%" top="45%" />
+            <ArtMarker number={6} to="art06" left="34%" top="51%" />
           </Flex>
         </AspectRatio>
+      </Flex>
+      <Flex
+        justify={{ base: 'flex-start', lg: 'flex-end' }}
+        px={{ base: '30px', lg: '0' }}
+        w={{ base: '100%', lg: '1060px' }}
+      >
+        <HStack pt="12px" color="grey.900">
+          <ExternalLinkIcon />
+          <Text fontSize={{ base: '14px', lg: '16px' }}>
+            點選這裡，進入礦山藝術季Google地圖
+          </Text>
+        </HStack>
       </Flex>
       <Flex
         mt="20px"
@@ -72,12 +99,14 @@ export function BureauPage() {
       >
         <Grid
           w="100%"
-          gap="20px"
+          gap={{ base: '10px', lg: '20px' }}
           templateRows="repeat(3, 1fr)"
           templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
         >
           {artData.map((art, i) => (
             <GridItem
+              as={Link}
+              href={`#${art.id}`}
               key={art.id}
               area={{
                 lg: `${(i + 1) % 3} / ${i <= 2 ? 1 : 2} / ${
@@ -85,17 +114,21 @@ export function BureauPage() {
                 } /${i <= 2 ? 2 : 4}`,
               }}
             >
-              <HStack as={Link} href={'#' + art.id}>
+              <HStack spacing="15px">
                 <Flex
-                  w="45px"
-                  h="45px"
-                  bg="yellow.500"
+                  w={{ base: '30px', lg: '45px' }}
+                  h={{ base: '30px', lg: '45px' }}
+                  bg="yellow.600"
                   color="blue.500"
                   rounded="full"
                   align="center"
                   justify="center"
                 >
-                  <Text fontSize="32px" letterSpacing="0" fontFamily="Roboto">
+                  <Text
+                    fontSize={{ base: '20px', lg: '32px' }}
+                    letterSpacing="0"
+                    fontFamily="Roboto"
+                  >
                     {i + 1}
                   </Text>
                 </Flex>
@@ -107,10 +140,6 @@ export function BureauPage() {
           ))}
         </Grid>
       </Flex>
-
-      {/* {Array(...new Array(+test[0]?.image || 0)).map((_, i) => (
-        <Image key={'text' + i} src={`/images/store/store0${i}.jpg`} />
-      ))} */}
 
       <ArtCenter {...artData[0]} />
       {artList.map((art, i) => (

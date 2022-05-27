@@ -70,7 +70,7 @@ const customTheme = {
       baseStyle: {
         fontSize: '16px',
         letterSpacing: '0.1em',
-        lineHeight: '24px',
+        lineHeight: '1.5',
       },
     },
     Heading: {

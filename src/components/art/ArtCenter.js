@@ -15,29 +15,40 @@ const ArtCenter = props => {
     >
       <Flex w="100%">
         <Flex w="10%" bg="blue.500">
-          <Flex w="100%" bg="white" borderRadius="0 0 15px 0px"></Flex>
+          <Flex
+            w="100%"
+            bg="white"
+            borderRadius={{ base: '0 0 5px 0', lg: '0 0 15px 0px' }}
+          ></Flex>
         </Flex>
         <Text
-          pt="20px"
-          pb="10px"
-          px="50px"
+          pt={{ base: '12px', lg: '20px' }}
+          pb={{ base: '2px', lg: '10px' }}
+          px={{ base: '20px', lg: '50px' }}
           bg="blue.500"
-          fontSize="36px"
+          fontSize={{ base: '16px', lg: '36px' }}
           lineHeight="1"
           fontWeight="700"
           color="white"
-          borderRadius="42px 42px 0px 0px"
+          borderRadius={{ base: '22px 22px 0px 0px', lg: '42px 42px 0px 0px' }}
         >
           {props.name}
         </Text>
         <Flex flex="1" bg="blue.500">
-          <Flex w="100%" bg="white" borderRadius="0 0 0 15px">
-            <HStack pl="25px" spacing="25px">
+          <Flex
+            w="100%"
+            bg="white"
+            borderRadius={{ base: '0 0 0px 5px', lg: '0 0 0px 15px' }}
+          >
+            <HStack
+              pl={{ base: '12px', lg: '25px' }}
+              spacing={{ base: '12px', lg: '25px' }}
+            >
               {Array(...new Array(3)).map((_, i) => (
                 <Box
                   key={'dot' + i}
-                  w="25px"
-                  h="25px"
+                  w={{ base: '12px', lg: '25px' }}
+                  h={{ base: '12px', lg: '25px' }}
                   rounded="full"
                   bg="blue.500"
                 ></Box>

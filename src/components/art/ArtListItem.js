@@ -1,15 +1,6 @@
 import { useRef } from 'react';
 
-import {
-  Flex,
-  Text,
-  Image,
-  HStack,
-  VStack,
-  Box,
-  Icon,
-  Button,
-} from '@chakra-ui/react';
+import { Flex, Text, Image, HStack, VStack, Box, Icon } from '@chakra-ui/react';
 import { FaMapMarker } from 'react-icons/fa';
 import { MdArrowRight, MdArrowLeft } from 'react-icons/md';
 
@@ -18,21 +9,23 @@ import 'swiper/css';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 
-const ArtListItem = props => {
-  console.log(props.imageNumber);
+import fireworkLgBlue from 'assets/images/homePage/fireworkLgBlue.svg';
+import fireworkSmIcon from 'assets/images/homePage/fireworkSmIcon.svg';
 
+const ArtListItem = props => {
   const swiperRef = useRef();
   return (
     <Flex
+      id={props.id}
       w="100%"
       wrap="wrap"
       align="center"
-      my="80px"
+      my="100px"
       direction={{ base: 'row', lg: props.reverse ? 'row-reverse' : 'row' }}
     >
       <Flex
         w={{ base: '100%', lg: '50%' }}
-        px="30px"
+        px={{ base: '30px', lg: props.reverse ? '10%' : '0%' }}
         pl={{ base: '30px', lg: props.reverse ? '0%' : '10%' }}
         justify="center"
       >
@@ -41,6 +34,24 @@ const ArtListItem = props => {
           justify="center"
           position="relative"
         >
+          {props.reverse ? (
+            <Image
+              position="absolute"
+              src={fireworkLgBlue}
+              w={{ base: '60px', lg: '150px' }}
+              // h="150px"
+              top={{ base: '-20px', lg: '-75px' }}
+              right={{ base: '-20px', lg: '-75px' }}
+            />
+          ) : (
+            <Image
+              position="absolute"
+              src={fireworkSmIcon}
+              w={{ base: '60px', lg: '150px' }}
+              top={{ base: '-20px', lg: '-75px' }}
+              left={{ base: '-20px', lg: '-75px' }}
+            />
+          )}
           <Flex
             top="50%"
             transform={`translateY(-50%)`}
@@ -105,36 +116,74 @@ const ArtListItem = props => {
       <VStack
         w={{ base: '100%', lg: '50%' }}
         spacing="15px"
-        // align="flex-start"
+        textAlign={{ base: props.reverse && 'left', lg: 'left' }}
         align={props.reverse ? 'flex-end' : 'flex-start'}
       >
-        <Text px="30px">{props.name} </Text>
         <Text
           px="30px"
+          w={{ lg: props.reverse && '480px', xl: props.reverse && '550px' }}
+          fontSize={{ base: '22px', lg: '36px' }}
+          fontWeight="900"
+          color="blue.600"
+        >
+          {props.name}
+        </Text>
+        <Text
+          w={{ md: props.reverse && '480px', xl: props.reverse && '550px' }}
+          px="30px"
           whiteSpace="pre-wrap"
-          textAlign={props.reverse ? 'right' : 'left'}
+          color="grey.900"
+          fontSize={{ base: '14px', lg: '16px' }}
+          fontWeight="700"
+          textAlign={{ base: props.reverse ? 'right' : 'left', lg: 'left' }}
         >
           {props.artist}
         </Text>
         <Flex
           w="100%"
           px="30px"
-          justify="space-between"
-          direction={{
-            base: 'row',
-            lg: props.reverse ? 'row-reverse' : 'row',
+          position="relative"
+          justify={{
+            base: props.reverse && 'flex-end',
+            lg: props.reverse ? 'flex-end' : 'flex-start',
           }}
+          // justify="space-between"
+          // direction={{
+          //   base: 'row',
+          //   lg: props.reverse ? 'row-reverse' : 'row',
+          // }}
         >
-          <HStack py={{ base: '10px', lg: '0' }}>
+          <HStack
+            pl={props.reverse && '60px'}
+            py={{ base: '10px', lg: '0' }}
+            w={{
+              base: 'auto',
+              lg: props.reverse && '480px',
+              xl: props.reverse && '550px',
+            }}
+          >
             <Icon as={FaMapMarker} size="24px" color="yellow.700" />
             <Text color="grey.900">{props.location}</Text>
           </HStack>
-          <HStack pl={props.reverse ? '25px' : '0px'} spacing="25px">
+          <HStack
+            position="absolute"
+            bottom="8px"
+            left={{
+              base: props.reverse ? '20px' : 'unset',
+              lg: props.reverse ? '20px' : 'unset',
+            }}
+            right={{
+              base: props.reverse ? 'unset' : '20px',
+              lg: props.reverse ? 'unset' : '20px',
+            }}
+            pl={props.reverse ? '25px' : '0px'}
+            spacing="10px"
+          >
             {Array(...new Array(3)).map((_, i) => (
               <Box
                 key={'dot' + i}
-                w="25px"
-                h="25px"
+                w="12px"
+                h="12px"
                 rounded="full"
                 bg="blue.500"
               ></Box>
@@ -149,7 +198,11 @@ const ArtListItem = props => {
           <Box h="2px" w="100%" bgColor="blue.500"></Box>
         </Flex>
 
-        <Box px="30px" maxW="550px" w="100%">
+        <Box
+          px="30px"
+          maxW={{ lg: props.reverse && '480px', xl: props.reverse && '550px' }}
+          w="100%"
+        >
           <SimpleBar style={{ maxHeight: 168, width: '100%' }}>
             <Text
               textAlign="left"
