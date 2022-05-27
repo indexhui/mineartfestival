@@ -84,7 +84,7 @@ const ArtCenter = props => {
                 <Image
                   objectFit="cover"
                   w="100%"
-                  h="400px"
+                  h={{ base: '200px', lg: '400px' }}
                   key={'text' + i}
                   src={`/images/art/art01/art01-0${i + 1}.jpg`}
                 />

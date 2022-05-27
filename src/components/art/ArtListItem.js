@@ -114,8 +114,9 @@ const ArtListItem = props => {
         </Flex>
       </Flex>
       <VStack
+        mt={{ base: '15px', lg: '0px' }}
         w={{ base: '100%', lg: '50%' }}
-        spacing="15px"
+        spacing={{ base: '8px', lg: '15px' }}
         textAlign={{ base: props.reverse && 'left', lg: 'left' }}
         align={props.reverse ? 'flex-end' : 'flex-start'}
       >
