@@ -25,7 +25,7 @@ const ArtMarker = props => {
   const { number, to, ...rest } = props;
   const element = document.getElementById(to);
   const handleScroll = () => {
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    element.scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <Flex

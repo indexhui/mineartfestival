@@ -1,8 +1,22 @@
-import { Flex, Link, Image, HStack, StackDivider } from '@chakra-ui/react';
+import {
+  Flex,
+  Link,
+  Image,
+  HStack,
+  StackDivider,
+  useDisclosure,
+  VStack,
+  Divider,
+  Box,
+} from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import logo from 'assets/images/logo.svg';
 import menu from 'assets/images/menu.svg';
+import close from 'assets/images/close.svg';
+
+const MotionFlex = motion(Flex);
 
 const navList = [
   {
@@ -36,7 +50,11 @@ const HeaderLink = props => {
   const { name, link, isExternal } = props;
 
   if (isExternal) {
-    <Link>{name}</Link>;
+    return (
+      <Link color="blue.600" fontSize={{ lg: '14px', xl: '16px' }} href={link}>
+        {name}
+      </Link>
+    );
   }
 
   return (
@@ -67,6 +85,91 @@ const HeaderNav = () => {
   );
 };
 
+const MobileMenuLink = props => {
+  const { name, link, isExternal } = props;
+
+  if (isExternal) {
+    return (
+      <Link
+        color="blue.600"
+        fontSize={{ lg: '14px', xl: '16px' }}
+        isExternal
+        href={link}
+      >
+        {name}
+      </Link>
+    );
+  }
+
+  return (
+    <Link
+      color="blue.600"
+      fontSize={{ lg: '14px', xl: '16px' }}
+      as={NavLink}
+      end
+      to={link}
+      _activeLink={{ fontWeight: 'bold' }}
+    >
+      {name}
+    </Link>
+  );
+};
+const MobileMenu = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <>
+      <Image
+        onClick={onOpen}
+        src={menu}
+        display={{ base: 'block', lg: 'none' }}
+        w="26px"
+      />
+      <AnimatePresence>
+        {isOpen && (
+          <MotionFlex
+            initial={{ x: '150%', opacity: 1 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.5 },
+            }}
+            exit={{
+              x: '150%',
+              opacity: 0,
+              transition: { duration: 0.55 },
+            }}
+            top="0"
+            right="0"
+            display={{ base: 'flex', lg: 'none' }}
+            position="fixed"
+            w="180px"
+            h="100%"
+            bg="#F5F7FF"
+            pt="50px"
+            px="20px"
+          >
+            <Image
+              onClick={onClose}
+              src={close}
+              w="27px"
+              position="absolute"
+              right="16px"
+              top="16px"
+            />
+            <VStack align="flex-start" w="100%" spacing="15px">
+              <MobileMenuLink name="首頁" link="/" />
+              <Box w="100%" h="1px" bg="grey.900"></Box>
+              {navList.map(item => (
+                <MobileMenuLink key={item.link} {...item} />
+              ))}
+            </VStack>
+          </MotionFlex>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
+
 const Header = () => {
   return (
     <Flex
@@ -85,7 +188,7 @@ const Header = () => {
         <Image src={logo} h={{ base: '32px', lg: '65px' }} />
       </NavLink>
       <HeaderNav />
-      <Image src={menu} display={{ base: 'block', lg: 'none' }} />
+      <MobileMenu />
     </Flex>
   );
 };

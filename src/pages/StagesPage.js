@@ -24,8 +24,8 @@ export function StagesPage() {
     >
       <Banner
         backgroundImage={stageBanner}
-        title="礦山事務所"
-        subtitle="地景藝術季"
+        title="小山舞台"
+        subtitle="表演藝術"
       />
 
       <StagesGrid />
