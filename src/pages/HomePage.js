@@ -29,7 +29,11 @@ export function HomePage() {
     >
       <Hero />
       <Intro />
-      <RevealFlex w="100%" justify="center" mt="-200px">
+      <RevealFlex
+        w="100%"
+        justify="center"
+        mt={{ base: '-100px', lg: '-200px' }}
+      >
         <AspectRatio
           w={{ base: '90%', lg: '50%' }}
           maxW="800px"

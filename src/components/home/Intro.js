@@ -1,4 +1,12 @@
-import { Flex, Image, Stack, VStack, Text, Heading } from '@chakra-ui/react';
+import {
+  Flex,
+  Image,
+  Stack,
+  VStack,
+  Text,
+  Heading,
+  Box,
+} from '@chakra-ui/react';
 import RevealFlex from 'components/RevealFlex';
 import Badge from 'components/Badge';
 
@@ -67,12 +75,21 @@ const Intro = () => {
       <Flex
         mt="-100px"
         w="100%"
-        h="400px"
+        h={{ base: '250px', lg: '400px' }}
         bgImage={`url('${introBg}')`}
         bgRepeat="no-repeat"
         bgSize="cover"
         borderBottom="10px solid #FFDC60"
-      ></Flex>
+        position="relative"
+      >
+        <Box
+          position="absolute"
+          top="0"
+          w="100%"
+          h="80px"
+          bg="linear-gradient(0deg, rgba(196, 196, 196, 0) 0%, rgba(226, 226, 226, 0.5) 32.97%,#FFFFFF 90%, #FFFFFF 100%)"
+        ></Box>
+      </Flex>
     </Flex>
   );
 };
