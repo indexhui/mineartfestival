@@ -207,6 +207,7 @@ const Traveler01 = () => {
                 pt={{ base: '6px', lg: '22px' }}
                 pl={{ base: '10px', lg: '20px' }}
                 color="white"
+                lineHeight="1"
                 fontSize={{ base: '16px', lg: '32px' }}
                 fontWeight="700"
                 letterSpacing="0.05em"
@@ -452,6 +453,7 @@ const Traveler02 = () => {
                 fontSize={{ base: '16px', lg: '32px' }}
                 fontWeight="700"
                 letterSpacing="0.05em"
+                lineHeight="1"
               >
                 {travelerData[order]?.title}
               </Text>
@@ -697,6 +699,7 @@ const Traveler03 = () => {
                 fontSize={{ base: '16px', lg: '32px' }}
                 fontWeight="700"
                 letterSpacing="0.05em"
+                lineHeight="1"
               >
                 {travelerData[order]?.title}
               </Text>
