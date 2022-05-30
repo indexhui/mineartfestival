@@ -93,7 +93,7 @@ const Hero = () => {
           {/* firework left */}
           <Flex
             position="absolute"
-            left={{ base: '-45px', lg: '20%' }}
+            left={{ base: '-45px', lg: '15%' }}
             top={{ base: '4%', lg: '15%' }}
             w={{ base: '90px', lg: '150px' }}
             h={{ base: '90px', lg: '150px' }}
@@ -124,7 +124,7 @@ const Hero = () => {
           {/* firework right */}
           <Flex
             position="absolute"
-            right={{ base: '-20px', lg: '20%' }}
+            right={{ base: '-20px', lg: '15%' }}
             top={{ base: '15%', lg: '22%' }}
             w={{ base: '90px', lg: '225px' }}
             h={{ base: '90px', lg: '225px' }}
