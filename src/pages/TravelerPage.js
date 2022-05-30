@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
@@ -14,6 +14,7 @@ import {
   ModalContent,
   ModalBody,
   useDisclosure,
+  useOutsideClick,
 } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
 
@@ -78,9 +79,14 @@ const TravelModal = props => {
 };
 
 const Traveler01 = () => {
+  const ref = useRef();
   const order = 0;
   const { data: travelerData } = useCsv(travelerCsv);
   const [isVisible, setIsVisible] = useState(false);
+  useOutsideClick({
+    ref: ref,
+    handler: () => setIsVisible(false),
+  });
 
   const handleSlideToggle = () => {
     setIsVisible(!isVisible);
@@ -263,6 +269,8 @@ const Traveler01 = () => {
         <AnimatePresence>
           {isVisible && (
             <MotionFlex
+              ref={ref}
+              zIndex="25"
               top="-50px"
               left="50px"
               position="absolute"
@@ -289,6 +297,18 @@ const Traveler01 = () => {
             </MotionFlex>
           )}
         </AnimatePresence>
+        {isVisible && (
+          <Flex
+            w="100vw"
+            h="100vh"
+            zIndex="20"
+            position="fixed"
+            cursor="pointer"
+            top="0"
+            left="0"
+            bg="#00000055"
+          ></Flex>
+        )}
         <Image
           shadow="md"
           src={travelerData[order]?.image}
@@ -303,9 +323,13 @@ const Traveler01 = () => {
 
 const Traveler02 = () => {
   const order = 1;
+  const ref = useRef();
   const { data: travelerData } = useCsv(travelerCsv);
   const [isVisible, setIsVisible] = useState(false);
-
+  useOutsideClick({
+    ref: ref,
+    handler: () => setIsVisible(false),
+  });
   const handleSlideToggle = () => {
     setIsVisible(!isVisible);
   };
@@ -487,6 +511,8 @@ const Traveler02 = () => {
         <AnimatePresence>
           {isVisible && (
             <MotionFlex
+              zIndex="25"
+              ref={ref}
               top="-50px"
               left="50px"
               position="absolute"
@@ -513,6 +539,18 @@ const Traveler02 = () => {
             </MotionFlex>
           )}
         </AnimatePresence>
+        {isVisible && (
+          <Flex
+            w="100vw"
+            h="100vh"
+            zIndex="20"
+            position="fixed"
+            cursor="pointer"
+            top="0"
+            left="0"
+            bg="#00000055"
+          ></Flex>
+        )}
         <Image
           shadow="md"
           src={travelerData[order]?.image}
@@ -527,8 +565,14 @@ const Traveler02 = () => {
 
 const Traveler03 = () => {
   const order = 2;
+  const ref = useRef();
   const { data: travelerData } = useCsv(travelerCsv);
   const [isVisible, setIsVisible] = useState(false);
+
+  useOutsideClick({
+    ref: ref,
+    handler: () => setIsVisible(false),
+  });
 
   const handleSlideToggle = () => {
     setIsVisible(!isVisible);
@@ -587,6 +631,7 @@ const Traveler03 = () => {
 
         <Image
           src={flag}
+          zIndex="-10"
           position="absolute"
           right={{ base: '20px', lg: '0' }}
           top={{ base: '60px', lg: '40px' }}
@@ -711,6 +756,8 @@ const Traveler03 = () => {
         <AnimatePresence>
           {isVisible && (
             <MotionFlex
+              ref={ref}
+              zIndex="25"
               top="-50px"
               left="50px"
               position="absolute"
@@ -737,6 +784,18 @@ const Traveler03 = () => {
             </MotionFlex>
           )}
         </AnimatePresence>
+        {isVisible && (
+          <Flex
+            w="100vw"
+            h="100vh"
+            zIndex="20"
+            position="fixed"
+            cursor="pointer"
+            top="0"
+            left="0"
+            bg="#00000055"
+          ></Flex>
+        )}
         <Image
           shadow="md"
           src={travelerData[order]?.image}

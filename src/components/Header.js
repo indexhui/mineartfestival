@@ -6,7 +6,6 @@ import {
   StackDivider,
   useDisclosure,
   VStack,
-  Divider,
   Box,
 } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
@@ -51,7 +50,12 @@ const HeaderLink = props => {
 
   if (isExternal) {
     return (
-      <Link color="blue.600" fontSize={{ lg: '14px', xl: '16px' }} href={link}>
+      <Link
+        color="blue.600"
+        fontSize={{ lg: '14px', xl: '16px' }}
+        href={link}
+        isExternal
+      >
         {name}
       </Link>
     );
