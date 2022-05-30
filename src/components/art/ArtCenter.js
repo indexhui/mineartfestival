@@ -5,7 +5,6 @@ import { Autoplay } from 'swiper';
 import 'swiper/css';
 
 const ArtCenter = props => {
-  console.log(props.map);
   return (
     <Flex
       id={props.id}
