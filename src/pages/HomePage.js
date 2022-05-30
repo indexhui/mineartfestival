@@ -5,6 +5,7 @@ import { Flex, Text, AspectRatio } from '@chakra-ui/react';
 import Hero from 'components/Hero';
 import Intro from 'components/home/Intro';
 import NavigateCards from 'components/home/NavigateCards';
+import RevealFlex from 'components/RevealFlex';
 
 const MotionFlex = motion(Flex);
 
@@ -28,7 +29,7 @@ export function HomePage() {
     >
       <Hero />
       <Intro />
-      <Flex w="100%" justify="center" mt="-200px">
+      <RevealFlex w="100%" justify="center" mt="-200px">
         <AspectRatio
           w={{ base: '90%', lg: '50%' }}
           maxW="800px"
@@ -40,7 +41,7 @@ export function HomePage() {
             allowFullScreen
           />
         </AspectRatio>
-      </Flex>
+      </RevealFlex>
       <NavigateCards />
 
       {/* <Flex>

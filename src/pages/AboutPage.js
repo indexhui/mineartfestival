@@ -4,7 +4,6 @@ import Badge from 'components/Badge';
 import RevealFlex from 'components/RevealFlex';
 
 import aboutBg from 'assets/images/aboutPage/aboutBg.jpg';
-// import logoWhite from 'assets/images/logoWhite.svg';
 
 import about from 'assets/images/aboutPage/about.svg';
 import HeroLogoIcon from 'components/icons/HeroLogoIcon';
@@ -19,7 +18,7 @@ export function AboutPage() {
         bgPosition="top center"
         bgSize="cover"
         justify="center"
-        borderBottom="10px solid #FFDC60 "
+        borderBottom={{ base: '5px solid #FFDC60', lg: '10px solid #FFDC60' }}
       >
         <Flex
           color="white"
@@ -28,49 +27,64 @@ export function AboutPage() {
           align="center"
           mt="-100px"
         >
-          <Image src={about} w="120px" mb="20px" />
-          <HeroLogoIcon w="250px" h="250px" />
+          <Image src={about} w={{ base: '70px', lg: '120px' }} mb="20px" />
+          <HeroLogoIcon
+            w={{ base: '125px', lg: '250px' }}
+            h={{ base: '125px', lg: '250px' }}
+          />
         </Flex>
       </Flex>
-      <Flex mt="-10vh" w="100%" px="80px">
+      <RevealFlex mt="-10vh" w="100%" px={{ base: '30px', lg: '80px' }}>
         <Flex
           bg="#3551A2DD"
           color="white"
-          borderRadius="0 100px"
+          borderRadius={{ base: '0 55px', lg: '0 100px' }}
           p="30px 45px"
           direction="column"
         >
-          <Text whiteSpace="pre-wrap">
+          <Text whiteSpace="pre-wrap" fontSize={{ base: '14px', lg: '16px' }}>
             {'M【Mountain】\n I 【Invites】\n N【Neighborhood】\n E【Enjoy】'}
           </Text>
-          <Text>
+          <Text fontSize={{ base: '14px', lg: '16px' }}>
             the Mountain Invites our Neighborhood to Enjoy the Art Festival
           </Text>
         </Flex>
-      </Flex>
-      <Flex w="100%" my="30px">
-        <Flex flex="1" align="center" position="relative">
+      </RevealFlex>
+      <RevealFlex w="100%" my="30px" direction={{ base: 'column', lg: 'row' }}>
+        <Flex
+          flex="1"
+          align="center"
+          position="relative"
+          mt={{ base: '28px', lg: '0' }}
+          mb={{ base: '50px', lg: '0' }}
+        >
           <VStack
             position="absolute"
             top="50%"
-            left="40%"
+            w={{ base: '360px', lg: 'unset' }}
+            // left="40%"
+            left={{ base: '50%', lg: '40%' }}
             transform="translate(-50%, -50%)"
             bgColor="white"
-            align="flex-start"
-            px="50px"
-            fontSize="24px"
+            align={{ base: 'center', lg: 'flex-start' }}
+            px={{ base: '25px', lg: '50px' }}
+            fontSize={{ base: '18px', lg: '24px' }}
             color="grey.700"
             fontWeight="700"
           >
-            <Text>礦山藝術季│ MINE art festival</Text>
-            <Text>由礦山邀請地方共同的藝術節慶。</Text>
+            <Text fontSize={{ base: '18px', lg: '24px' }}>
+              礦山藝術季│ MINE art festival
+            </Text>
+            <Text fontSize={{ base: '18px', lg: '24px' }}>
+              由礦山邀請地方共同的藝術節慶。
+            </Text>
           </VStack>
           <Box h="2px" w="100%" bgColor="grey.900"></Box>
         </Flex>
         <Flex>
           <Text
             whiteSpace="pre-wrap"
-            px="80px"
+            px={{ base: '30px', lg: '80px' }}
             color="grey.700"
             fontSize="16px"
             lineHeight="24px"
@@ -91,11 +105,16 @@ export function AboutPage() {
             而豐饒的人才更懂得擁抱。
           </Text>
         </Flex>
-      </Flex>
+      </RevealFlex>
       <Flex w="100%" justify="center">
-        <Badge h="195px">礦 山 結 晶</Badge>
+        <Badge h="195px">礦山結晶</Badge>
       </Flex>
-      <Flex justify="center" py="48px" color="grey.900">
+      <Flex
+        justify="center"
+        py="48px"
+        color="grey.900"
+        px={{ base: '30px', lg: '0' }}
+      >
         <VStack spacing="16px" maxW="840px" textAlign="left" align="flex-start">
           <RevealFlex order="0">
             <Text>策展人/朱泊華</Text>

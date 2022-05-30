@@ -63,7 +63,7 @@ const Hero = () => {
           left="0"
           right="0"
           bottom={{ base: 'unset', lg: '450px' }}
-          top={{ base: '150px', lg: 'unset' }}
+          top={{ base: '10vh', lg: 'unset' }}
           color="#3551A2"
           animate={{
             color: isDark ? '#fff' : '#3551A2',

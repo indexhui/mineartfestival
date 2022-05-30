@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,8 +10,6 @@ import view03 from 'assets/images/homePage/nav03.jpg';
 import view04 from 'assets/images/homePage/nav04.jpg';
 
 const MotionFlex = motion(Flex);
-const MotionText = motion(Text);
-const MotionImage = motion(Image);
 
 const navigateList = [
   {
@@ -42,18 +41,20 @@ const navigateList = [
 const NavigateCard = props => {
   const { title, subTitle, image, link } = props;
   const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
+
   const variants = {
     hover: {
       scale: 1.2,
     },
   };
+
   const textVariants = {
     hover: {
       y: 0,
       scale: 1.2,
     },
     normal: {
-      y: isLargerThan1280 ? -100 : -10,
+      y: -80,
     },
   };
 
@@ -62,6 +63,7 @@ const NavigateCard = props => {
       opacity: 0.5,
     },
   };
+
   return (
     <MotionFlex
       whileHover="hover"
@@ -76,21 +78,41 @@ const NavigateCard = props => {
       align="center"
       justify="center"
     >
-      <MotionFlex
-        variants={textVariants}
-        transition={{ duration: 0.5 }}
-        color="white"
-        direction="column"
-        zIndex="2"
-        align="center"
-      >
-        <Text fontSize="18px" fontWeight="700" letterSpacing="0.05em">
-          {title}
-        </Text>
-        <Text fontSize="16px" letterSpacing="0.05em">
-          {subTitle}
-        </Text>
-      </MotionFlex>
+      {isLargerThan1280 && (
+        <MotionFlex
+          variants={textVariants}
+          transition={{ duration: 0.5 }}
+          color="white"
+          direction="column"
+          zIndex="2"
+          align="center"
+        >
+          <Text fontSize="18px" fontWeight="700" letterSpacing="0.05em">
+            {title}
+          </Text>
+          <Text fontSize="16px" letterSpacing="0.05em">
+            {subTitle}
+          </Text>
+        </MotionFlex>
+      )}
+      {!isLargerThan1280 && (
+        <Flex
+          variants={textVariants}
+          transition={{ duration: 0.5 }}
+          color="white"
+          direction="column"
+          zIndex="2"
+          align="center"
+        >
+          <Text fontSize="18px" fontWeight="700" letterSpacing="0.05em">
+            {title}
+          </Text>
+          <Text fontSize="16px" letterSpacing="0.05em">
+            {subTitle}
+          </Text>
+        </Flex>
+      )}
+
       <MotionFlex
         variants={maskVariants}
         zIndex="1"

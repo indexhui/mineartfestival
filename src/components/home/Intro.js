@@ -71,8 +71,7 @@ const Intro = () => {
         bgImage={`url('${introBg}')`}
         bgRepeat="no-repeat"
         bgSize="cover"
-        borderBottom="10px"
-        borderColor="yellow.500"
+        borderBottom="10px solid #FFDC60"
       ></Flex>
     </Flex>
   );
