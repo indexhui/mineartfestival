@@ -22,8 +22,9 @@ const customTheme = {
     },
   },
   fonts: {
-    heading: "'Noto Sans TC', Sans-serif",
-    body: "'Noto Sans TC', Sans-serif",
+    heading:
+      "-apple-system,Arial,Roboto,'Noto Sans TC',PingFang TC, Sans-serif",
+    body: "-apple-system,Arial,Roboto,'Noto Sans TC',PingFang TC, Sans-serif",
   },
   colors: {
     blue: {

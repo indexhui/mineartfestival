@@ -22,14 +22,15 @@ import map from 'assets/images/bureauPage/map.jpg';
 import artFestivalLogo from 'assets/images/bureauPage/artFestivalLogo.svg';
 
 const ArtMarker = props => {
-  const { number, to, ...rest } = props;
-  const element = document.getElementById(to);
-  const handleScroll = () => {
-    element.scrollIntoView({ behavior: 'smooth' });
+  const { number, artId, to, ...rest } = props;
+
+  const handleScroll = id => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
   return (
     <Flex
-      onClick={handleScroll}
+      onClick={() => handleScroll(artId)}
       cursor="pointer"
       w={{ base: '16px', lg: '45px' }}
       h={{ base: '16px', lg: '45px' }}
@@ -44,7 +45,7 @@ const ArtMarker = props => {
       <Text
         color="blue.500"
         mt="-1px"
-        fontFamily="Roboto"
+        fontFamily="Roboto,Ariel, sans-serif"
         fontWeight="700"
         fontSize={{ base: '10px', lg: '32px' }}
         lineHeight={{ base: '10px', lg: '32px' }}
@@ -81,12 +82,12 @@ export function BureauPage() {
       <Flex px={{ base: '30px', lg: '0' }} w={{ base: '100%', lg: '1060px' }}>
         <AspectRatio w="100%" ratio={1060 / 680}>
           <Flex bgImage={`url('${map}')`} bgSize="cover">
-            <ArtMarker number={1} to="art01" left="6%" top="36%" />
-            <ArtMarker number={2} to="art02" right="36%" bottom="17%" />
-            <ArtMarker number={3} to="art03" right="10%" top="28%" />
-            <ArtMarker number={4} to="art04" right="34%" top="34%" />
-            <ArtMarker number={5} to="art05" right="37%" top="45%" />
-            <ArtMarker number={6} to="art06" left="34%" top="51%" />
+            <ArtMarker number={1} artId="art01" left="6%" top="36%" />
+            <ArtMarker number={2} artId="art02" right="36%" bottom="17%" />
+            <ArtMarker number={3} artId="art03" right="10%" top="28%" />
+            <ArtMarker number={4} artId="art04" right="34%" top="34%" />
+            <ArtMarker number={5} artId="art05" right="37%" top="45%" />
+            <ArtMarker number={6} artId="art06" left="34%" top="51%" />
           </Flex>
         </AspectRatio>
       </Flex>

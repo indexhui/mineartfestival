@@ -90,7 +90,7 @@ const HeaderNav = () => {
 };
 
 const MobileMenuLink = props => {
-  const { name, link, isExternal } = props;
+  const { name, link, isExternal, onClose } = props;
 
   if (isExternal) {
     return (
@@ -107,6 +107,8 @@ const MobileMenuLink = props => {
 
   return (
     <Link
+      onClick={onClose}
+      // onClick={() => onClose()}
       color="blue.600"
       fontSize={{ lg: '14px', xl: '16px' }}
       as={NavLink}
@@ -161,10 +163,14 @@ const MobileMenu = () => {
               top="16px"
             />
             <VStack align="flex-start" w="100%" spacing="15px">
-              <MobileMenuLink name="首頁" link="/" />
+              <Box onClick={onClose}>
+                <MobileMenuLink onClose={onClose} name="首頁" link="/" />
+              </Box>
               <Box w="100%" h="1px" bg="grey.900"></Box>
               {navList.map(item => (
-                <MobileMenuLink key={item.link} {...item} />
+                <Box key={item.link} onClick={onClose}>
+                  <MobileMenuLink {...item} />
+                </Box>
               ))}
             </VStack>
           </MotionFlex>

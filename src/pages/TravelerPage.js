@@ -25,7 +25,7 @@ import PageMotion from 'components/PageMotion';
 import Banner from 'components/Banner';
 import travelBg from 'assets/images/travelerPage/travelBg.jpg';
 import travelerBanner from 'assets/images/travelerPage/travelerBanner.jpg';
-import travelLogo from 'assets/images/travelerPage/travelLogo.png';
+import travelLogo from 'assets/images/travelerPage/travelLogo.svg';
 import travelRight from 'assets/images/travelerPage/travelRight.png';
 import travelLeft from 'assets/images/travelerPage/travelLeft.png';
 
@@ -204,7 +204,7 @@ const Traveler01 = () => {
               w={{ base: '130px', lg: '262px' }}
             >
               <Text
-                pt={{ base: '6px', lg: '22px' }}
+                pt={{ base: '10px', lg: '22px' }}
                 pl={{ base: '10px', lg: '20px' }}
                 color="white"
                 lineHeight="1"
@@ -447,7 +447,7 @@ const Traveler02 = () => {
               w={{ base: '130px', lg: '262px' }}
             >
               <Text
-                pt={{ base: '6px', lg: '22px' }}
+                pt={{ base: '10px', lg: '22px' }}
                 pl={{ base: '10px', lg: '15px' }}
                 color="white"
                 fontSize={{ base: '16px', lg: '32px' }}
@@ -636,7 +636,7 @@ const Traveler03 = () => {
           zIndex="-10"
           position="absolute"
           right={{ base: '20px', lg: '0' }}
-          top={{ base: '60px', lg: '40px' }}
+          top={{ base: '20px', lg: '40px' }}
           w={{ base: '80px', lg: '200px' }}
         />
         <Flex
@@ -693,7 +693,7 @@ const Traveler03 = () => {
               w={{ base: '130px', lg: '262px' }}
             >
               <Text
-                pt={{ base: '6px', lg: '22px' }}
+                pt={{ base: '10px', lg: '22px' }}
                 pl={{ base: '10px', lg: '15px' }}
                 color="white"
                 fontSize={{ base: '16px', lg: '32px' }}
