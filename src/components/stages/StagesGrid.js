@@ -12,6 +12,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalBody,
+  Link,
 } from '@chakra-ui/react';
 import useCsv from 'hooks/useCsv';
 import stageCsv from 'assets/csv/stage.csv';
@@ -95,7 +96,7 @@ const StagesGrid = () => {
                 {stage.time}
               </Text>
               <Flex justify="space-between">
-                <HStack>
+                <HStack as={Link} isExternal href={stage.map}>
                   <Icon as={FaMapMarker} size="24px" color="yellow.700" />
                   <Text color="grey.900">{stage.location}</Text>
                 </HStack>

@@ -1,6 +1,15 @@
 import { useRef } from 'react';
 
-import { Flex, Text, Image, HStack, VStack, Box, Icon } from '@chakra-ui/react';
+import {
+  Flex,
+  Text,
+  Image,
+  HStack,
+  VStack,
+  Box,
+  Icon,
+  Link,
+} from '@chakra-ui/react';
 import { FaMapMarker } from 'react-icons/fa';
 import { MdArrowRight, MdArrowLeft } from 'react-icons/md';
 
@@ -157,6 +166,9 @@ const ArtListItem = props => {
           // }}
         >
           <HStack
+            as={Link}
+            href={props.map}
+            isExternal
             pl={props.reverse && '60px'}
             py={{ base: '10px', lg: '0' }}
             w={{

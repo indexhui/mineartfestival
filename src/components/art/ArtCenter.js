@@ -1,10 +1,11 @@
-import { Flex, Text, Image, HStack, Box, Icon } from '@chakra-ui/react';
+import { Flex, Text, Image, HStack, Box, Icon, Link } from '@chakra-ui/react';
 import { FaMapMarker } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 import 'swiper/css';
 
 const ArtCenter = props => {
+  console.log(props.map);
   return (
     <Flex
       id={props.id}
@@ -118,7 +119,12 @@ const ArtCenter = props => {
             <Text fontSize="16px" fontWeight="700">
               {props.artist}
             </Text>
-            <HStack py={{ base: '10px', lg: '0' }}>
+            <HStack
+              as={Link}
+              href={props.map}
+              isExternal
+              py={{ base: '10px', lg: '0' }}
+            >
               <Icon as={FaMapMarker} size="24px" color="yellow.700" />
               <Text color="grey.900">{props.location}</Text>
             </HStack>
