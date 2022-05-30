@@ -42,10 +42,10 @@ const StageModal = props => {
       >
         More
       </Button>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+      <Modal isOpen={isOpen} onClose={onClose} size="xs" isCentered>
         <ModalOverlay />
         <ModalContent bg="yellow.700">
-          <ModalBody p="45px">
+          <ModalBody p="30px">
             <Flex align="flex-start" justify="space-between">
               {props.name} <CloseIcon cursor="pointer" onClick={onClose} />
             </Flex>

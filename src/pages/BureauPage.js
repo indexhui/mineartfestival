@@ -44,7 +44,6 @@ const ArtMarker = props => {
     >
       <Text
         color="blue.500"
-        mt="-1px"
         fontFamily="Roboto,Ariel, sans-serif"
         fontWeight="700"
         fontSize={{ base: '10px', lg: '32px' }}
@@ -138,7 +137,7 @@ export function BureauPage() {
                   <Text
                     fontSize={{ base: '20px', lg: '32px' }}
                     letterSpacing="0"
-                    fontFamily="Roboto"
+                    fontFamily="Roboto,Ariel, sans-serif"
                   >
                     {i + 1}
                   </Text>

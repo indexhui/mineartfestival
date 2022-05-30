@@ -105,7 +105,7 @@ const ArtListItem = props => {
                 <SwiperSlide key={props.id + i}>
                   <Image
                     w="100%"
-                    h="300px"
+                    h={{ base: '210px', lg: '300px' }}
                     objectFit="cover"
                     src={`/images/art/${props.id}/${props.id}-0${i + 1}.jpeg`}
                   />
