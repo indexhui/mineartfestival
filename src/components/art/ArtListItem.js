@@ -5,17 +5,18 @@ import { FaMapMarker } from 'react-icons/fa';
 import { MdArrowRight, MdArrowLeft } from 'react-icons/md';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import 'swiper/css';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
-
+import RevealFlex from 'components/RevealFlex';
 import fireworkLgBlue from 'assets/images/homePage/fireworkLgBlue.svg';
 import fireworkSmIcon from 'assets/images/homePage/fireworkSmIcon.svg';
 
 const ArtListItem = props => {
   const swiperRef = useRef();
   return (
-    <Flex
+    <RevealFlex
       id={props.id}
       w="100%"
       wrap="wrap"
@@ -92,9 +93,10 @@ const ArtListItem = props => {
                 swiperRef.current = swiper;
               }}
               autoplay={{
-                delay: 2500,
+                delay: 2000,
                 disableOnInteraction: false,
               }}
+              modules={[Autoplay]}
               spaceBetween={20}
               loop={true}
               slidesPerView={1}
@@ -224,7 +226,7 @@ const ArtListItem = props => {
           <SimpleBar style={{ maxHeight: 300 }}>{props.content}</SimpleBar>
         </Box> */}
       </VStack>
-    </Flex>
+    </RevealFlex>
   );
 };
 

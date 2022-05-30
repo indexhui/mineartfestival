@@ -115,6 +115,7 @@ export function BureauPage() {
         >
           {artData.map((art, i) => (
             <GridItem
+              key={art.id}
               cursor="pointer"
               onClick={() => handleScroll(art.id)}
               area={{

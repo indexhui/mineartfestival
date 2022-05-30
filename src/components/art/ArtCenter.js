@@ -1,6 +1,7 @@
 import { Flex, Text, Image, HStack, Box, Icon } from '@chakra-ui/react';
 import { FaMapMarker } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
 import 'swiper/css';
 
 const ArtCenter = props => {
@@ -61,9 +62,10 @@ const ArtCenter = props => {
         {props.imageNumber > 0 && (
           <Swiper
             autoplay={{
-              delay: 2500,
+              delay: 2000,
               disableOnInteraction: false,
             }}
+            modules={[Autoplay]}
             spaceBetween={20}
             loop={true}
             slidesPerView={1.2}

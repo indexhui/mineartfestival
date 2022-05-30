@@ -17,6 +17,7 @@ import useCsv from 'hooks/useCsv';
 import stageCsv from 'assets/csv/stage.csv';
 import { FaMapMarker } from 'react-icons/fa';
 import { CloseIcon } from '@chakra-ui/icons';
+import RevealFlex from 'components/RevealFlex';
 import intro from 'assets/images/stagesPage/intro.svg';
 
 const StageModal = props => {
@@ -71,7 +72,6 @@ const StagesGrid = () => {
       <Grid
         py="45px"
         px="30px"
-        border="2px solid black"
         // w="1280px"
         w={{ sm: '100%', md: '75%', lg: '80%', xl: '1280px' }}
         templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
@@ -79,27 +79,29 @@ const StagesGrid = () => {
       >
         {stageData.map(stage => (
           <GridItem key={stage.id}>
-            <Text
-              color="blue.600"
-              textAlign="center"
-              h="58px"
-              fontSize="18px"
-              fontWeight="700"
-              borderBottom="2px solid #3551A2"
-            >
-              {stage.name}
-            </Text>
-            <Image my="24px" w="100%" src={stage.image} />
-            <Text color="blue.600" fontSize="16px" fontWeight="700">
-              {stage.time}
-            </Text>
-            <Flex justify="space-between">
-              <HStack>
-                <Icon as={FaMapMarker} size="24px" color="yellow.700" />
-                <Text color="grey.900">{stage.location}</Text>
-              </HStack>
-              <StageModal {...stage} />
-            </Flex>
+            <RevealFlex direction="column">
+              <Text
+                color="blue.600"
+                textAlign="center"
+                h="58px"
+                fontSize="18px"
+                fontWeight="700"
+                borderBottom="2px solid #3551A2"
+              >
+                {stage.name}
+              </Text>
+              <Image my="24px" w="100%" src={stage.image} />
+              <Text color="blue.600" fontSize="16px" fontWeight="700">
+                {stage.time}
+              </Text>
+              <Flex justify="space-between">
+                <HStack>
+                  <Icon as={FaMapMarker} size="24px" color="yellow.700" />
+                  <Text color="grey.900">{stage.location}</Text>
+                </HStack>
+                <StageModal {...stage} />
+              </Flex>
+            </RevealFlex>
           </GridItem>
         ))}
       </Grid>

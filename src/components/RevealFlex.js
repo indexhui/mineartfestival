@@ -29,7 +29,7 @@ const RevealFlex = props => {
       }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: props.once || true, amount: 0.8 }}
+      viewport={{ once: props.once ?? true, amount: 0.6 }}
       variants={variants}
       transition={transition}
       {...rest}
