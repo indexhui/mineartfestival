@@ -63,7 +63,7 @@ const Hero = () => {
           w="100%"
           h="100%"
           bgSize="cover"
-          opacity={scrollPercentage * 0.9}
+          opacity={scrollPercentage < 0.5 ? scrollPercentage * 1.5 : 1}
           bgImage={`url(${stars})`}
         />
         {/* logo center */}
