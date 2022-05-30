@@ -11,7 +11,7 @@ const Banner = props => {
         bgRepeat="no-repeat"
         bgSize="cover"
       >
-        <VStack align="flex-start">
+        <VStack align="flex-start" w="100%">
           <Text
             color={titleColor || 'grey.700'}
             fontSize={{ base: '14px', lg: '24px' }}
