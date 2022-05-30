@@ -15,6 +15,7 @@ import fireworkSmIcon from 'assets/images/homePage/fireworkSmIcon.svg';
 import fireworkSmWhiteIcon from 'assets/images/homePage/fireworkSmWhiteIcon.svg';
 import fireworkLgWhite from 'assets/images/homePage/fireworkLgWhite.svg';
 import fireworkLgBlue from 'assets/images/homePage/fireworkLgBlue.svg';
+import stars from 'assets/images/homePage/stars.png';
 
 const MotionFlex = motion(Flex);
 const MotionImage = motion(Image);
@@ -53,9 +54,18 @@ const Hero = () => {
         h="100%"
         initial={{ opacity: 0 }}
         animate={{ opacity: scrollPercentage * 2.5 }}
-        bg="#0A3B51"
+        bg="linear-gradient(180deg, #0B2C3F 10.65%, #123F57 55.47%, #557D93 100%)"
       ></MotionFlex>
       <Box position="sticky" w="100%" h="100vh" top="100px">
+        <Box
+          position="absolute"
+          zIndex="-5"
+          w="100%"
+          h="100%"
+          bgSize="cover"
+          opacity={scrollPercentage * 0.9}
+          bgImage={`url(${stars})`}
+        />
         {/* logo center */}
         <MotionFlex
           position="absolute"
