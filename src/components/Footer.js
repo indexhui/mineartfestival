@@ -16,13 +16,16 @@ const Footer = () => {
     >
       <Image src={logo} w="155px" />
       <HStack color="blue.600" spacing="24px" py="20px">
-        <Link>
+        <Link href="https://www.facebook.com/goldmuseum" isExternal>
           <Icon as={FaFacebook} w="24px" h="24px" />
         </Link>
-        <Link>
+        <Link href="https://www.instagram.com/goldmuseum.tw/" isExternal>
           <Icon as={AiFillInstagram} w="30px" h="30px" />
         </Link>
-        <Link>
+        <Link
+          href="https://www.youtube.com/channel/UC8fO8tlnSiZC-iZ4eVKbqUg"
+          isExternal
+        >
           <Icon as={FaYoutube} w="30px" h="30px" />
         </Link>
       </HStack>
