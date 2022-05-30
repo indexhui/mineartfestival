@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.820db07e.css",
-    "main.js": "/static/js/main.8c9ca177.js",
+    "main.js": "/static/js/main.237af793.js",
     "static/js/377.a7a89e0e.chunk.js": "/static/js/377.a7a89e0e.chunk.js",
     "static/media/noto-sans-tc-all-900-normal.woff": "/static/media/noto-sans-tc-all-900-normal.39091305eb4715026829.woff",
     "static/media/noto-sans-tc-all-700-normal.woff": "/static/media/noto-sans-tc-all-700-normal.cede87514f7b0338a4cd.woff",
@@ -19,6 +19,7 @@
     "static/media/nav03.jpg": "/static/media/nav03.62f90bd3ea7c0bc621ed.jpg",
     "static/media/view01.jpg": "/static/media/view01.f0451b34dec4cac182fd.jpg",
     "static/media/view02.jpg": "/static/media/view02.77add2cb16b36ba1b8fa.jpg",
+    "static/media/closingBg.jpg": "/static/media/closingBg.b44e1127a788b5af7957.jpg",
     "static/media/mt2.png": "/static/media/mt2.5ba12b3534ca15be0938.png",
     "static/media/nav01.jpg": "/static/media/nav01.5b9a3c4fd5a99ba0dfdc.jpg",
     "static/media/travelRight.png": "/static/media/travelRight.acb9e0ac57ca15fa94b8.png",
@@ -423,6 +424,7 @@
     "static/media/noto-sans-tc-0-500-normal.woff2": "/static/media/noto-sans-tc-0-500-normal.32460d8d90587ead8a73.woff2",
     "static/media/intro.svg": "/static/media/intro.58ddcb4491d8e0bce5ea4dfe48ff41eb.svg",
     "static/media/flag.svg": "/static/media/flag.dd1ec198495531b40207b68c8df5df58.svg",
+    "static/media/closingTitle.svg": "/static/media/closingTitle.20f6a1f531e187c4e003715c594fdb95.svg",
     "static/media/noto-sans-tc-87-700-normal.woff2": "/static/media/noto-sans-tc-87-700-normal.c51ec659944ddaa0764c.woff2",
     "static/media/noto-sans-tc-87-400-normal.woff2": "/static/media/noto-sans-tc-87-400-normal.c0a1198c9cdcf2124a7d.woff2",
     "static/media/noto-sans-tc-87-900-normal.woff2": "/static/media/noto-sans-tc-87-900-normal.74f3e93853dd844df543.woff2",
@@ -445,18 +447,18 @@
     "static/media/noto-sans-tc-97-400-normal.woff2": "/static/media/noto-sans-tc-97-400-normal.75366b62ae3f5bd253dd.woff2",
     "static/media/noto-sans-tc-97-900-normal.woff2": "/static/media/noto-sans-tc-97-900-normal.664507a7931161509617.woff2",
     "static/media/hotel.csv": "/static/media/hotel.a5eb9e2c055bb55a9993.csv",
-    "static/media/menu.svg": "/static/media/menu.b878608e45bfdb393c5e84e8313cfcdf.svg",
     "index.html": "/index.html",
+    "static/media/menu.svg": "/static/media/menu.b878608e45bfdb393c5e84e8313cfcdf.svg",
     "static/media/cloud.svg": "/static/media/cloud.665f049aaf4030a9c7b2ed1ca3fa1b02.svg",
     "static/media/store.csv": "/static/media/store.7d9d87a8b06074aad988.csv",
     "static/media/close.svg": "/static/media/close.4c93c8a4905c4f3f944493007199f719.svg",
     "static/media/partnerBg.svg": "/static/media/partnerBg.33c23dc23421917323b830c14c03e9fe.svg",
     "main.820db07e.css.map": "/static/css/main.820db07e.css.map",
-    "main.8c9ca177.js.map": "/static/js/main.8c9ca177.js.map",
+    "main.237af793.js.map": "/static/js/main.237af793.js.map",
     "377.a7a89e0e.chunk.js.map": "/static/js/377.a7a89e0e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.820db07e.css",
-    "static/js/main.8c9ca177.js"
+    "static/js/main.237af793.js"
   ]
 }
