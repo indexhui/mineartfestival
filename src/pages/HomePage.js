@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, AspectRatio } from '@chakra-ui/react';
+// import ReactPlayer from 'react-player';
+
 import Hero from 'components/Hero';
 import Intro from 'components/home/Intro';
 import NavigateCards from 'components/home/NavigateCards';
@@ -21,11 +23,29 @@ export function HomePage() {
       bg="white"
       w="100%"
       direction="column"
-      justify="center"
+      // justify="center"
+      // align="center"
     >
       <Hero />
       <Intro />
+      <Flex w="100%" justify="center" mt="-200px">
+        <AspectRatio
+          w={{ base: '90%', lg: '50%' }}
+          maxW="800px"
+          ratio={850 / 480}
+        >
+          <iframe
+            title="mineartfestival"
+            src="https://www.youtube.com/embed/7GybxtIbGzA"
+            allowFullScreen
+          />
+        </AspectRatio>
+      </Flex>
       <NavigateCards />
+
+      {/* <Flex>
+        <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
+      </Flex> */}
     </MotionFlex>
   );
 }

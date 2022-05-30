@@ -36,7 +36,6 @@ const Hero = () => {
 
   useEffect(() => {
     setScrollPercentage(scrollY / elementBoundary.height);
-    console.log(scrollY, elementBoundary.height);
   }, [scrollY, elementBoundary.top, elementBoundary.height]);
 
   return (
@@ -45,7 +44,7 @@ const Hero = () => {
       ref={ref}
       h={window.innerHeight * 2.25}
       position="relative"
-      mb="100px"
+      mb={{ base: '-10px', md: '50px' }}
     >
       <MotionFlex
         position="absolute"
@@ -63,7 +62,8 @@ const Hero = () => {
           margin="0 auto"
           left="0"
           right="0"
-          top="170px"
+          bottom={{ base: 'unset', lg: '450px' }}
+          top={{ base: '150px', lg: 'unset' }}
           color="#3551A2"
           animate={{
             color: isDark ? '#fff' : '#3551A2',
@@ -71,80 +71,113 @@ const Hero = () => {
           transition={{
             duration: 2,
           }}
-          w="350px"
-          h="350px"
+          w={{ base: '155px', lg: '300px' }}
+          h={{ base: '155px', lg: '300px' }}
         >
-          <HeroLogoIcon w="350px" h="350px" />
+          <HeroLogoIcon
+            w={{ base: '155px', lg: '300px' }}
+            h={{ base: '155px', lg: '300px' }}
+          />
         </MotionFlex>
-        {/* firework left */}
-        <Flex position="absolute" left="20%" top="15%" w="150px" h="150px">
-          <MotionImage
-            animate={{ opacity: isDark ? 0 : 1 }}
-            transition={{
-              duration: 0.6,
-            }}
-            w="150px"
-            h="150px"
+        <Box position="absolute" w="100%" h="100%" overflowX="hidden">
+          {/* firework left */}
+          <Flex
             position="absolute"
-            top="0"
-            src={fireworkSmIcon}
-          />
-          <MotionImage
-            animate={{ opacity: isDark ? 1 : 0 }}
-            transition={{
-              duration: 0.6,
-            }}
-            w="150px"
-            h="150px"
+            left={{ base: '-45px', lg: '20%' }}
+            top={{ base: '4%', lg: '15%' }}
+            w={{ base: '90px', lg: '150px' }}
+            h={{ base: '90px', lg: '150px' }}
+          >
+            <MotionImage
+              animate={{ opacity: isDark ? 0 : 1 }}
+              transition={{
+                duration: 0.6,
+              }}
+              w={{ base: '90px', lg: '150px' }}
+              h={{ base: '90px', lg: '150px' }}
+              position="absolute"
+              top="0"
+              src={fireworkSmIcon}
+            />
+            <MotionImage
+              animate={{ opacity: isDark ? 1 : 0 }}
+              transition={{
+                duration: 0.6,
+              }}
+              w="150px"
+              h="150px"
+              position="absolute"
+              top="0"
+              src={fireworkSmWhiteIcon}
+            />
+          </Flex>
+          {/* firework right */}
+          <Flex
             position="absolute"
-            top="0"
-            src={fireworkSmWhiteIcon}
-          />
-        </Flex>
-        {/* firework right */}
-        <Flex position="absolute" right="18%" top="22%" w="225px" h="225px">
-          <MotionImage
-            animate={{ opacity: isDark ? 0 : 1 }}
-            transition={{
-              duration: 0.6,
-            }}
-            w="225px"
-            h="225px"
-            position="absolute"
-            top="0"
-            src={fireworkLgBlue}
-          />
-          <MotionImage
-            animate={{ opacity: isDark ? 1 : 0 }}
-            transition={{
-              duration: 0.6,
-            }}
-            w="225px"
-            h="225px"
-            position="absolute"
-            top="0"
-            src={fireworkLgWhite}
-          />
-        </Flex>
-        <MotionImage
+            right={{ base: '-20px', lg: '20%' }}
+            top={{ base: '15%', lg: '22%' }}
+            w={{ base: '90px', lg: '225px' }}
+            h={{ base: '90px', lg: '225px' }}
+          >
+            <MotionImage
+              animate={{ opacity: isDark ? 0 : 1 }}
+              transition={{
+                duration: 0.6,
+              }}
+              w={{ base: '90px', lg: '225px' }}
+              h={{ base: '90px', lg: '225px' }}
+              position="absolute"
+              top="0"
+              src={fireworkLgBlue}
+            />
+            <MotionImage
+              animate={{ opacity: isDark ? 1 : 0 }}
+              transition={{
+                duration: 0.6,
+              }}
+              w={{ base: '90px', lg: '225px' }}
+              h={{ base: '90px', lg: '225px' }}
+              position="absolute"
+              top="0"
+              src={fireworkLgWhite}
+            />
+          </Flex>
+        </Box>
+        <MotionFlex
           initial={{ opacity: 1 }}
           animate={{ opacity: isDark ? 1 : 0 }}
           transition={{ duration: 0.5 }}
-          bottom="-200px"
+          bottom={{ base: '-20px', lg: '-100px' }}
           position="absolute"
-          src={mt2}
+          // src={mt2}
+          bgImage={`url(${mt2})`}
+          bgSize="cover"
+          bgRepeat="no-repeat"
+          bgPosition="top center"
           w="100%"
+          h={{ base: '400px', lg: '450px' }}
         />
-        <MotionImage
+        <MotionFlex
           initial={{ opacity: 0 }}
           animate={{ opacity: isDark ? 0 : 1 }}
           transition={{ duration: 0.5 }}
-          bottom="-200px"
+          bottom={{ base: '-20px', lg: '-100px' }}
           position="absolute"
-          src={mt1}
+          // src={mt1}
+          bgImage={`url(${mt1})`}
+          bgSize="cover"
+          bgRepeat="no-repeat"
+          bgPosition="top center"
           w="100%"
-          // h="200px"
+          h={{ base: '400px', lg: '450px' }}
         />
+        <Box
+          position="absolute"
+          bottom={{ base: '-20px', lg: '-100px' }}
+          w="100%"
+          h="240px"
+          bg="linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(226, 226, 226, 0.5) 32.97%,#FFFFFF 90%, #FFFFFF 100%)"
+        ></Box>
       </Box>
     </MotionFlex>
   );

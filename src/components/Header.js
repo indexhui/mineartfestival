@@ -75,7 +75,7 @@ const HeaderNav = () => {
   return (
     <HStack
       display={{ base: 'none', lg: 'flex' }}
-      spacing={{ lg: '12px', xl: '32px' }}
+      spacing={{ lg: '12px', xl: '20px', '2xl': '32px' }}
       divider={<StackDivider borderColor="blue.600" />}
     >
       {navList.map(item => (
@@ -175,7 +175,7 @@ const Header = () => {
     <Flex
       position="sticky"
       top="0"
-      h={{ base: '60px', lg: '100px' }}
+      h={{ base: '60px', lg: '80px' }}
       w="100%"
       bg="white"
       zIndex="20"
@@ -185,7 +185,7 @@ const Header = () => {
       justifyContent="space-between"
     >
       <NavLink to="/">
-        <Image src={logo} h={{ base: '32px', lg: '65px' }} />
+        <Image src={logo} h={{ base: '32px', lg: '50px' }} />
       </NavLink>
       <HeaderNav />
       <MobileMenu />

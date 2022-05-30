@@ -1,6 +1,7 @@
 import { Flex, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useMediaQuery } from '@chakra-ui/react';
 
 import view01 from 'assets/images/homePage/nav01.jpg';
 import view02 from 'assets/images/homePage/nav02.jpg';
@@ -16,26 +17,31 @@ const navigateList = [
     title: '礦山事務所',
     subTitle: '地景藝術',
     image: view01,
+    link: '/jinguashi-mining-bureau',
   },
   {
     title: '小山舞台',
     subTitle: '表演藝術',
     image: view02,
+    link: '/stages',
   },
   {
     title: '山人旅行社',
     subTitle: '文化行旅',
     image: view03,
+    link: '/traveler',
   },
   {
     title: '周邊夥伴',
     subTitle: '',
     image: view04,
+    link: '/partner',
   },
 ];
 
 const NavigateCard = props => {
-  const { title, subTitle, image } = props;
+  const { title, subTitle, image, link } = props;
+  const [isLargerThan1280] = useMediaQuery('(min-width: 1280px)');
   const variants = {
     hover: {
       scale: 1.2,
@@ -47,7 +53,7 @@ const NavigateCard = props => {
       scale: 1.2,
     },
     normal: {
-      y: -100,
+      y: isLargerThan1280 ? -100 : -10,
     },
   };
 
@@ -60,11 +66,11 @@ const NavigateCard = props => {
     <MotionFlex
       whileHover="hover"
       as={Link}
-      to="stages"
+      to={link}
       initial="normal"
       overflow="hidden"
       w="100%"
-      h="400px"
+      h={{ base: '150px', lg: '400px' }}
       _hover={{ cursor: 'pointer' }}
       position="relative"
       align="center"
@@ -116,7 +122,12 @@ const NavigateCards = () => {
       mt="100px"
     >
       {navigateList.map(navigate => (
-        <GridItem key={navigate.title} colSpan={1}>
+        <GridItem
+          key={navigate.title}
+          colSpan={1}
+          px={{ base: '30px', lg: '0' }}
+          py={{ base: '5px', lg: '0' }}
+        >
           <NavigateCard {...navigate} />
         </GridItem>
       ))}

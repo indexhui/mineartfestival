@@ -21,22 +21,22 @@ const viewsList = [
 const Views = () => {
   return (
     <Stack
-      direction={{ sm: 'column', lg: 'row' }}
-      spacing="60px"
-      mt="35px"
+      direction={{ base: 'column', lg: 'row' }}
+      spacing={{ base: '20px', lg: '60px' }}
+      mt="40px"
       zIndex="1"
     >
       {viewsList.map((view, index) => (
         <RevealFlex key={view.id} order={index}>
           <VStack spacing="16px">
             <Image
-              w="240px"
-              h="240px"
+              w={{ base: '180px', lg: '240px' }}
+              h={{ base: '180px', lg: '240px' }}
               rounded="full"
               src={view.img}
               shadow="xl"
             />
-            <Heading fontSize="24px" color="grey.700">
+            <Heading fontSize={{ base: '18px', lg: '24px' }} color="grey.700">
               {view.name}
             </Heading>
           </VStack>
@@ -49,13 +49,13 @@ const Views = () => {
 const Intro = () => {
   return (
     <Flex w="100%" direction="column" align="center">
-      <Badge h="255px">青 春 山 海 線</Badge>
+      <Badge h={{ base: '200px', lg: '255px' }}>青 春 山 海 線</Badge>
       <RevealFlex>
         <Text
           whiteSpace="pre-wrap"
           textAlign="center"
-          fontSize="24px"
-          lineHeight="35px"
+          fontSize={{ base: '16px', lg: '24px' }}
+          lineHeight={{ base: '24px', lg: '35px' }}
           letterSpacing=".15em"
           color="grey.700"
           mt="35px"

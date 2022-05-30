@@ -5,8 +5,8 @@ const Badge = props => {
   return (
     <RevealFlex
       bg="yellow.500"
-      w="200px"
-      h="200px"
+      w={{ base: '105px', lg: '200px' }}
+      h={{ base: '105px', lg: '200px' }}
       rounded="full"
       zIndex="10"
       align="center"
@@ -17,7 +17,7 @@ const Badge = props => {
         lineHeight="40px"
         style={{ writingMode: 'vertical-lr' }}
         fontWeight="900"
-        fontSize="35px"
+        fontSize={{ base: '20px', lg: '35px' }}
         textAlign="center"
         color="blue.500"
         {...props}
