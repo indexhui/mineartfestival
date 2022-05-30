@@ -13,6 +13,7 @@ const Banner = props => {
       >
         <VStack align="flex-start" w="100%">
           <Text
+            textAlign="left"
             color={titleColor || 'grey.700'}
             fontSize={{ base: '14px', lg: '24px' }}
             fontWeight="700"
@@ -20,6 +21,7 @@ const Banner = props => {
             {subtitle}
           </Text>
           <Heading
+            textAlign="left"
             color={titleColor || 'blue.700'}
             fontSize={{ base: '40px ', lg: '70px' }}
             fontWeight="700"
