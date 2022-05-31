@@ -109,7 +109,7 @@ const ArtCenter = props => {
           bgColor="grey.100"
           w={{ base: '100%', lg: '90%', xl: '85%', '2xl': '1280px' }}
           px={{ base: '30px', lg: '0' }}
-          align="flex-start"
+          // align="flex-start"
         >
           <Flex
             w={{ base: '100%', lg: '50%' }}
@@ -117,18 +117,15 @@ const ArtCenter = props => {
             justify="space-between"
             align="flex-start"
           >
-            <Text fontSize="16px" fontWeight="700">
+            <Text fontSize="16px" fontWeight="700" w="100%" textAlign="left">
               {props.artist}
             </Text>
-            <HStack
-              as={Link}
-              href={props.map}
-              isExternal
-              py={{ base: '10px', lg: '0' }}
-            >
-              <Icon as={FaMapMarker} size="24px" color="yellow.700" />
-              <Text color="grey.900">{props.location}</Text>
-            </HStack>
+            <Link href={props.map} isExternal>
+              <HStack py={{ base: '10px', lg: '0' }}>
+                <Icon as={FaMapMarker} size="24px" color="yellow.700" />
+                <Text color="grey.900">{props.location}</Text>
+              </HStack>
+            </Link>
           </Flex>
           <Flex
             w={{ base: '100%', lg: '50%' }}
