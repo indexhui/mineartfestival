@@ -53,6 +53,7 @@ const HeaderLink = props => {
     return (
       <Link
         color="blue.600"
+        py="8px"
         fontSize={{ lg: '14px', xl: '16px' }}
         href={link}
         isExternal
@@ -65,6 +66,7 @@ const HeaderLink = props => {
   return (
     <RouterLink to={link}>
       <Text
+        py="8px"
         outline="none"
         color="blue.600"
         fontSize={{ lg: '14px', xl: '16px' }}
@@ -78,9 +80,15 @@ const HeaderLink = props => {
 const HeaderNav = () => {
   return (
     <HStack
+      alignItem="center"
       display={{ base: 'none', lg: 'flex' }}
       spacing={{ lg: '12px', xl: '20px', '2xl': '32px' }}
-      divider={<StackDivider borderColor="blue.600" />}
+      divider={
+        <StackDivider
+          style={{ marginTop: '8px', marginBottom: '8px' }}
+          borderColor="blue.600"
+        />
+      }
     >
       {navList.map(item => (
         <HeaderLink key={item.link} {...item} />
@@ -108,7 +116,6 @@ const MobileMenuLink = props => {
   return (
     <Link
       onClick={onClose}
-      // onClick={() => onClose()}
       color="blue.600"
       fontSize={{ lg: '14px', xl: '16px' }}
       as={RouterLink}
