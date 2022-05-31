@@ -9,11 +9,7 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
-import {
-  polyfill,
-  scrollIntoView,
-  elementScrollIntoViewPolyfill,
-} from 'seamless-scroll-polyfill';
+import { polyfill, scrollIntoView } from 'seamless-scroll-polyfill';
 
 import Banner from 'components/Banner';
 import PageMotion from 'components/PageMotion';
@@ -31,14 +27,12 @@ const ArtMarker = props => {
 
   const handleScroll = id => {
     const element = document.getElementById(id);
-    // element.scrollIntoView();
     polyfill();
     scrollIntoView(element, {
       behavior: 'smooth',
       block: 'center',
       inline: 'center',
     });
-    // elementScrollIntoViewPolyfill(element);
   };
 
   return (
@@ -75,7 +69,12 @@ export function BureauPage() {
 
   const handleScroll = id => {
     const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    polyfill();
+    scrollIntoView(element, {
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center',
+    });
   };
 
   return (
