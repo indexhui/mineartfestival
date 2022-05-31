@@ -17,6 +17,7 @@ const PartnerLabel = props => {
           width: isLargerThan1280 ? '20%' : '25%',
           transition: { duration: 1 },
         }}
+        viewport={{ once: true, amount: 0.8 }}
       ></MotionBox>
       <Box
         ml="10px"

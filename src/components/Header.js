@@ -9,7 +9,7 @@ import {
   Box,
   Text,
 } from '@chakra-ui/react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import logo from 'assets/images/logo.svg';
@@ -47,7 +47,7 @@ const navList = [
 ];
 
 const HeaderLink = props => {
-  const { name, link, isExternal } = props;
+  const { name, link, isExternal, location } = props;
 
   if (isExternal) {
     return (
@@ -66,9 +66,11 @@ const HeaderLink = props => {
   return (
     <RouterLink to={link}>
       <Text
+        fontWeight={location.pathname === link ? 'bold' : 'normal'}
         py="8px"
         outline="none"
         color="blue.600"
+        _hover={{ fontWeight: 'bold' }}
         fontSize={{ lg: '14px', xl: '16px' }}
       >
         {name}
@@ -77,10 +79,11 @@ const HeaderLink = props => {
   );
 };
 
-const HeaderNav = () => {
+const HeaderNav = props => {
+  const { location } = props;
   return (
     <HStack
-      alignItem="center"
+      align="center"
       display={{ base: 'none', lg: 'flex' }}
       spacing={{ lg: '12px', xl: '20px', '2xl': '32px' }}
       divider={
@@ -91,7 +94,7 @@ const HeaderNav = () => {
       }
     >
       {navList.map(item => (
-        <HeaderLink key={item.link} {...item} />
+        <HeaderLink key={item.link} location={location} {...item} />
       ))}
     </HStack>
   );
@@ -188,6 +191,7 @@ const MobileMenu = () => {
 };
 
 const Header = () => {
+  const location = useLocation();
   const handleClickHome = () => {
     window.scrollTo({
       top: 0,
@@ -214,7 +218,7 @@ const Header = () => {
           h={{ base: '32px', lg: '50px' }}
         />
       </RouterLink>
-      <HeaderNav />
+      <HeaderNav location={location} />
       <MobileMenu />
     </Flex>
   );

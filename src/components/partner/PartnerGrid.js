@@ -40,7 +40,7 @@ const PartnerGrid = ({ partnerData }) => {
                 <MotionImage
                   w="100%"
                   src={partner.image}
-                  whileHover={{ rotate: -4, transition: { duration: 0.25 } }}
+                  whileHover={{ rotate: -4, transition: { duration: 0.6 } }}
                   shadow="lg"
                   border={{ base: '5px solid white', lg: '20px solid white' }}
                 />

@@ -46,7 +46,7 @@ const ClosingCard = props => {
         bgColor="grey.400"
         mt="10px"
         mb="15px"
-        rounded="xl"
+        rounded="45px"
       ></Flex>
       <Text color="white" fontSize="16px">
         {content}

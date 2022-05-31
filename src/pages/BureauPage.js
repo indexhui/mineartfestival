@@ -78,7 +78,10 @@ export function BureauPage() {
         mb={{ base: '16px', lg: '36px' }}
         src={artFestivalLogo}
       />
-      <Flex px={{ base: '30px', lg: '0' }} w={{ base: '100%', lg: '1060px' }}>
+      <Flex
+        px={{ base: '30px', lg: '0' }}
+        w={{ base: '100%', lg: '90%', xl: '1060px' }}
+      >
         <AspectRatio w="100%" ratio={1060 / 680}>
           <Flex bgImage={`url('${map}')`} bgSize="cover">
             <ArtMarker number={1} artId="art01" left="6%" top="36%" />
@@ -93,7 +96,7 @@ export function BureauPage() {
       <Flex
         justify={{ base: 'flex-start', lg: 'flex-end' }}
         px={{ base: '30px', lg: '0' }}
-        w={{ base: '100%', lg: '1060px' }}
+        w={{ base: '100%', lg: '90%', xl: '1060px' }}
       >
         <HStack pt="12px" color="grey.900">
           <ExternalLinkIcon />
@@ -105,7 +108,7 @@ export function BureauPage() {
       <Flex
         mt="20px"
         px={{ base: '30px', lg: '0' }}
-        w={{ base: '100%', lg: '1060px' }}
+        w={{ base: '100%', lg: '90%', xl: '1060px' }}
       >
         <Grid
           w="100%"
@@ -155,7 +158,6 @@ export function BureauPage() {
       {artList.map((art, i) => (
         <ArtListItem key={art.id} {...art} reverse={i % 2 !== 0} />
       ))}
-      {/* <ArtListItem {...artData[1]} /> */}
     </PageMotion>
   );
 }

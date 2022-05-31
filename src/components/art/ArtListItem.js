@@ -49,7 +49,6 @@ const ArtListItem = props => {
               position="absolute"
               src={fireworkLgBlue}
               w={{ base: '60px', lg: '150px' }}
-              // h="150px"
               top={{ base: '-20px', lg: '-75px' }}
               right={{ base: '-20px', lg: '-75px' }}
             />
@@ -102,9 +101,10 @@ const ArtListItem = props => {
                 swiperRef.current = swiper;
               }}
               autoplay={{
-                delay: 2000,
+                delay: 2500,
                 disableOnInteraction: false,
               }}
+              speed={1000}
               modules={[Autoplay]}
               spaceBetween={20}
               loop={true}
@@ -159,11 +159,6 @@ const ArtListItem = props => {
             base: props.reverse && 'flex-end',
             lg: props.reverse ? 'flex-end' : 'flex-start',
           }}
-          // justify="space-between"
-          // direction={{
-          //   base: 'row',
-          //   lg: props.reverse ? 'row-reverse' : 'row',
-          // }}
         >
           <HStack
             as={Link}
@@ -213,11 +208,7 @@ const ArtListItem = props => {
           <Box h="2px" w="100%" bgColor="blue.500"></Box>
         </Flex>
 
-        <Box
-          px="30px"
-          maxW={{ lg: props.reverse && '480px', xl: props.reverse && '550px' }}
-          w="100%"
-        >
+        <Box px="30px" maxW={{ lg: '480px', xl: '550px' }} w="100%">
           <SimpleBar style={{ maxHeight: 168, width: '100%' }}>
             <Text
               textAlign="left"

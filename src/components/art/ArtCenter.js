@@ -62,9 +62,10 @@ const ArtCenter = props => {
         {props.imageNumber > 0 && (
           <Swiper
             autoplay={{
-              delay: 2000,
+              delay: 2500,
               disableOnInteraction: false,
             }}
+            speed={1000}
             modules={[Autoplay]}
             spaceBetween={20}
             loop={true}
@@ -106,8 +107,9 @@ const ArtCenter = props => {
           wrap="wrap"
           color="grey.900"
           bgColor="grey.100"
-          w={{ base: '100%', lg: '90%', xl: '1280px' }}
+          w={{ base: '100%', lg: '90%', xl: '85%', '2xl': '1280px' }}
           px={{ base: '30px', lg: '0' }}
+          align="flex-start"
         >
           <Flex
             w={{ base: '100%', lg: '50%' }}

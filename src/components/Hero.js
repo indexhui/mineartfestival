@@ -41,7 +41,6 @@ const Hero = () => {
 
   return (
     <MotionFlex
-      // mt="60px"
       ref={ref}
       h={window.innerHeight * 2.25}
       position="relative"
@@ -72,8 +71,8 @@ const Hero = () => {
           margin="0 auto"
           left="0"
           right="0"
-          bottom={{ base: 'unset', lg: '450px' }}
-          top={{ base: '10vh', lg: 'unset' }}
+          // bottom={{ base: 'unset', lg: '450px' }}
+          top={{ base: '10vh', lg: '9vh' }}
           color="#3551A2"
           animate={{
             color: isDark ? '#fff' : '#3551A2',
@@ -81,12 +80,12 @@ const Hero = () => {
           transition={{
             duration: 2,
           }}
-          w={{ base: '155px', lg: '300px' }}
-          h={{ base: '155px', lg: '300px' }}
+          w={{ base: '155px', lg: '280px' }}
+          h={{ base: '155px', lg: '280px' }}
         >
           <HeroLogoIcon
-            w={{ base: '155px', lg: '300px' }}
-            h={{ base: '155px', lg: '300px' }}
+            w={{ base: '155px', lg: '280px' }}
+            h={{ base: '155px', lg: '280px' }}
           />
         </MotionFlex>
         <Box position="absolute" w="100%" h="100%" overflowX="hidden">

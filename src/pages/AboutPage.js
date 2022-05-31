@@ -43,7 +43,7 @@ export function AboutPage() {
           direction="column"
         >
           <Text whiteSpace="pre-wrap" fontSize={{ base: '14px', lg: '16px' }}>
-            {'M【Mountain】\n I 【Invites】\n N【Neighborhood】\n E【Enjoy】'}
+            {'M【Mountain】\nI 【Invites】\nN【Neighborhood】\nE【Enjoy】'}
           </Text>
           <Text fontSize={{ base: '14px', lg: '16px' }}>
             the Mountain Invites our Neighborhood to Enjoy the Art Festival
