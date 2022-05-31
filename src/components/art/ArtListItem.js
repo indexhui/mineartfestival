@@ -170,7 +170,7 @@ const ArtListItem = props => {
             href={props.map}
             isExternal
             pl={props.reverse && '60px'}
-            py={{ base: '10px', lg: '0' }}
+            py={{ base: '5px', lg: '0' }}
             w={{
               base: 'auto',
               lg: props.reverse && '480px',
@@ -182,7 +182,7 @@ const ArtListItem = props => {
           </HStack>
           <HStack
             position="absolute"
-            bottom="8px"
+            bottom={{ base: '10px', lg: '8px' }}
             left={{
               base: props.reverse ? '20px' : 'unset',
               lg: props.reverse ? '20px' : 'unset',
@@ -191,7 +191,7 @@ const ArtListItem = props => {
               base: props.reverse ? 'unset' : '20px',
               lg: props.reverse ? 'unset' : '20px',
             }}
-            pl={props.reverse ? '25px' : '0px'}
+            pl={props.reverse ? '5px' : '0px'}
             spacing="10px"
           >
             {Array(...new Array(3)).map((_, i) => (

@@ -22,18 +22,18 @@ const Wrapper = ({ children }) => {
 const Router = () => {
   const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Wrapper>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/jinguashi-mining-bureau" element={<BureauPage />} />
-          <Route path="/partner" element={<PartnerPage />} />
-          <Route path="/traveler" element={<TravelerPage />} />
-          <Route path="/stages" element={<StagesPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/" element={<HomePage />} />
-        </Routes>
-      </Wrapper>
-    </AnimatePresence>
+    // <AnimatePresence exitBeforeEnter>
+    <Wrapper>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/jinguashi-mining-bureau" element={<BureauPage />} />
+        <Route path="/partner" element={<PartnerPage />} />
+        <Route path="/traveler" element={<TravelerPage />} />
+        <Route path="/stages" element={<StagesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Wrapper>
+    // </AnimatePresence>
   );
 };
 

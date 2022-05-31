@@ -7,8 +7,9 @@ import {
   useDisclosure,
   VStack,
   Box,
+  Text,
 } from '@chakra-ui/react';
-import { NavLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import logo from 'assets/images/logo.svg';
@@ -62,16 +63,15 @@ const HeaderLink = props => {
   }
 
   return (
-    <Link
-      color="blue.600"
-      fontSize={{ lg: '14px', xl: '16px' }}
-      as={NavLink}
-      end
-      to={link}
-      _activeLink={{ fontWeight: 'bold' }}
-    >
-      {name}
-    </Link>
+    <RouterLink to={link}>
+      <Text
+        outline="none"
+        color="blue.600"
+        fontSize={{ lg: '14px', xl: '16px' }}
+      >
+        {name}
+      </Text>
+    </RouterLink>
   );
 };
 
@@ -111,7 +111,7 @@ const MobileMenuLink = props => {
       // onClick={() => onClose()}
       color="blue.600"
       fontSize={{ lg: '14px', xl: '16px' }}
-      as={NavLink}
+      as={RouterLink}
       end
       to={link}
       _activeLink={{ fontWeight: 'bold' }}
@@ -181,6 +181,12 @@ const MobileMenu = () => {
 };
 
 const Header = () => {
+  const handleClickHome = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <Flex
       position="sticky"
@@ -194,9 +200,13 @@ const Header = () => {
       shadow="md"
       justifyContent="space-between"
     >
-      <NavLink to="/">
-        <Image src={logo} h={{ base: '32px', lg: '50px' }} />
-      </NavLink>
+      <RouterLink to="/" onClick={() => handleClickHome()}>
+        <Image
+          onClick={handleClickHome}
+          src={logo}
+          h={{ base: '32px', lg: '50px' }}
+        />
+      </RouterLink>
       <HeaderNav />
       <MobileMenu />
     </Flex>
