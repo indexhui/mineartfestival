@@ -109,7 +109,6 @@ const ArtCenter = props => {
           bgColor="grey.100"
           w={{ base: '100%', lg: '90%', xl: '85%', '2xl': '1280px' }}
           px={{ base: '30px', lg: '0' }}
-          // align="flex-start"
         >
           <Flex
             w={{ base: '100%', lg: '50%' }}
@@ -120,7 +119,7 @@ const ArtCenter = props => {
             <Text fontSize="16px" fontWeight="700" w="100%" textAlign="left">
               {props.artist}
             </Text>
-            <Link href={props.map} isExternal>
+            <Link href={props.map} isExternal w="100%">
               <HStack py={{ base: '10px', lg: '0' }}>
                 <Icon as={FaMapMarker} size="24px" color="yellow.700" />
                 <Text color="grey.900">{props.location}</Text>

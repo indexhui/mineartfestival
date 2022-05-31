@@ -128,7 +128,7 @@ const ArtListItem = props => {
         mt={{ base: '15px', lg: '0px' }}
         w={{ base: '100%', lg: '50%' }}
         spacing={{ base: '8px', lg: '15px' }}
-        textAlign={{ base: props.reverse && 'left', lg: 'left' }}
+        textAlign={{ base: props.reverse ? 'left' : 'right', lg: 'left' }}
         align={props.reverse ? 'flex-end' : 'flex-start'}
       >
         <Text
