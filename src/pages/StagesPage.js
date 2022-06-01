@@ -78,26 +78,9 @@ export function StagesPage() {
       />
 
       <StagesGrid />
-      <RevealFlex
-        w="100%"
-        justify="center"
-        mb={{ base: '-80px', lg: '-200px' }}
-      >
-        <AspectRatio
-          w={{ base: '90%', lg: '50%' }}
-          maxW="800px"
-          ratio={850 / 480}
-        >
-          <iframe
-            title="mineartfestival"
-            src="https://www.youtube.com/embed/7GybxtIbGzA"
-            allowFullScreen
-          />
-        </AspectRatio>
-      </RevealFlex>
       <Flex
         bgSize="cover"
-        borderTop={{ base: '10px solid #2D458A', lg: '150px solid #2D458A' }}
+        borderTop={{ base: '10px solid #2D458A', lg: '10px solid #2D458A' }}
         bgImage={`url(${closingBg})`}
         direction="column"
         align="center"
@@ -110,14 +93,14 @@ export function StagesPage() {
           pb={{ base: '72px', lg: '120px' }}
           direction={{ base: 'column', lg: 'row' }}
         >
-          <RevealFlex order="1" once={false}>
+          <RevealFlex order="1">
             <Image
               h={{ base: '138px', lg: '183px' }}
               mb="20px"
               src={ClosingTitle}
             />
           </RevealFlex>
-          <RevealFlex order="2" once={false}>
+          <RevealFlex order="2">
             <Text
               color="white"
               px="30px"
@@ -137,6 +120,24 @@ export function StagesPage() {
           ))}
         </Flex>
       </Flex>
+      <RevealFlex
+        w="100%"
+        justify="center"
+        bg="blue.700"
+        py={{ base: '30px', lg: '80px' }}
+      >
+        <AspectRatio
+          w={{ base: '90%', lg: '70%' }}
+          maxW="800px"
+          ratio={850 / 480}
+        >
+          <iframe
+            title="mineartfestival"
+            src="https://www.youtube.com/embed/7GybxtIbGzA"
+            allowFullScreen
+          />
+        </AspectRatio>
+      </RevealFlex>
     </MotionFlex>
   );
 }
