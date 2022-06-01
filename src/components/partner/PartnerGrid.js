@@ -5,7 +5,6 @@ import {
   Text,
   Image,
   Link,
-  Box,
   AspectRatio,
 } from '@chakra-ui/react';
 

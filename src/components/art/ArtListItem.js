@@ -9,6 +9,7 @@ import {
   Box,
   Icon,
   Link,
+  Skeleton,
 } from '@chakra-ui/react';
 import { FaMapMarker } from 'react-icons/fa';
 import { MdArrowRight, MdArrowLeft } from 'react-icons/md';
@@ -21,6 +22,7 @@ import 'simplebar-react/dist/simplebar.min.css';
 import RevealFlex from 'components/RevealFlex';
 import fireworkLgBlue from 'assets/images/homePage/fireworkLgBlue.svg';
 import fireworkSmIcon from 'assets/images/homePage/fireworkSmIcon.svg';
+import stageLoading from 'assets/images/stageLoading.svg';
 
 const ArtListItem = props => {
   const swiperRef = useRef();
@@ -117,6 +119,9 @@ const ArtListItem = props => {
                     h={{ base: '210px', lg: '300px' }}
                     objectFit="cover"
                     src={`/images/art/${props.id}/${props.id}-0${i + 1}.jpeg`}
+                    fallback={
+                      <Skeleton w="100%" h={{ base: '210px', lg: '300px' }} />
+                    }
                   />
                 </SwiperSlide>
               ))}
