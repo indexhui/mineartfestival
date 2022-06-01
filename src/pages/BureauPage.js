@@ -96,8 +96,18 @@ export function BureauPage() {
       >
         <AspectRatio w="100%" ratio={1060 / 680}>
           <Flex bgImage={`url('${map}')`} bgSize="cover">
-            <ArtMarker number={1} artId="art01" left="6%" top="36%" />
-            <ArtMarker number={2} artId="art02" right="36%" bottom="17%" />
+            <ArtMarker
+              number={1}
+              artId="art01"
+              left={{ base: '5%', lg: '6%' }}
+              top="36%"
+            />
+            <ArtMarker
+              number={2}
+              artId="art02"
+              right={{ base: '37%', lg: '36%' }}
+              bottom="17%"
+            />
             <ArtMarker number={3} artId="art03" right="10%" top="28%" />
             <ArtMarker number={4} artId="art04" right="34%" top="34%" />
             <ArtMarker number={5} artId="art05" right="37%" top="45%" />

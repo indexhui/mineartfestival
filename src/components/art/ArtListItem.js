@@ -22,7 +22,6 @@ import 'simplebar-react/dist/simplebar.min.css';
 import RevealFlex from 'components/RevealFlex';
 import fireworkLgBlue from 'assets/images/homePage/fireworkLgBlue.svg';
 import fireworkSmIcon from 'assets/images/homePage/fireworkSmIcon.svg';
-import stageLoading from 'assets/images/stageLoading.svg';
 
 const ArtListItem = props => {
   const swiperRef = useRef();

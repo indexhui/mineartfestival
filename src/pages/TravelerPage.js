@@ -15,6 +15,7 @@ import {
   ModalBody,
   useDisclosure,
   useOutsideClick,
+  Skeleton,
 } from '@chakra-ui/react';
 import { CloseIcon } from '@chakra-ui/icons';
 
@@ -318,6 +319,7 @@ const Traveler01 = () => {
           ></Flex>
         )}
         <Image
+          fallback={<Skeleton w="100%" h={{ base: '250px', lg: '350px' }} />}
           shadow="md"
           src={travelerData[order]?.image}
           w="100%"
@@ -563,6 +565,7 @@ const Traveler02 = () => {
         )}
         <Image
           shadow="md"
+          fallback={<Skeleton w="100%" h={{ base: '250px', lg: '350px' }} />}
           src={travelerData[order]?.image}
           w="100%"
           h={{ base: '250px', lg: '350px' }}
@@ -810,6 +813,7 @@ const Traveler03 = () => {
           ></Flex>
         )}
         <Image
+          fallback={<Skeleton w="100%" h={{ base: '250px', lg: '350px' }} />}
           shadow="md"
           src={travelerData[order]?.image}
           w="100%"

@@ -1,4 +1,4 @@
-import { Flex, Image, Text, Box, VStack } from '@chakra-ui/react';
+import { Flex, Image, Text, Box, VStack, Skeleton } from '@chakra-ui/react';
 import PageMotion from 'components/PageMotion';
 import Badge from 'components/Badge';
 import RevealFlex from 'components/RevealFlex';
@@ -14,6 +14,7 @@ export function AboutPage() {
       <Flex
         w="100%"
         h={{ base: '340px', lg: '520px' }}
+        bgColor="gray.400"
         bgImage={`url('${aboutBg}')`}
         bgPosition="top center"
         bgSize="cover"
@@ -21,6 +22,7 @@ export function AboutPage() {
         borderBottom={{ base: '5px solid #FFDC60', lg: '10px solid #FFDC60' }}
       >
         <Flex
+          zIndex="2"
           color="white"
           direction="column"
           justify="center"
@@ -34,6 +36,7 @@ export function AboutPage() {
           />
         </Flex>
       </Flex>
+
       <RevealFlex mt="-10vh" w="100%" px={{ base: '30px', lg: '80px' }}>
         <Flex
           bg="#3551A2DD"
@@ -50,6 +53,7 @@ export function AboutPage() {
           </Text>
         </Flex>
       </RevealFlex>
+
       <RevealFlex w="100%" my="30px" direction={{ base: 'column', lg: 'row' }}>
         <Flex
           flex="1"

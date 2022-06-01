@@ -8,6 +8,7 @@ import {
   useElementScroll,
 } from 'framer-motion';
 
+import mt from 'assets/images/homePage/mt.svg';
 import mt1 from 'assets/images/homePage/mt1.png';
 import mt2 from 'assets/images/homePage/mt2.png';
 import HeroLogoIcon from 'components/icons/HeroLogoIcon';
@@ -186,6 +187,16 @@ const Hero = () => {
             />
           </Flex>
         </Box>
+        <Flex
+          bottom={{ base: '-20px', lg: '-100px' }}
+          position="absolute"
+          bgImage={`url(${mt})`}
+          bgSize="cover"
+          bgRepeat="no-repeat"
+          bgPosition="top center"
+          w="100%"
+          h={{ base: '400px', lg: '450px' }}
+        />
         <MotionFlex
           initial={{ opacity: 1 }}
           animate={{ opacity: isDark ? 1 : 0 }}
@@ -214,6 +225,7 @@ const Hero = () => {
           w="100%"
           h={{ base: '400px', lg: '450px' }}
         />
+
         <Box
           position="absolute"
           bottom={{ base: '-20px', lg: '-100px' }}

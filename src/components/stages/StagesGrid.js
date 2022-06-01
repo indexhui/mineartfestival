@@ -20,6 +20,7 @@ import { FaMapMarker } from 'react-icons/fa';
 import { CloseIcon } from '@chakra-ui/icons';
 import RevealFlex from 'components/RevealFlex';
 import intro from 'assets/images/stagesPage/intro.svg';
+import stageLoading from 'assets/images/stageLoading.svg';
 
 const StageModal = props => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -45,7 +46,7 @@ const StageModal = props => {
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xs" isCentered>
         <ModalOverlay />
-        <ModalContent bg="yellow.700">
+        <ModalContent bg="yellow.500">
           <ModalBody p="30px">
             <Flex align="flex-start" justify="space-between">
               {props.name} <CloseIcon cursor="pointer" onClick={onClose} />
@@ -91,7 +92,12 @@ const StagesGrid = () => {
               >
                 {stage.name}
               </Text>
-              <Image my="24px" w="100%" src={stage.image} />
+              <Image
+                my="24px"
+                w="100%"
+                fallbackSrc={stageLoading}
+                src={stage.image}
+              />
               <Text color="blue.600" fontSize="16px" fontWeight="700">
                 {stage.time}
               </Text>

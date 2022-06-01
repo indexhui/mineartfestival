@@ -122,7 +122,6 @@ const MobileMenuLink = props => {
       color="blue.600"
       fontSize={{ lg: '14px', xl: '16px' }}
       as={RouterLink}
-      end
       to={link}
       _activeLink={{ fontWeight: 'bold' }}
     >
