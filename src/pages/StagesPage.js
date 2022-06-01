@@ -88,7 +88,7 @@ export function StagesPage() {
         pb="72px"
       >
         <Flex
-          w={{ sm: '100%', md: '75%', lg: '80%', xl: '1280px' }}
+          w={{ sm: '100%', md: '75%', lg: '80%', '2xl': '1280' }}
           align="center"
           pb={{ base: '72px', lg: '120px' }}
           direction={{ base: 'column', lg: 'row' }}
@@ -111,7 +111,7 @@ export function StagesPage() {
           </RevealFlex>
         </Flex>
         <Flex
-          w={{ sm: '100%', md: '75%', lg: '80%', xl: '1280px' }}
+          w={{ sm: '100%', md: '75%', lg: '80%', '2xl': '1280' }}
           justify="space-between"
           direction={{ base: 'column', lg: 'row' }}
         >

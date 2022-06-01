@@ -74,8 +74,7 @@ const StagesGrid = () => {
       <Grid
         py="45px"
         px="30px"
-        // w="1280px"
-        w={{ sm: '100%', md: '75%', lg: '80%', xl: '1280px' }}
+        w={{ sm: '100%', md: '75%', lg: '80%', '2xl': '1280' }}
         templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
         gap="80px"
       >
