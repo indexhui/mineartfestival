@@ -151,6 +151,40 @@ const Hero = () => {
               src={fireworkLgWhite}
             />
           </Flex>
+          {/* firework bottom */}
+          <Flex
+            position="absolute"
+            display={{ base: 'flex', lg: 'none' }}
+            margin="0 auto"
+            right="0"
+            left="0"
+            bottom="250px"
+            w="165px"
+            h="165px"
+          >
+            <MotionImage
+              animate={{ opacity: isDark ? 0 : 1 }}
+              transition={{
+                duration: 0.6,
+              }}
+              w="165px"
+              h="165px"
+              position="absolute"
+              top="0"
+              src={fireworkLgBlue}
+            />
+            <MotionImage
+              animate={{ opacity: isDark ? 1 : 0 }}
+              transition={{
+                duration: 0.6,
+              }}
+              w="165px"
+              h="165px"
+              position="absolute"
+              top="0"
+              src={fireworkLgWhite}
+            />
+          </Flex>
         </Box>
         <MotionFlex
           initial={{ opacity: 1 }}
