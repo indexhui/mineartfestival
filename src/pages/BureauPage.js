@@ -101,7 +101,7 @@ export function BureauPage() {
             <ArtMarker number={3} artId="art03" right="10%" top="28%" />
             <ArtMarker number={4} artId="art04" right="34%" top="34%" />
             <ArtMarker number={5} artId="art05" right="37%" top="45%" />
-            <ArtMarker number={6} artId="art06" left="34%" top="51%" />
+            <ArtMarker number={6} artId="art06" left="33%" top="51%" />
           </Flex>
         </AspectRatio>
       </Flex>

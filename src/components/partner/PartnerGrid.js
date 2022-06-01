@@ -12,13 +12,14 @@ import {
 import RevealFlex from 'components/RevealFlex';
 
 import { motion } from 'framer-motion';
+import loadingBg from 'assets/images/loadingBg.svg';
 
 const MotionImage = motion(Image);
 
 const PartnerGrid = ({ partnerData }) => {
-  if (partnerData.length === 0) return null;
+  if (partnerData.length === 0) return <Flex w="100%" minH="800px"></Flex>;
   return (
-    <Flex w="100%" justify="center">
+    <Flex w="100%" minH="800px" justify="center">
       <Grid
         py="45px"
         px="30px"
@@ -38,7 +39,9 @@ const PartnerGrid = ({ partnerData }) => {
             >
               <AspectRatio w={{ base: '100%', lg: '92%' }} ratio={1}>
                 <MotionImage
+                  fallbackSrc={loadingBg}
                   w="100%"
+                  bg="gray.300"
                   src={partner.image}
                   whileHover={{ rotate: -4, transition: { duration: 0.6 } }}
                   shadow="lg"
