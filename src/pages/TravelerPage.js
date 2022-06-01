@@ -190,76 +190,83 @@ const Traveler01 = () => {
               transformOrigin="(0,0)"
             ></Box>
           </Flex>
-          <Flex
+          <Box
             w="310px"
             direction="column"
             align={{ base: 'center', lg: 'flex-start' }}
             pt={{ base: '20px', lg: '75px' }}
           >
-            <Flex
-              bgImage={`url('${titleImage}')`}
-              bgSize="cover"
-              bgRepeat="no-repeat"
-              h={{ base: '40px', lg: '80px' }}
-              w={{ base: '130px', lg: '262px' }}
-            >
-              <Text
-                pt={{ base: '10px', lg: '22px' }}
-                pl={{ base: '10px', lg: '20px' }}
-                color="white"
-                lineHeight="1"
-                fontSize={{ base: '16px', lg: '32px' }}
-                fontWeight="700"
-                letterSpacing="0.05em"
+            <Flex w="100%" justify={{ base: 'center', lg: 'flex-start' }}>
+              <Flex
+                bgImage={`url('${titleImage}')`}
+                bgSize="cover"
+                bgRepeat="no-repeat"
+                h={{ base: '40px', lg: '80px' }}
+                w={{ base: '130px', lg: '262px' }}
               >
-                {travelerData[order]?.title}
-              </Text>
+                <Text
+                  textAlign={{ base: 'center', lg: 'left' }}
+                  pt={{ base: '10px', lg: '22px' }}
+                  pl={{ base: '10px', lg: '20px' }}
+                  color="white"
+                  fontSize={{ base: '16px', lg: '32px' }}
+                  fontWeight="700"
+                  letterSpacing="0.05em"
+                  lineHeight="1"
+                >
+                  {travelerData[order]?.title}
+                </Text>
+              </Flex>
             </Flex>
             <Text
+              w="100%"
+              textAlign={{ base: 'center', lg: 'left' }}
               whiteSpace="pre-wrap"
               pt={{ base: '5px', lg: '15px' }}
               fontSize={{ base: '14px', lg: '16px' }}
             >
               {travelerData[order]?.time}
             </Text>
-            <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
-              <Button
-                display={{ base: 'none', lg: 'flex' }}
-                fontWeight="500"
-                fontSize={{ base: '12px', lg: '14px' }}
-                rounded="full"
-                lineHeight="auto"
-                py={{ base: '4px', lg: '8px' }}
-                px={{ base: '10px', lg: '16px' }}
-                h="auto"
-                onClick={handleSlideToggle}
-                _hover={{ bg: isVisible ? '#7C8DC6' : '#7C8DC6' }}
-                color={isVisible ? 'white' : 'black'}
-                bg={
-                  isVisible
-                    ? 'linear-gradient(90deg, #7C8DC6 0%, #7487C3 28%, #5D78BA 72.01%, #4B6CB3 100.01%)'
-                    : 'yellow.500'
-                }
-              >
-                簡介
-              </Button>
-              <TravelModal content={travelerData[order]?.content} />
-              <Link
-                h="auto"
-                fontSize={{ base: '12px', lg: '14px' }}
-                fontWeight="500"
-                py={{ base: '4px', lg: '8px' }}
-                px={{ base: '10px', lg: '16px' }}
-                _hover={{ bg: '#7C8DC6' }}
-                href={travelerData[order]?.link}
-                isExternal
-                bg="yellow.500"
-                rounded="full"
-              >
-                報名連結
-              </Link>
-            </HStack>
-          </Flex>
+            <Flex justify={{ base: 'center', lg: 'flex-start' }}>
+              <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
+                <Button
+                  display={{ base: 'none', lg: 'flex' }}
+                  fontWeight="500"
+                  fontSize={{ base: '12px', lg: '14px' }}
+                  rounded="full"
+                  lineHeight="auto"
+                  py={{ base: '4px', lg: '8px' }}
+                  px={{ base: '10px', lg: '16px' }}
+                  h="auto"
+                  onClick={handleSlideToggle}
+                  _hover={{ bg: isVisible ? '#7C8DC6' : '#7C8DC6' }}
+                  color={isVisible ? 'white' : 'black'}
+                  bg={
+                    isVisible
+                      ? 'linear-gradient(90deg, #7C8DC6 0%, #7487C3 28%, #5D78BA 72.01%, #4B6CB3 100.01%)'
+                      : 'yellow.500'
+                  }
+                >
+                  簡介
+                </Button>
+                <TravelModal content={travelerData[order]?.content} />
+                <Link
+                  h="auto"
+                  fontSize={{ base: '12px', lg: '14px' }}
+                  fontWeight="500"
+                  py={{ base: '4px', lg: '8px' }}
+                  px={{ base: '10px', lg: '16px' }}
+                  _hover={{ bg: '#7C8DC6' }}
+                  href={travelerData[order]?.link}
+                  isExternal
+                  bg="yellow.500"
+                  rounded="full"
+                >
+                  報名連結
+                </Link>
+              </HStack>
+            </Flex>
+          </Box>
         </Flex>
       </Flex>
       <Flex
@@ -433,76 +440,77 @@ const Traveler02 = () => {
               transformOrigin="(0,0)"
             ></Box>
           </Flex>
-          <Flex
-            w="310px"
-            direction="column"
-            align={{ base: 'center', lg: 'flex-start' }}
-            pt={{ base: '20px', lg: '75px' }}
-          >
-            <Flex
-              bgImage={`url('${titleImage}')`}
-              bgSize="cover"
-              bgRepeat="no-repeat"
-              h={{ base: '40px', lg: '80px' }}
-              w={{ base: '130px', lg: '262px' }}
-            >
-              <Text
-                pt={{ base: '10px', lg: '22px' }}
-                pl={{ base: '10px', lg: '15px' }}
-                color="white"
-                fontSize={{ base: '16px', lg: '32px' }}
-                fontWeight="700"
-                letterSpacing="0.05em"
-                lineHeight="1"
+          <Box w="310px" pt={{ base: '20px', lg: '75px' }}>
+            <Flex w="100%" justify={{ base: 'center', lg: 'flex-start' }}>
+              <Flex
+                bgImage={`url('${titleImage}')`}
+                bgSize="cover"
+                bgRepeat="no-repeat"
+                h={{ base: '40px', lg: '80px' }}
+                w={{ base: '130px', lg: '262px' }}
               >
-                {travelerData[order]?.title}
-              </Text>
+                <Text
+                  pt={{ base: '10px', lg: '22px' }}
+                  pl={{ base: '10px', lg: '15px' }}
+                  color="white"
+                  fontSize={{ base: '16px', lg: '32px' }}
+                  fontWeight="700"
+                  letterSpacing="0.05em"
+                  lineHeight="1"
+                >
+                  {travelerData[order]?.title}
+                </Text>
+              </Flex>
             </Flex>
             <Text
+              w="100%"
+              textAlign={{ base: 'center', lg: 'left' }}
               whiteSpace="pre-wrap"
               pt={{ base: '5px', lg: '15px' }}
               fontSize={{ base: '14px', lg: '16px' }}
             >
               {travelerData[order]?.time}
             </Text>
-            <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
-              <Button
-                display={{ base: 'none', lg: 'flex' }}
-                fontWeight="500"
-                fontSize={{ base: '12px', lg: '14px' }}
-                rounded="full"
-                lineHeight="auto"
-                py={{ base: '4px', lg: '8px' }}
-                px={{ base: '10px', lg: '16px' }}
-                h="auto"
-                onClick={handleSlideToggle}
-                _hover={{ bg: isVisible ? '#7C8DC6' : '#7C8DC6' }}
-                color={isVisible ? 'white' : 'black'}
-                bg={
-                  isVisible
-                    ? 'linear-gradient(90deg, #7C8DC6 0%, #7487C3 28%, #5D78BA 72.01%, #4B6CB3 100.01%)'
-                    : 'yellow.500'
-                }
-              >
-                簡介
-              </Button>
-              <TravelModal content={travelerData[order]?.content} />
-              <Link
-                h="auto"
-                fontSize={{ base: '12px', lg: '14px' }}
-                fontWeight="500"
-                py={{ base: '4px', lg: '8px' }}
-                px={{ base: '10px', lg: '16px' }}
-                _hover={{ bg: '#7C8DC6' }}
-                href={travelerData[order]?.link}
-                isExternal
-                bg="yellow.500"
-                rounded="full"
-              >
-                報名連結
-              </Link>
-            </HStack>
-          </Flex>
+            <Flex justify={{ base: 'center', lg: 'flex-start' }}>
+              <HStack spacing="25px" pt={{ base: '10px', lg: '75px' }}>
+                <Button
+                  display={{ base: 'none', lg: 'flex' }}
+                  fontWeight="500"
+                  fontSize={{ base: '12px', lg: '14px' }}
+                  rounded="full"
+                  lineHeight="auto"
+                  py={{ base: '4px', lg: '8px' }}
+                  px={{ base: '10px', lg: '16px' }}
+                  h="auto"
+                  onClick={handleSlideToggle}
+                  _hover={{ bg: isVisible ? '#7C8DC6' : '#7C8DC6' }}
+                  color={isVisible ? 'white' : 'black'}
+                  bg={
+                    isVisible
+                      ? 'linear-gradient(90deg, #7C8DC6 0%, #7487C3 28%, #5D78BA 72.01%, #4B6CB3 100.01%)'
+                      : 'yellow.500'
+                  }
+                >
+                  簡介
+                </Button>
+                <TravelModal content={travelerData[order]?.content} />
+                <Link
+                  h="auto"
+                  fontSize={{ base: '12px', lg: '14px' }}
+                  fontWeight="500"
+                  py={{ base: '4px', lg: '8px' }}
+                  px={{ base: '10px', lg: '16px' }}
+                  _hover={{ bg: '#7C8DC6' }}
+                  href={travelerData[order]?.link}
+                  isExternal
+                  bg="yellow.500"
+                  rounded="full"
+                >
+                  報名連結
+                </Link>
+              </HStack>
+            </Flex>
+          </Box>
         </Flex>
       </Flex>
       <Flex
@@ -679,11 +687,7 @@ const Traveler03 = () => {
               transformOrigin="(0,0)"
             ></Box>
           </Flex>
-          <Box
-            w="310px"
-            border="1px solid red"
-            pt={{ base: '20px', lg: '75px' }}
-          >
+          <Box w="310px" pt={{ base: '20px', lg: '75px' }}>
             <Flex w="100%" justify={{ base: 'center', lg: 'flex-start' }}>
               <Flex
                 bgImage={`url('${titleImage}')`}
