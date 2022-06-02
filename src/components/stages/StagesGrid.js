@@ -70,7 +70,7 @@ const StagesGrid = () => {
   const { data: stageData } = useCsv(stageCsv);
 
   return (
-    <Flex w="100%" justify="center">
+    <Flex w="100%" justify="center" minH="500px">
       <Grid
         py="45px"
         px="30px"
