@@ -117,7 +117,7 @@ const ArtListItem = props => {
                     w="100%"
                     h={{ base: '210px', lg: '300px' }}
                     objectFit="cover"
-                    src={`/images/art/${props.id}/${props.id}-0${i + 1}.jpeg`}
+                    src={`/images/art/${props.id}/${props.id}-${i + 1}.jpg`}
                     fallback={
                       <Skeleton w="100%" h={{ base: '210px', lg: '300px' }} />
                     }

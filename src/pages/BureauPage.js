@@ -120,12 +120,17 @@ export function BureauPage() {
         px={{ base: '30px', lg: '0' }}
         w={{ base: '100%', lg: '90%', xl: '1060px' }}
       >
-        <HStack pt="12px" color="grey.900">
-          <ExternalLinkIcon />
-          <Text fontSize={{ base: '14px', lg: '16px' }}>
-            點選這裡，進入礦山藝術季Google地圖
-          </Text>
-        </HStack>
+        <Link
+          isExternal
+          href="https://www.google.com/maps/d/u/4/edit?mid=1xU3BaZy6sKOfZJPd04FAWgzUXXlifaY&usp=sharing"
+        >
+          <HStack pt="12px" color="grey.900">
+            <ExternalLinkIcon />
+            <Text fontSize={{ base: '14px', lg: '16px' }}>
+              點選這裡，進入礦山藝術季Google地圖
+            </Text>
+          </HStack>
+        </Link>
       </Flex>
       <Flex
         mt="20px"
