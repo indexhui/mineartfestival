@@ -6,6 +6,9 @@ import StagesGrid from 'components/stages/StagesGrid';
 import RevealFlex from 'components/RevealFlex';
 import closingBg from 'assets/images/closingBg.jpg';
 import ClosingTitle from 'assets/images/closingTitle.svg';
+import stageClosing01 from 'assets/images/stagesPage/stage-closing01.jpg';
+import stageClosing02 from 'assets/images/stagesPage/stage-closing02.jpg';
+import stageClosing03 from 'assets/images/stagesPage/stage-closing03.jpg';
 
 const MotionFlex = motion(Flex);
 
@@ -13,17 +16,17 @@ const ClosingList = [
   {
     title: '浩瀚',
     content: '絕美的文化資產',
-    image: '',
+    image: stageClosing01,
   },
   {
     title: '創新',
     content: '時尚藝術帶動礦山想像',
-    image: '',
+    image: stageClosing02,
   },
   {
-    title: '美好',
+    title: '共好',
     content: '表演藝術共鳴山城',
-    image: '',
+    image: stageClosing03,
   },
 ];
 
@@ -40,14 +43,14 @@ const ClosingCard = props => {
       <Text color="white" fontSize="24px">
         {title}
       </Text>
-      <Flex
+      <Image
         w="300px"
         h="200px"
-        bgColor="grey.400"
         mt="10px"
         mb="15px"
+        src={image}
         rounded="45px"
-      ></Flex>
+      />
       <Text color="white" fontSize="16px">
         {content}
       </Text>
@@ -120,7 +123,7 @@ export function StagesPage() {
           ))}
         </Flex>
       </Flex>
-      <RevealFlex
+      <Flex
         w="100%"
         justify="center"
         bg="blue.700"
@@ -137,7 +140,7 @@ export function StagesPage() {
             allowFullScreen
           />
         </AspectRatio>
-      </RevealFlex>
+      </Flex>
     </MotionFlex>
   );
 }

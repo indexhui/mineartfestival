@@ -21,6 +21,7 @@ import { CloseIcon } from '@chakra-ui/icons';
 import RevealFlex from 'components/RevealFlex';
 import intro from 'assets/images/stagesPage/intro.svg';
 import stageLoading from 'assets/images/stageLoading.svg';
+import { HiOutlineTicket } from 'react-icons/hi';
 
 const StageModal = props => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -54,6 +55,19 @@ const StageModal = props => {
             <Flex borderBottom="1px solid black" py="12px" mb="24px">
               <Image src={intro} />
             </Flex>
+            {props.linkCopy && (
+              <Flex fontSize="16px">
+                <Link src={props.link}>
+                  <HStack color="grey.900">
+                    <Icon as={HiOutlineTicket} fontSize="20px" />
+                    <Text fontSize="16px" color="grey.900">
+                      {props.linkCopy}
+                    </Text>
+                  </HStack>
+                </Link>
+              </Flex>
+            )}
+
             <Flex>
               <Text fontSize="16px" fontWeight="500" lineHeight="30px">
                 {props.content}
