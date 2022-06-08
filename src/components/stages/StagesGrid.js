@@ -57,10 +57,15 @@ const StageModal = props => {
             </Flex>
             {props.linkCopy && (
               <Flex fontSize="16px">
-                <Link src={props.link}>
-                  <HStack color="grey.900">
+                <Link href={props.link} isExternal>
+                  <HStack color="grey.700" align="center">
                     <Icon as={HiOutlineTicket} fontSize="20px" />
-                    <Text fontSize="16px" color="grey.900">
+                    <Text
+                      fontSize="16px"
+                      color="grey.700"
+                      fontWeight="700"
+                      letterSpacing="0.1em"
+                    >
                       {props.linkCopy}
                     </Text>
                   </HStack>
