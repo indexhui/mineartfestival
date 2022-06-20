@@ -41,7 +41,7 @@ export function HomePage() {
         >
           <iframe
             title="mineartfestival"
-            src="https://www.youtube.com/embed/7GybxtIbGzA"
+            src="https://www.youtube.com/embed/8AM0ds5_h1c"
             allowFullScreen
           />
         </AspectRatio>
