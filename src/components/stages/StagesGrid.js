@@ -75,10 +75,10 @@ const StageModal = props => {
 
             <Flex>
               <Text
+                textAlign="left"
                 fontSize="16px"
                 fontWeight="500"
                 lineHeight="30px"
-                worldBreak="break-all"
                 whiteSpace="pre-wrap"
               >
                 {props.content}
