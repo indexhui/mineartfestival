@@ -6,6 +6,10 @@ import Hero from 'components/Hero';
 import Intro from 'components/home/Intro';
 import NavigateCards from 'components/home/NavigateCards';
 import RevealFlex from 'components/RevealFlex';
+import Slogan from 'components/home/Slogan';
+import VideoSwipe from 'components/home/VideoSwipe';
+import Show from 'components/Show';
+import TheAtre from 'components/TheAtre';
 
 const MotionFlex = motion(Flex);
 
@@ -28,8 +32,15 @@ export function HomePage() {
       // align="center"
     >
       <Hero />
+      <Slogan />
+      <VideoSwipe />
+      <Show />
+      <TheAtre isHome={true} />
+
+      <NavigateCards />
       <Intro />
-      <RevealFlex
+
+      {/* <RevealFlex
         w="100%"
         justify="center"
         mt={{ base: '-100px', lg: '-200px' }}
@@ -45,9 +56,7 @@ export function HomePage() {
             allowFullScreen
           />
         </AspectRatio>
-      </RevealFlex>
-      <NavigateCards />
-
+      </RevealFlex> */}
       {/* <Flex>
         <ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />
       </Flex> */}

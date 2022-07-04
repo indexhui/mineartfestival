@@ -141,7 +141,7 @@ const NavigateCards = () => {
   return (
     <Grid
       templateColumns={{ sm: 'repeat(1, 1fr)', lg: 'repeat(4, 1fr)' }}
-      mt="100px"
+      mt={{ base: '20px', lg: '0' }}
     >
       {navigateList.map(navigate => (
         <GridItem

@@ -226,13 +226,13 @@ const Hero = () => {
           h={{ base: '400px', lg: '450px' }}
         />
 
-        <Box
+        {/* <Box
           position="absolute"
           bottom={{ base: '-20px', lg: '-100px' }}
           w="100%"
           h="240px"
           bg="linear-gradient(180deg, rgba(196, 196, 196, 0) 0%, rgba(226, 226, 226, 0.5) 32.97%,#FFFFFF 90%, #FFFFFF 100%)"
-        ></Box>
+        ></Box> */}
       </Box>
     </MotionFlex>
   );
