@@ -1,14 +1,20 @@
 import { motion } from 'framer-motion';
 import { Flex, Text, AspectRatio, Image } from '@chakra-ui/react';
+
 import Banner from 'components/Banner';
+import Show from 'components/Show';
+import ShowDetail from 'components/stages/ShowDetail';
+
 import stageBanner from 'assets/images/stagesPage/stageBanner.jpg';
 import StagesGrid from 'components/stages/StagesGrid';
 import RevealFlex from 'components/RevealFlex';
+import Slogan from 'components/home/Slogan';
 import closingBg from 'assets/images/closingBg.jpg';
 import ClosingTitle from 'assets/images/closingTitle.svg';
 import stageClosing01 from 'assets/images/stagesPage/stage-closing01.jpg';
 import stageClosing02 from 'assets/images/stagesPage/stage-closing02.jpg';
 import stageClosing03 from 'assets/images/stagesPage/stage-closing03.jpg';
+import Chromatic from 'components/stages/Chromatic';
 
 const MotionFlex = motion(Flex);
 
@@ -74,13 +80,20 @@ export function StagesPage() {
       w="100%"
       direction="column"
     >
-      <Banner
-        backgroundImage={stageBanner}
-        title="小山舞台"
-        subtitle="表演藝術"
-      />
+      <Flex direction="column" bg="#0E2B45">
+        <Banner
+          backgroundImage={stageBanner}
+          title="小山舞台"
+          subtitle="表演藝術"
+          mb="-40px"
+        />
 
-      <StagesGrid />
+        <Slogan />
+      </Flex>
+      <Chromatic />
+      <Show />
+      <ShowDetail />
+      {/* <StagesGrid /> */}
       <Flex
         bgSize="cover"
         borderTop={{ base: '10px solid #2D458A', lg: '10px solid #2D458A' }}

@@ -1,6 +1,6 @@
 import { Flex, Heading, Text, VStack, Skeleton } from '@chakra-ui/react';
 const Banner = props => {
-  const { backgroundImage, title, subtitle, titleColor } = props;
+  const { backgroundImage, title, subtitle, titleColor, mb } = props;
   return (
     <Flex
       w="100%"
@@ -8,6 +8,7 @@ const Banner = props => {
       zIndex="2"
       position="relative"
       h={{ base: '260px', lg: '480px' }}
+      mb={mb}
     >
       <Skeleton
         position="absolute"

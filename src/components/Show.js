@@ -27,7 +27,7 @@ const Show = () => {
         direction="column"
         align="center"
         pt="45px"
-        pb={{ base: '0', lg: '9 5px' }}
+        pb={{ base: '0', lg: '95px' }}
       >
         <Image src={showSlogan} w="170px" alt="show" mb="45px" />
         <Image w="100%" maxW="1060px" src={show} />

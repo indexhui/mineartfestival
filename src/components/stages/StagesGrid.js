@@ -13,6 +13,7 @@ import {
   ModalContent,
   ModalBody,
   Link,
+  Box,
 } from '@chakra-ui/react';
 import useCsv from 'hooks/useCsv';
 import stageCsv from 'assets/csv/stage.csv';
@@ -95,48 +96,80 @@ const StagesGrid = () => {
   const { data: stageData } = useCsv(stageCsv);
 
   return (
-    <Flex w="100%" justify="center" minH="500px">
-      <Grid
-        py="45px"
-        px="30px"
-        w={{ sm: '100%', md: '75%', lg: '80%', '2xl': '1280' }}
-        templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
-        gap="80px"
-      >
-        {stageData.map(stage => (
-          <GridItem key={stage.id}>
-            <RevealFlex direction="column">
-              <Text
-                color="blue.600"
-                textAlign="center"
-                h="58px"
-                fontSize="18px"
-                fontWeight="700"
-                borderBottom="2px solid #3551A2"
-              >
-                {stage.name}
-              </Text>
-              <Image
-                my="24px"
-                w="100%"
-                fallbackSrc={stageLoading}
-                src={stage.image}
-              />
-              <Text color="blue.600" fontSize="16px" fontWeight="700">
-                {stage.time}
-              </Text>
-              <Flex justify="space-between">
-                <HStack as={Link} isExternal href={stage.map}>
-                  <Icon as={FaMapMarker} size="24px" color="yellow.700" />
-                  <Text color="grey.900">{stage.location}</Text>
-                </HStack>
-                <StageModal {...stage} />
-              </Flex>
-            </RevealFlex>
-          </GridItem>
-        ))}
-      </Grid>
-    </Flex>
+    <>
+      <Flex w="100%" justify="center" pb="20px">
+        <Flex
+          w={{ base: '204px', lg: '358px' }}
+          h={{ base: '107px', lg: '169px' }}
+          justify="center"
+          position="relative"
+          overflow="hidden"
+        >
+          <Box
+            w={{ base: '204px', lg: '358px' }}
+            h={{ base: '204px', lg: '358px' }}
+            position="absolute"
+            bg="yellow.600"
+            rounded="full"
+            bottom="0px"
+          ></Box>
+          <Text
+            fontWeight="900"
+            zIndex="10"
+            color="blue.600"
+            textAlign="center"
+            w="100%"
+            pt={{ base: '30px', lg: '68px' }}
+            fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
+            fontSize={{ base: '20px', lg: '24px' }}
+          >
+            地方文化演出
+          </Text>
+        </Flex>
+      </Flex>
+      <Flex w="100%" justify="center" minH="500px">
+        <Grid
+          py="45px"
+          px="30px"
+          w={{ sm: '100%', md: '75%', lg: '80%', '2xl': '1280' }}
+          templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
+          gap="80px"
+        >
+          {stageData.map(stage => (
+            <GridItem key={stage.id}>
+              <RevealFlex direction="column">
+                <Text
+                  color="blue.600"
+                  textAlign="center"
+                  h="58px"
+                  fontSize="18px"
+                  fontWeight="700"
+                  borderBottom="2px solid #3551A2"
+                >
+                  {stage.name}
+                </Text>
+                <Image
+                  my="24px"
+                  w="100%"
+                  fallbackSrc={stageLoading}
+                  src={stage.image}
+                />
+                <Text color="blue.600" fontSize="16px" fontWeight="700">
+                  {stage.time}
+                </Text>
+                <Flex justify="space-between">
+                  <HStack as={Link} isExternal href={stage.map}>
+                    <Icon as={FaMapMarker} size="24px" color="yellow.700" />
+                    <Text color="grey.900">{stage.location}</Text>
+                  </HStack>
+                  <StageModal {...stage} />
+                </Flex>
+              </RevealFlex>
+            </GridItem>
+          ))}
+        </Grid>
+      </Flex>
+    </>
   );
 };
 export default StagesGrid;
