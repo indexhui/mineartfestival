@@ -142,7 +142,7 @@ export function PartnerPage() {
           pb={{ base: '12px', lg: '24px' }}
           borderBottom={{ base: '3px solid #3E5EBD', lg: '5px solid #3E5EBD' }}
         >
-          周邊夥伴
+          周邊好康
         </Heading> */}
 
         <Flex

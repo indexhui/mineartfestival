@@ -114,7 +114,7 @@ const ShowInfo = () => {
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
-                鎏金時尚
+                鎏金時尚夜
                 <br />
                 演出團隊
                 <br />

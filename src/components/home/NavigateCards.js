@@ -31,7 +31,7 @@ const navigateList = [
     link: '/traveler',
   },
   {
-    title: '周邊夥伴',
+    title: '周邊好康',
     subTitle: '',
     image: view04,
     link: '/partner',
