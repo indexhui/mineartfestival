@@ -97,7 +97,7 @@ const StagesGrid = () => {
 
   return (
     <>
-      <Flex w="100%" justify="center" pb="20px">
+      <Flex id="stagesGrid" w="100%" justify="center" pb="20px">
         <Flex
           w={{ base: '204px', lg: '358px' }}
           h={{ base: '107px', lg: '169px' }}

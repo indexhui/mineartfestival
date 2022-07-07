@@ -8,6 +8,8 @@ import {
   Image,
 } from '@chakra-ui/react';
 
+import { Link as RouterLink } from 'react-router-dom';
+
 import MainButton from 'components/MainButton';
 
 import BusIcon from 'components/icons/BusIcon';
@@ -51,46 +53,10 @@ const routeList = [
 const ShowInfo = () => {
   return (
     <>
-      <Flex bg="#3C627A" w="100%">
-        <Flex pt="120px" w="15%" bg="yellow.600" justify="flex-end" pr="30px">
-          <VStack spacing="8px">
-            <Box w="12px" h="12px" bg="grey.900"></Box>
-            <Text
-              color="grey.900"
-              fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
-              writingMode="vertical-lr"
-              style={{
-                writingMode: 'vertical-lr',
-              }}
-            >
-              活動資訊
-            </Text>
-          </VStack>
-        </Flex>
-        <Flex pl="50px" pt="120px" w="70%" justify="flex-start">
-          <Image src={showTime} />
-          <VStack pl="100px" color="white" align="flex-start">
-            <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text>18:30-19:00</Text>
-              <Text>開放入場</Text>
-            </Stack>
-            <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text>19:00-20:30</Text>
-              <Text whiteSpace="pre-wrap">
-                鎏金時尚文化夜・跨界璀璨耀山城
-                <br />
-                演出團隊
-                <br />
-                潘怡良設計師群、優人神鼓、新象劇場、金田創藝、趙傳
-              </Text>
-            </Stack>
-          </VStack>
-        </Flex>
-      </Flex>
-      <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
+      <Flex id="showInfo" bg="#3C627A" w="100%">
         <Flex
+          display={{ base: 'none', lg: 'flex' }}
           pt="120px"
-          pb="120px"
           w="15%"
           bg="yellow.600"
           justify="flex-end"
@@ -99,6 +65,10 @@ const ShowInfo = () => {
           <VStack spacing="8px">
             <Box w="12px" h="12px" bg="grey.900"></Box>
             <Text
+              pt="10px"
+              fontWeight="900"
+              fontSize="24px"
+              letterSpacing="5px"
               color="grey.900"
               fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
               writingMode="vertical-lr"
@@ -112,14 +82,96 @@ const ShowInfo = () => {
         </Flex>
         <Flex
           pl="50px"
+          pr="30px"
+          pt={{ base: '40px', lg: '120px' }}
+          w={{ base: '100%', lg: '70%' }}
+          justify="flex-start"
+          direction={{ base: 'column', lg: 'row' }}
+        >
+          <Text
+            display={{ base: 'block', lg: 'none' }}
+            pb="20px"
+            fontSize="16px"
+            color="yellow.500"
+            fontWeight="900"
+            fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
+          >
+            活動資訊
+          </Text>
+          <Image w={{ base: '60px', lg: '120px' }} src={showTime} mb="24px" />
+          <VStack
+            pl={{ base: '0', lg: '300px' }}
+            color="white"
+            align="flex-start"
+          >
+            <Stack direction={{ base: 'column', lg: 'row' }}>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>18:30-19:00</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>開放入場</Text>
+            </Stack>
+            <Stack direction={{ base: 'column', lg: 'row' }}>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>19:00-20:30</Text>
+              <Text
+                fontSize={{ base: '14px', lg: '16px' }}
+                whiteSpace="pre-wrap"
+              >
+                鎏金時尚文化夜・跨界璀璨耀山城
+                <br />
+                演出團隊
+                <br />
+                潘怡良設計師群、優人神鼓、新象劇場、金田創藝、趙傳
+              </Text>
+            </Stack>
+          </VStack>
+        </Flex>
+      </Flex>
+      <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
+        <Flex
+          display={{ base: 'none', lg: 'flex' }}
           pt="120px"
-          w="70%"
-          border="1px solid red"
+          pb="120px"
+          w="15%"
+          bg="yellow.600"
+          justify="flex-end"
+          pr="30px"
+        >
+          <VStack spacing="8px">
+            <Box w="12px" h="12px" bg="grey.900"></Box>
+            <Text
+              pt="10px"
+              fontWeight="900"
+              fontSize="24px"
+              letterSpacing="5px"
+              color="grey.900"
+              fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
+              writingMode="vertical-lr"
+              style={{
+                writingMode: 'vertical-lr',
+              }}
+            >
+              交通資訊
+            </Text>
+          </VStack>
+        </Flex>
+        <Flex
+          pl="50px"
+          pr="30px"
+          pt={{ base: '40px', lg: '120px' }}
+          w={{ base: '100%', lg: '70%' }}
           justify="flex-start"
           direction="column"
         >
           <Text
-            pb="48px"
+            display={{ base: 'block', lg: 'none' }}
+            pb="20px"
+            fontSize="16px"
+            color="yellow.500"
+            fontWeight="900"
+            fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
+          >
+            活動資訊
+          </Text>
+          <Text
+            pb={{ base: '16px', lg: '48px' }}
             fontWeight="700"
             fontSize={{ base: '14px', lg: '24px' }}
           >
@@ -134,13 +186,13 @@ const ShowInfo = () => {
             >
               <HStack spacing="14px" align="center">
                 <Flex fontSize={{ base: '30px', lg: '40px' }}>
-                  <BusIcon boxSize="40px" />
+                  <BusIcon boxSize={{ base: '30px', lg: '40px' }} />
                 </Flex>
                 <Text fontWeight="500" fontSize={{ base: '16px', lg: '20px' }}>
                   大眾交通路線（水湳洞站下）
                 </Text>
               </HStack>
-              <Text>
+              <Text fontWeight="700" fontSize="14px">
                 從臺北出發：可搭1811前往
                 <br />
                 從基隆市區出發：可搭1811、或791前往
@@ -153,7 +205,7 @@ const ShowInfo = () => {
             <VStack
               align="flex-start"
               w="100%"
-              spacing={{ base: '8px', lg: '25px' }}
+              spacing={{ base: '16px', lg: '25px' }}
             >
               <HStack spacing="14px" align="center">
                 <Flex fontSize={{ base: '30px', lg: '40px' }}>
@@ -167,6 +219,7 @@ const ShowInfo = () => {
               <VStack align="flex-start" w="100%">
                 {routeList.map(route => (
                   <Stack
+                    pb="12px"
                     key={route.title}
                     direction={{ base: 'column', lg: 'row' }}
                     textAlign="left"
@@ -177,7 +230,11 @@ const ShowInfo = () => {
                       h="12px"
                       rounded="full"
                     ></Box>
-                    <VStack w="70%" pl="16px" spacing="8px">
+                    <VStack
+                      w={{ base: '100%', lg: '70%' }}
+                      pl="16px"
+                      spacing="8px"
+                    >
                       <Text
                         w="100%"
                         fontWeight="700"
@@ -209,7 +266,7 @@ const ShowInfo = () => {
                 </Text>
               </HStack>
               <Image src={carMap} />
-              <VStack align="flex-start" w="100%">
+              <VStack align="flex-start" w="100%" pt="12px">
                 <Text fontWeight="700" fontSize="18px">
                   1. 活動地點水湳洞停車場開放部分車位可直接停車
                 </Text>
@@ -269,9 +326,13 @@ const ShowInfo = () => {
               <Text fontWeight="700" fontSize="18px" pb="20px">
                 周邊停車空間建議：（車位數量有限，僅供參考評估）
               </Text>
-              <Flex>
+              <Flex direction={{ base: 'column', lg: 'row' }}>
                 <Image src={parkMap} />
-                <Text maxW="250px" pl="28px">
+                <Text
+                  maxW={{ base: '100%', lg: '280px' }}
+                  pl={{ base: '0', lg: '28px' }}
+                  pt={{ base: '16px', lg: '0' }}
+                >
                   活動場域周邊停車場（至會場步行約15~20分）：水湳洞遊客中心停車場、黃金瀑布前停車場、濱海公路周邊駐車空間
                 </Text>
               </Flex>
@@ -280,7 +341,9 @@ const ShowInfo = () => {
         </Flex>
       </Flex>
       <Flex w="100%" justify="center" bg="#3C627A">
-        <MainButton my="100px">More</MainButton>
+        <RouterLink to="/partner">
+          <MainButton my="100px">合作民宿</MainButton>
+        </RouterLink>
       </Flex>
     </>
   );

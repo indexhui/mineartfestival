@@ -5,6 +5,7 @@ const Title = props => {
     <Text
       fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
       fontSize={{ base: '20px', lg: '24px' }}
+      fontWeight="900"
       pb="4px"
       borderBottom="3px solid white"
       {...props}

@@ -16,6 +16,7 @@ import stageClosing02 from 'assets/images/stagesPage/stage-closing02.jpg';
 import stageClosing03 from 'assets/images/stagesPage/stage-closing03.jpg';
 import Chromatic from 'components/stages/Chromatic';
 import TheAtre from 'components/TheAtre';
+import ShowSwipe from 'components/stages/ShowSwipe';
 
 const MotionFlex = motion(Flex);
 
@@ -93,6 +94,7 @@ export function StagesPage() {
       </Flex>
       <Chromatic />
       <Show />
+      <ShowSwipe />
       <TheAtre />
       <ShowDetail />
       {/* <StagesGrid /> */}

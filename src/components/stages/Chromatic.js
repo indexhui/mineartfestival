@@ -33,7 +33,7 @@ const ColorLabel = props => {
   return (
     <VStack justify="center" spacing="8px">
       <Image src={image} />
-      <Text color="white" fontSize={{ base: '14px', lg: '16px' }}>
+      <Text color="grey.100" fontSize={{ base: '14px', lg: '16px' }}>
         {title}
       </Text>
     </VStack>

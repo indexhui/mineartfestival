@@ -37,6 +37,7 @@ const ArtMember = props => {
           ml={{ base: '0', lg: '45px' }}
         >
           <Text
+            fontWeight="900"
             display={{ base: 'none', lg: 'block' }}
             fontSize={{ base: '18px', lg: '24px' }}
             fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
@@ -70,6 +71,7 @@ const ArtTeam = () => {
   const { data: memberData } = useCsv(memberCsv);
   return (
     <Flex
+      id="artTeam"
       direction="column"
       bg="black"
       color="white"
