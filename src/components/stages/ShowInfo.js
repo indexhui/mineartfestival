@@ -18,8 +18,8 @@ import CarIcon from 'components/icons/CarIcon';
 
 import showTime from 'assets/images/stagesPage/showTime.svg';
 import shuttleMap from 'assets/images/stagesPage/shuttleMap.png';
-import carMap from 'assets/images/stagesPage/carMap.jpg';
-import parkMap from 'assets/images/stagesPage/parkMap.jpg';
+import carMap from 'assets/images/stagesPage/carMap.png';
+import parkMap from 'assets/images/stagesPage/parkMap.png';
 
 const routeList = [
   {
@@ -327,7 +327,7 @@ const ShowInfo = () => {
                 周邊停車空間建議：（車位數量有限，僅供參考評估）
               </Text>
               <Flex direction={{ base: 'column', lg: 'row' }}>
-                <Image src={parkMap} />
+                <Image maxW="800px" src={parkMap} />
                 <Text
                   maxW={{ base: '100%', lg: '280px' }}
                   pl={{ base: '0', lg: '28px' }}

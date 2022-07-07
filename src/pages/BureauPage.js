@@ -7,6 +7,7 @@ import {
   Grid,
   GridItem,
   HStack,
+  Box,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { polyfill, scrollIntoView } from 'seamless-scroll-polyfill';
@@ -191,6 +192,30 @@ export function BureauPage() {
       <Roadmap />
       <Coworking />
       <Timeline />
+      <Flex justify="center" pt={{ base: '40px', lg: '100px' }} pb="30px">
+        <Flex border="2px solid #2D458A" position="relative" mb="-40px">
+          <Box
+            w="100%"
+            h="100%"
+            position="absolute"
+            bottom="-10px"
+            right="-10px"
+            bg="blue.600"
+          ></Box>
+          <Text
+            zIndex="10"
+            bg="white"
+            px="12px"
+            pt="12px"
+            pb="16px"
+            color="blue.600"
+            fontWeight="700"
+            fontSize={{ base: '16px', lg: '36px' }}
+          >
+            #藝術作品修復計畫
+          </Text>
+        </Flex>
+      </Flex>
       {/* <ArtCenter {...artData[0]} /> */}
       {artList.map((art, i) => (
         <ArtListItem key={art.id} {...art} reverse={i % 2 !== 0} />

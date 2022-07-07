@@ -130,7 +130,7 @@ const PlanCard = props => {
 const Plan = () => {
   return (
     <>
-      <Flex w="100%" pt="40px" direction="column" align="center">
+      <Flex id="art01" w="100%" pt="40px" direction="column" align="center">
         <Flex border="2px solid #2D458A" position="relative" mb="-40px">
           <Box
             w="100%"
