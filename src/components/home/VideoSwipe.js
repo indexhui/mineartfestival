@@ -106,6 +106,7 @@ const VideoSwipe = props => {
                 >
                   <AspectRatio
                     border="1px solid #193851"
+                    bg="grey.900"
                     w="100%"
                     ratio={16 / 9}
                     transform={isActive ? 'scale(1)' : 'scale(0.7)'}
