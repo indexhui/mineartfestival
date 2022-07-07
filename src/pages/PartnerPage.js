@@ -113,7 +113,7 @@ export function PartnerPage() {
       >
         <VStack w="75%" align="center" spacing="20px">
           <Text color="grey.900" fontSize="24px" fontWeight="700">
-            ｜民宿夥伴｜
+            ｜店家夥伴｜
           </Text>
         </VStack>
       </Flex>
