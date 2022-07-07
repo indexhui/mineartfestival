@@ -52,8 +52,9 @@ const Show = () => {
             position="absolute"
             top="0"
             justify="center"
-            pt={{ base: '8px', lg: '22px' }}
-            px="20px"
+            pt={{ base: '8px', lg: '12px' }}
+            pr="20px"
+            pl={{ base: '20px', lg: '0' }}
             bgImage={{
               base: `url(${showDecorationSm})`,
               lg: `url(${showDecoration})`,
@@ -64,9 +65,9 @@ const Show = () => {
             <Text
               color="grey.900"
               fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
-              fontWeight="700"
-              // fontSize="24px"
-              fontSize={{ base: '16px', lg: '24px' }}
+              fontWeight="900"
+              ml={{ base: '0', lg: '-10px' }}
+              fontSize={{ base: '16px', lg: '23px' }}
             >
               潘怡良設計師領軍，
               <br />

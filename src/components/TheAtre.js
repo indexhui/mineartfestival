@@ -11,6 +11,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 
+import { Link as RouterLink } from 'react-router-dom';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 import atre from 'assets/images/atre.png';
@@ -71,6 +72,8 @@ const TheAtre = props => {
           rounded="full"
           p="16px 24px"
           w="auto"
+          as={RouterLink}
+          to="/stages"
         >
           <HStack align="center">
             <Text>前往活動</Text>

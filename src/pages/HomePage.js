@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Flex, Text, AspectRatio } from '@chakra-ui/react';
 // import ReactPlayer from 'react-player';
+import useCsv from 'hooks/useCsv';
 
 import Hero from 'components/Hero';
 import Intro from 'components/home/Intro';
