@@ -114,7 +114,7 @@ const ShowInfo = () => {
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
-                鎏金時尚文化夜・跨界璀璨耀山城
+                鎏金時尚
                 <br />
                 演出團隊
                 <br />
