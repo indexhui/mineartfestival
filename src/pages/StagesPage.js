@@ -98,7 +98,10 @@ export function StagesPage() {
       <TheAtre />
       <ShowDetail />
       {/* <StagesGrid /> */}
-      <Flex
+
+      {/* 閉幕式 */}
+
+      {/* <Flex
         bgSize="cover"
         borderTop={{ base: '10px solid #2D458A', lg: '10px solid #2D458A' }}
         bgImage={`url(${closingBg})`}
@@ -157,7 +160,7 @@ export function StagesPage() {
             allowFullScreen
           />
         </AspectRatio>
-      </Flex>
+      </Flex> */}
     </MotionFlex>
   );
 }
