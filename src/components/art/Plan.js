@@ -157,6 +157,8 @@ const Plan = () => {
           w="100%"
           py="80px"
           bgImage={`url('${planBg}')`}
+          bgRepeat="no-repeat"
+          bgSize="cover"
           justify="center"
           direction="column"
           align="center"
