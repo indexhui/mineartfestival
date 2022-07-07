@@ -14,6 +14,7 @@ import { motion } from 'framer-motion';
 import loadingBg from 'assets/images/loadingBg.svg';
 
 const MotionImage = motion(Image);
+const MotionGridItem = motion(GridItem);
 
 const PartnerGrid = ({ partnerData }) => {
   if (partnerData.length === 0) return <Flex w="100%" minH="800px"></Flex>;
@@ -27,7 +28,13 @@ const PartnerGrid = ({ partnerData }) => {
         gap={{ base: '20px', lg: '20px' }}
       >
         {partnerData.map(partner => (
-          <GridItem as={Link} href={partner.link} isExternal key={partner.id}>
+          <MotionGridItem
+            as={Link}
+            href={partner.link}
+            isExternal
+            key={partner.id}
+            whileHover={{ rotate: -4, transition: { duration: 0.6 } }}
+          >
             <RevealFlex
               position="relative"
               w="100%
@@ -36,7 +43,6 @@ const PartnerGrid = ({ partnerData }) => {
               // pb="6%"
               once={true}
               direction="column"
-              whileHover={{ rotate: -4, transition: { duration: 0.6 } }}
             >
               <AspectRatio w={{ base: '100%', lg: '92%' }} ratio={300 / 240}>
                 <MotionImage
@@ -60,7 +66,7 @@ const PartnerGrid = ({ partnerData }) => {
                   textAlign="center"
                   fontSize={{ base: '16px', lg: '18px' }}
                   // px={{ base: '8px', lg: '20px' }}
-                  py={{ base: '5px', lg: '8px' }}
+                  pt={{ base: '4px', lg: '8px' }}
                   fontWeight="700"
                   // bg="blue.600"
                 >
@@ -74,13 +80,13 @@ const PartnerGrid = ({ partnerData }) => {
                 fontSize={{ base: '14px', lg: '16px' }}
                 fontWeight="400"
                 color="blue.500"
-                pt={{ base: '20px', lg: '18px' }}
+                pt={{ base: '0px', lg: '8px' }}
                 textAlign="left"
               >
                 {partner.content}
               </Text>
             </RevealFlex>
-          </GridItem>
+          </MotionGridItem>
         ))}
       </Grid>
     </Flex>

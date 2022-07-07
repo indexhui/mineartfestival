@@ -327,7 +327,7 @@ const ShowInfo = () => {
                 周邊停車空間建議：（車位數量有限，僅供參考評估）
               </Text>
               <Flex direction={{ base: 'column', lg: 'row' }}>
-                <Image maxW="800px" src={parkMap} />
+                <Image w="100%" maxW="800px" src={parkMap} />
                 <Text
                   maxW={{ base: '100%', lg: '280px' }}
                   pl={{ base: '0', lg: '28px' }}

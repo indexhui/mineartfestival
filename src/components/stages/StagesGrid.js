@@ -130,7 +130,7 @@ const StagesGrid = () => {
       <Flex w="100%" justify="center" minH="500px">
         <Grid
           py="45px"
-          px="30px"
+          px="40px"
           w={{ sm: '100%', md: '75%', lg: '80%', '2xl': '1280' }}
           templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(3, 1fr)' }}
           gap="80px"
