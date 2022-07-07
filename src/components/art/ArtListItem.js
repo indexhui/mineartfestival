@@ -252,6 +252,7 @@ const ArtListItem = props => {
         </Flex>
         <Flex maxW={{ lg: '480px', xl: '550px' }} w="100%">
           <Text
+            whiteSpace="pre-wrap"
             color="grey.900"
             textAlign="left"
             px="30px"
