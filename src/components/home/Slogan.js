@@ -20,7 +20,7 @@ const Slogan = () => {
         fontWeight="900"
         color="white"
         fontFamily="Noto Serif TC,'Noto Serif CJK TC'"
-        fontSize={{ base: '20px', lg: '24px' }}
+        fontSize={{ base: '30px', lg: '48px' }}
       >
         鎏金時尚
       </Text>
