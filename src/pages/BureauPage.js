@@ -13,6 +13,11 @@ import { polyfill, scrollIntoView } from 'seamless-scroll-polyfill';
 
 import Banner from 'components/Banner';
 import PageMotion from 'components/PageMotion';
+import Plan from 'components/art/Plan';
+import Roadmap from 'components/art/Roadmap';
+import Coworking from 'components/art/Coworking';
+import Timeline from 'components/art/Timeline';
+
 import ArtCenter from 'components/art/ArtCenter';
 import useCsv from 'hooks/useCsv';
 import artCsv from 'assets/csv/art.csv';
@@ -180,8 +185,13 @@ export function BureauPage() {
           ))}
         </Grid>
       </Flex>
-
-      <ArtCenter {...artData[0]} />
+      {/* 2022礦山的共農計畫 */}
+      <Plan />
+      {/* roadmap */}
+      <Roadmap />
+      <Coworking />
+      <Timeline />
+      {/* <ArtCenter {...artData[0]} /> */}
       {artList.map((art, i) => (
         <ArtListItem key={art.id} {...art} reverse={i % 2 !== 0} />
       ))}
