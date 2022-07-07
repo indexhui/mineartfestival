@@ -97,14 +97,19 @@ const VideoSwipe = props => {
               {({ isActive }) => (
                 <Box
                   w="100%"
-                  h={{ base: '200px', lg: '380px' }}
+                  // h={{ base: '200px', lg: '380px' }}
                   // w={isActive ? '650px' : '250px'}
                   // transform="scale(0.3)"
                   zIndex={isActive ? '5' : '0'}
-                  transform={isActive ? 'scale(1)' : 'scale(0.7)'}
-                  bg={isActive ? 'grey.500' : 'grey.800'}
+                  // transform={isActive ? 'scale(1)' : 'scale(0.7)'}
+                  // bg={isActive ? 'grey.500' : 'grey.800'}
                 >
-                  <AspectRatio>
+                  <AspectRatio
+                    border="1px solid #193851"
+                    w="100%"
+                    ratio={16 / 9}
+                    transform={isActive ? 'scale(1)' : 'scale(0.7)'}
+                  >
                     <iframe
                       title={item}
                       src={'https://www.youtube.com/embed/' + item}
@@ -157,44 +162,56 @@ const VideoSwipe = props => {
         >
           {videoList.map((item, index) => (
             <SwiperSlide key={item}>
-              {({ isActive }) => (
-                <Box
+              {/* {({ isActive }) => (
+                
+              )} */}
+
+              <Box
+                w="100%"
+                border="1px solid red"
+                h={{ base: '200px', lg: '380px' }}
+                // w={isActive ? '650px' : '250px'}
+                // transform="scale(0.3)"
+                // zIndex={isActive ? '5' : '0'}
+                // transform={isActive ? 'scale(1)' : 'scale(0.7)'}
+                // bg={isActive ? 'grey.500' : 'grey.800'}
+              >
+                <iframe
                   w="100%"
-                  h={{ base: '200px', lg: '380px' }}
-                  // w={isActive ? '650px' : '250px'}
-                  // transform="scale(0.3)"
-                  zIndex={isActive ? '5' : '0'}
-                  transform={isActive ? 'scale(1)' : 'scale(0.7)'}
-                  bg={isActive ? 'grey.500' : 'grey.800'}
-                >
-                  <AspectRatio>
-                    <iframe
-                      title={item}
-                      src={'https://www.youtube.com/embed/' + item}
-                      allowFullScreen
-                    />
-                  </AspectRatio>
-                  <Text fontSize="10px" color="#193851"></Text>
-                </Box>
-              )}
+                  h="500px"
+                  title={item}
+                  src={'https://www.youtube.com/embed/' + item}
+                  allowFullScreen
+                />
+                {/* <AspectRatio w="100%">
+                  <iframe
+                    title={item}
+                    src={'https://www.youtube.com/embed/' + item}
+                    allowFullScreen
+                  />
+                </AspectRatio> */}
+                <Text fontSize="10px" color="#193851">
+                  test
+                </Text>
+              </Box>
             </SwiperSlide>
           ))}
 
-          {/* <SwiperSlide>
-          {({ isActive }) => (
-            <Box
-              w="100%"
-              h={{ base: '200px', lg: '380px' }}
-              // w={isActive ? '650px' : '250px'}
-              // transform="scale(0.3)"
-              zIndex={isActive ? '5' : '0'}
-              transform={isActive ? 'scale(1)' : 'scale(0.7)'}
-              bg={isActive ? 'blue.500' : 'red.500'}
-            >
-              w
-            </Box>
-          )}
-        </SwiperSlide> */}
+          <SwiperSlide>
+            {({ isActive }) => (
+              <Box
+                w="100%"
+                h={{ base: '200px', lg: '380px' }}
+                // w={isActive ? '650px' : '250px'}
+                // transform="scale(0.3)"
+                zIndex={isActive ? '5' : '0'}
+                transform={isActive ? 'scale(1)' : 'scale(0.7)'}
+                bg={isActive ? 'blue.500' : 'red.500'}
+              >
+                w
+              </Box>
+            )}
+          </SwiperSlide>
         </Swiper>
       </Flex>
     </>

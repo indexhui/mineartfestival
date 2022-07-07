@@ -37,7 +37,7 @@ const navList = [
     link: '/traveler',
   },
   {
-    name: '周邊夥伴',
+    name: '周邊好康',
     link: '/partner',
   },
   {
