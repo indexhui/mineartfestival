@@ -124,7 +124,7 @@ const ShowInfo = () => {
           </VStack>
         </Flex>
       </Flex>
-      <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
+      {/* <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
         <Flex
           display={{ base: 'none', lg: 'flex' }}
           pt="120px"
@@ -178,7 +178,6 @@ const ShowInfo = () => {
             活動地點 水湳洞停車場
           </Text>
           <VStack spacing="48px">
-            {/* 公車 */}
             <VStack
               align="flex-start"
               w="100%"
@@ -200,8 +199,6 @@ const ShowInfo = () => {
                 從福隆、瑞芳出發：可在福隆遊客中心或瑞芳火車站搭乘856臺灣好行公車或搭887
               </Text>
             </VStack>
-
-            {/* 巴士 */}
             <VStack
               align="flex-start"
               w="100%"
@@ -251,7 +248,6 @@ const ShowInfo = () => {
                 ))}
               </VStack>
             </VStack>
-            {/* 自駕停車 */}
             <VStack
               align="flex-start"
               w="100%"
@@ -292,35 +288,6 @@ const ShowInfo = () => {
                   ・建議民眾當日可提早至瑞芳/九份及金瓜石地區進行旅遊，並將車輛停放於海科館/瑞芳火車站周邊停車場/勸濟堂停車場，17:30後再轉乘免費接駁車前往會場。
                 </Text>
               </VStack>
-              {/* <VStack align="flex-start" w="100%">
-                {routeList.map(route => (
-                  <Stack
-                    key={route.title}
-                    direction={{ base: 'column', lg: 'row' }}
-                    textAlign="left"
-                  >
-                    <Box
-                      bg={route.color}
-                      w="90px"
-                      h="12px"
-                      rounded="full"
-                    ></Box>
-                    <VStack w="70%" pl="16px" spacing="8px">
-                      <Text
-                        w="100%"
-                        fontWeight="700"
-                        fontSize="18px"
-                        color="yellow.500"
-                      >
-                        {route.title}
-                      </Text>
-                      <Text fontSize={{ base: '16px', lg: '18px' }}>
-                        {route.content}
-                      </Text>
-                    </VStack>
-                  </Stack>
-                ))}
-              </VStack> */}
             </VStack>
             <Flex direction="column" align="flex-start" w="100%">
               <Text fontWeight="700" fontSize="18px" pb="20px">
@@ -339,7 +306,7 @@ const ShowInfo = () => {
             </Flex>
           </VStack>
         </Flex>
-      </Flex>
+      </Flex> */}
       <Flex w="100%" justify="center" bg="#3C627A">
         <RouterLink to="/partner">
           <MainButton my="100px">合作民宿</MainButton>
