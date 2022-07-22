@@ -17,13 +17,14 @@ import showDirector from 'assets/images/showDirector.jpg';
 import showDecoration from 'assets/images/showDecoration.svg';
 import showDecorationSm from 'assets/images/showDecorationSm.svg';
 
-const Show = () => {
+const Show = ({ bgColor }) => {
   return (
     <>
       <Flex
         justify="center"
         bgImage={stars}
-        bgColor="#14324C"
+        // bgColor="#14324C"
+        bgColor={bgColor || '#14324C'}
         direction="column"
         align="center"
         pt="45px"

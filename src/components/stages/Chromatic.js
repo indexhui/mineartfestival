@@ -12,6 +12,7 @@ import fireworkLgWhite from 'assets/images/homePage/fireworkLgWhite.svg';
 import colorGreen from 'assets/images/stagesPage/color_green.svg';
 import colorGold from 'assets/images/stagesPage/color_gold.svg';
 import colorSliver from 'assets/images/stagesPage/color_silver.svg';
+import routeLogoGold from 'assets/images/routeLogoGold.png';
 
 const chromaticList = [
   {
@@ -44,7 +45,7 @@ const Chromatic = () => {
   return (
     <Flex
       px="30px"
-      bg="#14324C"
+      bg="#070A0C"
       w="100%"
       position="relative"
       py="50px"
@@ -64,6 +65,7 @@ const Chromatic = () => {
         left="-125px"
         top="120px"
       />
+      <Image w={{ base: '250px', lg: '270px' }} py="30px" src={routeLogoGold} />
       <Text
         color="white"
         fontSize={{ base: '20px', lg: '24px' }}

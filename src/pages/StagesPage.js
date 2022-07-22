@@ -93,9 +93,9 @@ export function StagesPage() {
         <Slogan />
       </Flex>
       <Chromatic />
-      <Show />
+      <Show bgColor="#070A0C" />
       <ShowSwipe />
-      <TheAtre />
+      <TheAtre bgGradient="linear-gradient(180deg, #152128 0%, #1A2931 100%)" />
       <ShowDetail />
       {/* <StagesGrid /> */}
 

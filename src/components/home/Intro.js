@@ -15,6 +15,7 @@ import view02 from 'assets/images/homePage/view02.jpg';
 import view03 from 'assets/images/homePage/view03.jpg';
 
 import introBg from 'assets/images/homePage/introBg.jpg';
+import routeLogo from 'assets/images/routeLogo.png';
 
 const viewsList = [
   {
@@ -57,7 +58,10 @@ const Views = () => {
 const Intro = () => {
   return (
     <Flex w="100%" direction="column" align="center" pt="100px">
-      <Badge h={{ base: '200px', lg: '255px' }}>青 春 山 海 線</Badge>
+      <RevealFlex>
+        <Image w={{ base: '275px', lg: '312px' }} src={routeLogo} mb="80px" />
+      </RevealFlex>
+      {/* <Badge h={{ base: '200px', lg: '255px' }}>青 春 山 海 線</Badge> */}
       <RevealFlex>
         <Text
           whiteSpace="pre-wrap"

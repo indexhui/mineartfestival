@@ -14,7 +14,7 @@ const ShowSwiper = props => {
     <>
       {/* lg */}
       <Flex
-        bg="#2E5169"
+        bg="#152128"
         bgImage={stars}
         w="100%"
         py="80px"

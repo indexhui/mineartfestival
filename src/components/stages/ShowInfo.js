@@ -17,37 +17,40 @@ import ShuttleIcon from 'components/icons/ShuttleIcon';
 import CarIcon from 'components/icons/CarIcon';
 
 import showTime from 'assets/images/stagesPage/showTime.svg';
-import shuttleMap from 'assets/images/stagesPage/shuttleMap.png';
-import carMap from 'assets/images/stagesPage/carMap.png';
+import shuttleMap from 'assets/images/stagesPage/shuttleMap02.png';
+import carMap from 'assets/images/stagesPage/carMap02.jpg';
 import parkMap from 'assets/images/stagesPage/parkMap.png';
+import trafficControl from 'assets/images/stagesPage/trafficControl.jpg';
 
 const routeList = [
   {
     color: '#39B54A',
-    title: '1.【碧沙C區停車場(海科館)-水湳洞停車場】線',
+    title:
+      '【基隆線】八斗子觀光漁港C區停車場－大基隆駕訓班停車場－水湳洞停車場',
     content:
-      '行經路線：17:30~22:30 每15分鐘一班碧砂C區停車場→水湳洞停車場，沿途不停靠',
+      '去程：17:30~19:00 每10-15分鐘一班，由八斗子觀光漁港C區停車場發車 \n回程：20:30 由水湳洞停車場發車',
   },
   {
     color:
       'linear-gradient(90deg, #EAE7E3 0%, #DCD8D6 6.36%, #B6B1B3 18.51%, #9A959A 26.4%, #F9F9F9 52.25%, #EBEAEB 58.78%, #C6C3C5 71.33%, #8E888B 87.64%, #B5B5B6 100%)',
-    title: '2.【瑞芳火車站-水湳洞停車場】線',
+    title: '【瑞芳火車站-水湳洞停車場】線',
     content:
-      '行經路線：17:30~22:30 每15分鐘一班瑞芳火車站→水湳洞停車場，沿途不停靠',
+      '去程：17:30~19:00 每10-15分鐘一班，由瑞芳火車站發車 \n回程：20:30 由水湳洞停車場發車',
   },
   {
     color:
       'linear-gradient(90deg, #F0CC7E 0.56%, #E8C47E 18.54%, #C78A03 59.55%, #E3B75E 79.27%, #EFCA84 87.08%, #F4E7CF 100%)',
-    title: '3.【勸濟堂停車場-水湳洞停車場】線 去程',
+    title:
+      '【金九線】新九停車場－隔頂停車場－黃金博物館－勸濟堂停車場－水湳洞停車場',
     content:
-      '行經路線：17:30~19:00 每15分鐘一班勸濟堂停車場→水湳洞停車場，沿途不停靠 ',
+      '去程：17:30~19:00 每10-15分鐘一班，由新九停車場發車 \n回程：20:30 由水湳洞停車場發車，沿途增停靠「九份老街」',
   },
-  {
-    color: '#F7931E',
-    title: '4.【勸濟堂停車場-水湳洞停車場】線 返程',
-    content:
-      '行經路線：19:00~22:30 每15分鐘一班沿途停靠水湳洞停車場→勸濟堂→隔頂停車場→九份老街→九份分局（台陽停車場）→九號停車場→瑞芳區公所→水湳洞停車場（僅提供下車，不提供沿途載客）',
-  },
+  // {
+  //   color: '#F7931E',
+  //   title: '4.【勸濟堂停車場-水湳洞停車場】線 返程',
+  //   content:
+  //     '行經路線：19:00~22:30 每15分鐘一班沿途停靠水湳洞停車場→勸濟堂→隔頂停車場→九份老街→九份分局（台陽停車場）→九號停車場→瑞芳區公所→水湳洞停車場（僅提供下車，不提供沿途載客）',
+  // },
 ];
 
 const ShowInfo = () => {
@@ -109,22 +112,47 @@ const ShowInfo = () => {
               <Text fontSize={{ base: '14px', lg: '16px' }}>開放入場</Text>
             </Stack>
             <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text fontSize={{ base: '14px', lg: '16px' }}>19:00-20:30</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>18:45-19:00</Text>
               <Text
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
-                鎏金時尚夜
+                暖場演出-金銀之間 演出團隊：新象劇場
+              </Text>
+            </Stack>
+            <Stack direction={{ base: 'column', lg: 'row' }}>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>19:00-19:35</Text>
+              <Text
+                fontSize={{ base: '14px', lg: '16px' }}
+                whiteSpace="pre-wrap"
+              >
+                陽歌行 演出團隊：優人神鼓
+              </Text>
+            </Stack>
+            <Stack direction={{ base: 'column', lg: 'row' }}>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>19:35-20:15</Text>
+              <Text
+                fontSize={{ base: '14px', lg: '16px' }}
+                whiteSpace="pre-wrap"
+              >
+                鎏金時尚
                 <br />
-                演出團隊
-                <br />
-                潘怡良設計師群、優人神鼓、新象劇場、金田創藝、趙傳
+                演出團隊：金田創藝、潘怡良設計師群、李翊君
+              </Text>
+            </Stack>
+            <Stack direction={{ base: 'column', lg: 'row' }}>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>20:15-20:30</Text>
+              <Text
+                fontSize={{ base: '14px', lg: '16px' }}
+                whiteSpace="pre-wrap"
+              >
+                市長致詞＆謝幕
               </Text>
             </Stack>
           </VStack>
         </Flex>
       </Flex>
-      {/* <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
+      <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
         <Flex
           display={{ base: 'none', lg: 'flex' }}
           pt="120px"
@@ -156,7 +184,7 @@ const ShowInfo = () => {
           pl="50px"
           pr="30px"
           pt={{ base: '40px', lg: '120px' }}
-          w={{ base: '100%', lg: '70%' }}
+          w={{ base: '100%', lg: '75%' }}
           justify="flex-start"
           direction="column"
         >
@@ -240,7 +268,10 @@ const ShowInfo = () => {
                       >
                         {route.title}
                       </Text>
-                      <Text fontSize={{ base: '16px', lg: '18px' }}>
+                      <Text
+                        fontSize={{ base: '16px', lg: '18px' }}
+                        whiteSpace="pre-wrap"
+                      >
                         {route.content}
                       </Text>
                     </VStack>
@@ -261,16 +292,21 @@ const ShowInfo = () => {
                   自駕停車
                 </Text>
               </HStack>
+              <Text>周邊停車空間建議：（車位數量有限，僅供參考評估）</Text>
               <Image src={carMap} />
-              <VStack align="flex-start" w="100%" pt="12px">
+              <Text>
+                交通管制：因應8月6日鎏金時尚夜，北34九份往水湳洞路段特定時段全線管制
+              </Text>
+              <Image src={trafficControl} />
+              {/* <VStack align="flex-start" w="100%" pt="12px">
                 <Text fontWeight="700" fontSize="18px">
                   1. 活動地點水湳洞停車場開放部分車位可直接停車
                 </Text>
                 <Text fontWeight="700" fontSize="18px">
                   2.開放路肩：將活動會場東北側，北部濱海公路(洞頂路以東)雙側800m則開放路邊停車使用
                 </Text>
-              </VStack>
-              <VStack
+              </VStack> */}
+              {/* <VStack
                 spacing="2px"
                 fontWeight="400"
                 fontSize={{ base: '14px', lg: '16px' }}
@@ -287,9 +323,9 @@ const ShowInfo = () => {
                 <Text w="100%">
                   ・建議民眾當日可提早至瑞芳/九份及金瓜石地區進行旅遊，並將車輛停放於海科館/瑞芳火車站周邊停車場/勸濟堂停車場，17:30後再轉乘免費接駁車前往會場。
                 </Text>
-              </VStack>
+              </VStack> */}
             </VStack>
-            <Flex direction="column" align="flex-start" w="100%">
+            {/* <Flex direction="column" align="flex-start" w="100%">
               <Text fontWeight="700" fontSize="18px" pb="20px">
                 周邊停車空間建議：（車位數量有限，僅供參考評估）
               </Text>
@@ -303,10 +339,10 @@ const ShowInfo = () => {
                   活動場域周邊停車場（至會場步行約15~20分）：水湳洞遊客中心停車場、黃金瀑布前停車場、濱海公路周邊駐車空間
                 </Text>
               </Flex>
-            </Flex>
+            </Flex> */}
           </VStack>
         </Flex>
-      </Flex> */}
+      </Flex>
       <Flex w="100%" justify="center" bg="#3C627A">
         <RouterLink to="/partner">
           <MainButton my="100px">合作民宿</MainButton>

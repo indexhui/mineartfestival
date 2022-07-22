@@ -1,17 +1,17 @@
-id,title,content,avatar,sign
+id,title,content,avatar,sign,
 member01,藝術總監/設計師 潘怡良,"臺灣設計師針織女王潘怡良，深耕高級時尚多年，屢獲時尚大獎，是時裝界屈指可數的設計師。
-擁有時尚設計豐富資源的人脈平臺，結合食衣住行育樂整體生活美學的時尚概念大師。",/images/artMember/member01.jpg,/images/artMember/sign01.jpg
+擁有時尚設計豐富資源的人脈平臺，結合食衣住行育樂整體生活美學的時尚概念大師。",/images/artMember/member01.jpg,/images/artMember/sign01.jpg,
 member02,設計師 郭瑋,"INF由設計師郭瑋於2011年創立。一直以來以可變形的機能（一衣多穿）與結構著稱。設計專精於結構與剪裁，透過俐落與洗鍊的線條，創造獨一無二的作品。
-""你想要的，外面找不到的，都在INF""。",/images/artMember/member02.jpg,/images/artMember/sign02.jpg
-member03,設計師 吳日云,首位登上紐約時裝周的臺灣設計師，獲選國際Tatler雜誌傑出青年。憑著清新鮮明的風格征戰國際時裝周，擄獲政商名流的心，合作無數名人，同名品牌AUSTIN.W獲LV旅遊指南推薦之臺灣品牌。,/images/artMember/member03.jpg,/images/artMember/sign03.jpg
+""你想要的，外面找不到的，都在INF""。",/images/artMember/member02.jpg,/images/artMember/sign02.jpg,/images/artMember/member02.jpg
+member03,設計師 吳日云,首位登上紐約時裝周的臺灣設計師，獲選國際Tatler雜誌傑出青年。憑著清新鮮明的風格征戰國際時裝周，擄獲政商名流的心，合作無數名人，同名品牌AUSTIN.W獲LV旅遊指南推薦之臺灣品牌。,/images/artMember/member03.jpg,/images/artMember/sign03.jpg,
 member04,演出團隊 優人神鼓,"優，是古老的『表演者』
 神，是人內心深層的寧靜狀態
 優人神鼓， 即『在自已的寧靜中擊鼓』
-1988年木柵老泉山創團，致力於最精緻的劇場藝術，至今仍不斷受邀至全球重要藝術節演出。",/images/artMember/member04.jpg,/images/artMember/sign04.jpg
-member05,演出團隊 輔仁大學織品服裝學院,立基於織品服裝學系逾半世紀的歷史與卓越成果，織品服裝學院於2017年8月1日成立，以「永續時尚」為核心，藉由組織再造、課程改革、環境建構及產學合作，培育具前瞻性及競爭力的台灣時尚產業人才。,/images/artMember/member05.jpg,/images/artMember/sign05.jpg
-member06,金工團隊 At.冶器金屬物件工作室,由兩位金屬工藝創作者王意婷與王安琪共同成立。希望能藉由工作室的成立，能將工藝態度與當代創作思維導入於課程之中，透過手作實踐想法的實現，在細節中找到更多對自我的追求，在不斷的相互思考對話中，找到更多有趣的觀點。不僅是技術的傳授，更是許多思維的交換場，也能以此傳遞手與心及腦的併行重要性。,/images/artMember/member06.jpg,/images/artMember/sign06.jpg
+1988年木柵老泉山創團，致力於最精緻的劇場藝術，至今仍不斷受邀至全球重要藝術節演出。",/images/artMember/member04.jpg,/images/artMember/sign04.jpg,
+member05,演出團隊 輔仁大學織品服裝學院,立基於織品服裝學系逾半世紀的歷史與卓越成果，織品服裝學院於2017年8月1日成立，以「永續時尚」為核心，藉由組織再造、課程改革、環境建構及產學合作，培育具前瞻性及競爭力的台灣時尚產業人才。,/images/artMember/member05.jpg,/images/artMember/sign05.jpg,
+member06,金工團隊 At.冶器金屬物件工作室,由兩位金屬工藝創作者王意婷與王安琪共同成立。希望能藉由工作室的成立，能將工藝態度與當代創作思維導入於課程之中，透過手作實踐想法的實現，在細節中找到更多對自我的追求，在不斷的相互思考對話中，找到更多有趣的觀點。不僅是技術的傳授，更是許多思維的交換場，也能以此傳遞手與心及腦的併行重要性。,/images/artMember/member06.jpg,/images/artMember/sign06.jpg,
 member07,彩妝團隊 臺北城市科技大學妝管系,"全場大秀由伊林及凱渥模特兒林嘉綺、王思偉等領銜。
-特別感謝幕後造型髮妝團隊，由鄭俊賢老師帶領的臺北城市科技大學妝管系師生團隊設計的風尚妝髮造型，演繹40套精彩服飾。",/images/artMember/member07.jpg,/images/artMember/sign07.jpg
-member08,演出團隊 新象創作劇團,新象創作劇團大膽創新並且力求多元豐富，成為臺灣馬戲雜技團隊的佼佼者，更是馬戲雜技與戲劇結合的首發先鋒。,/images/artMember/member08.jpg,/images/artMember/sign08.jpg
-member09,演出團隊 金田創藝,創辦人李冀禹為跨界演出的新銳鬼才編舞家，有著豐富及專業的國內外製作整合節目經驗，建構不同領域熱愛表演藝術創作的人才嶄露平台，成為臺灣獨特的表演品牌。,/images/artMember/member09.jpg,/images/artMember/sign09.jpg
-member10,演出團隊 趙傳,趙傳擅長將經典轉化為潮流，把固有成見反轉顛覆，在搖滾中藏俄鐵和柔情，成為華語音樂時代的代表人物。,/images/artMember/member10.jpg,/images/artMember/sign10.jpg
+特別感謝幕後造型髮妝團隊，由鄭俊賢老師帶領的臺北城市科技大學妝管系師生團隊設計的風尚妝髮造型，演繹40套精彩服飾。",/images/artMember/member07.jpg,/images/artMember/sign07.jpg,
+member08,演出團隊 新象創作劇團,新象創作劇團大膽創新並且力求多元豐富，成為臺灣馬戲雜技團隊的佼佼者，更是馬戲雜技與戲劇結合的首發先鋒。,/images/artMember/member08.jpg,/images/artMember/sign08.jpg,
+member09,演出團隊 金田創藝,創辦人李冀禹為跨界演出的新銳鬼才編舞家，有著豐富及專業的國內外製作整合節目經驗，建構不同領域熱愛表演藝術創作的人才嶄露平台，成為臺灣獨特的表演品牌。,/images/artMember/member09.jpg,/images/artMember/sign09.jpg,
+member10,演出團隊 李翊君,李翊君以同時精通國語歌和台語歌的「雙聲帶」見稱。聲音蘊涵著一股強大而溫暖的力量，充滿層次與獨特韻味，臺灣難得一見的經典好聲音。,/images/artMember/member10.jpg,/images/artMember/sign10.jpg,

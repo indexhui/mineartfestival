@@ -18,11 +18,12 @@ import atre from 'assets/images/atre.png';
 import mt2 from 'assets/images/homePage/mt2.png';
 
 const TheAtre = props => {
-  const { isHome } = props;
+  const { isHome, bgGradient } = props;
   return (
     <Flex
       pt={{ base: '30px', lg: '60px' }}
-      bg="linear-gradient(180deg, #2E5169 0%, #3D637B 100%)"
+      // bg="linear-gradient(180deg, #2E5169 0%, #3D637B 100%)"
+      bg={bgGradient || 'linear-gradient(180deg, #2E5169 0%, #3D637B 100%)'}
       color="white"
       direction="column"
       align="center"
