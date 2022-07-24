@@ -33,11 +33,12 @@ const routeList = [
   {
     color:
       'linear-gradient(90deg, #EAE7E3 0%, #DCD8D6 6.36%, #B6B1B3 18.51%, #9A959A 26.4%, #F9F9F9 52.25%, #EBEAEB 58.78%, #C6C3C5 71.33%, #8E888B 87.64%, #B5B5B6 100%)',
-    title: '【瑞芳火車站-水湳洞停車場】線',
+    title: '【【瑞芳線】瑞芳火車站－大基隆駕訓班停車場－水湳洞停車場',
     content:
       '去程：17:30~19:00 每10-15分鐘一班，由瑞芳火車站發車 \n回程：20:30 由水湳洞停車場發車',
   },
   {
+    isThin: true,
     color:
       'linear-gradient(90deg, #F0CC7E 0.56%, #E8C47E 18.54%, #C78A03 59.55%, #E3B75E 79.27%, #EFCA84 87.08%, #F4E7CF 100%)',
     title:
@@ -249,12 +250,19 @@ const ShowInfo = () => {
                     direction={{ base: 'column', lg: 'row' }}
                     textAlign="left"
                   >
-                    <Box
-                      bg={route.color}
-                      w="90px"
-                      h="12px"
-                      rounded="full"
-                    ></Box>
+                    {route.isThin && (
+                      <Box bg="#F7931E" w="90px" h="5px" rounded="full"></Box>
+                    )}
+
+                    {!route.isThin && (
+                      <Box
+                        bg={route.color}
+                        w="90px"
+                        h="12px"
+                        rounded="full"
+                      ></Box>
+                    )}
+
                     <VStack
                       w={{ base: '100%', lg: '70%' }}
                       pl="16px"
