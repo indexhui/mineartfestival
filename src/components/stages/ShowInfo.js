@@ -6,6 +6,7 @@ import {
   Stack,
   Box,
   Image,
+  chakra,
 } from '@chakra-ui/react';
 
 import { Link as RouterLink } from 'react-router-dom';
@@ -17,8 +18,8 @@ import ShuttleIcon from 'components/icons/ShuttleIcon';
 import CarIcon from 'components/icons/CarIcon';
 
 import showTime from 'assets/images/stagesPage/showTime.svg';
-import shuttleMap from 'assets/images/stagesPage/shuttleMap02.png';
-import carMap from 'assets/images/stagesPage/carMap02.jpg';
+import shuttleMap from 'assets/images/stagesPage/shuttleMap03.png';
+import carMap from 'assets/images/stagesPage/carMap.png';
 import parkMap from 'assets/images/stagesPage/parkMap.png';
 import trafficControl from 'assets/images/stagesPage/trafficControl.jpg';
 
@@ -28,23 +29,23 @@ const routeList = [
     title:
       '【基隆線】八斗子觀光漁港C區停車場－大基隆駕訓班停車場－水湳洞停車場',
     content:
-      '去程：17:30~19:00 每10-15分鐘一班，由八斗子觀光漁港C區停車場發車 \n回程：20:30 由水湳洞停車場發車',
+      '去程｜17:00-19:00每10-15分鐘一班，由八斗子觀光漁港C區停車場發車 \n回程｜20:30 由水湳洞停車場發車',
   },
   {
     color:
       'linear-gradient(90deg, #EAE7E3 0%, #DCD8D6 6.36%, #B6B1B3 18.51%, #9A959A 26.4%, #F9F9F9 52.25%, #EBEAEB 58.78%, #C6C3C5 71.33%, #8E888B 87.64%, #B5B5B6 100%)',
     title: '【瑞芳線】瑞芳火車站－大基隆駕訓班停車場－水湳洞停車場',
     content:
-      '去程：17:30~19:00 每10-15分鐘一班，由瑞芳火車站發車 \n回程：20:30 由水湳洞停車場發車',
+      '去程｜17:00-19:00每10-15分鐘一班，由瑞芳火車站發車 \n回程｜20:30 由水湳洞停車場發車',
   },
   {
-    isThin: true,
+    // isThin: true,
     color:
       'linear-gradient(90deg, #F0CC7E 0.56%, #E8C47E 18.54%, #C78A03 59.55%, #E3B75E 79.27%, #EFCA84 87.08%, #F4E7CF 100%)',
     title:
       '【金九線】新九停車場－隔頂停車場－黃金博物館－勸濟堂停車場－水湳洞停車場',
     content:
-      '去程：17:30~19:00 每10-15分鐘一班，由新九停車場發車 \n回程：20:30 由水湳洞停車場發車，沿途增停靠「九份老街」',
+      '去程｜17:00-19:00每10-15分鐘一班，由新九停車場發車 \n回程｜20:30 由水湳洞停車場發車',
   },
   // {
   //   color: '#F7931E',
@@ -185,7 +186,7 @@ const ShowInfo = () => {
           pl="50px"
           pr="30px"
           pt={{ base: '40px', lg: '120px' }}
-          w={{ base: '100%', lg: '75%' }}
+          w={{ base: '100%', lg: '80%' }}
           justify="flex-start"
           direction="column"
         >
@@ -217,16 +218,53 @@ const ShowInfo = () => {
                   <BusIcon boxSize={{ base: '30px', lg: '40px' }} />
                 </Flex>
                 <Text fontWeight="500" fontSize={{ base: '16px', lg: '20px' }}>
-                  大眾交通路線（水湳洞站下）
+                  大眾交通｜公車路線
                 </Text>
               </HStack>
-              <Text fontWeight="700" fontSize="14px">
-                從臺北出發：可搭1811前往
-                <br />
-                從基隆市區出發：可搭1811或791前往
-                <br />
-                從福隆、瑞芳出發：可在福隆遊客中心或瑞芳火車站搭乘856臺灣好行公車或搭887
-              </Text>
+              <VStack align="flex-start" w="100%" spacing="2px">
+                <Text fontWeight="700" fontSize={{ base: '14px', lg: '18px' }}>
+                  當日上午可至九份、金瓜石地區周邊旅遊，再
+                  <chakra.span color="yellow.500">
+                    轉乘【金九線】接駁車
+                  </chakra.span>
+                  前往活動會場
+                </Text>
+                <Text fontWeight="400" fontSize={{ base: '14px', lg: '18px' }}>
+                  臺北出發：可搭965及1062客運前往
+                </Text>
+                <Text fontWeight="400" fontSize={{ base: '14px', lg: '18px' }}>
+                  基隆市區出發：可搭788前往
+                </Text>
+                <Text fontWeight="400" fontSize={{ base: '14px', lg: '18px' }}>
+                  瑞芳出發：可在瑞芳火車站搭乘856黃金福隆線、788、965公車或搭1062客運前往{' '}
+                </Text>
+              </VStack>
+              <VStack align="flex-start" w="100%" spacing="2px">
+                <Text fontWeight="700" fontSize={{ base: '14px', lg: '18px' }}>
+                  回程選擇
+                </Text>
+                <Text fontWeight="400" fontSize={{ base: '14px', lg: '18px' }}>
+                  ．搭乘【瑞芳線】接駁車至瑞芳車站轉乘火車
+                </Text>
+                <Text fontWeight="400" fontSize={{ base: '14px', lg: '18px' }}>
+                  ．基隆市區出發：可搭788前往
+                </Text>
+              </VStack>
+              <VStack align="flex-start" w="100%" spacing="2px">
+                <Text fontWeight="700" fontSize={{ base: '14px', lg: '18px' }}>
+                  公車末班車資訊：
+                </Text>
+                <Text fontWeight="700" fontSize={{ base: '14px', lg: '18px' }}>
+                  臺北客運
+                  <chakra.span fontWeight="400"> 965 末班21:00</chakra.span>
+                </Text>
+                <Text fontWeight="700" fontSize={{ base: '14px', lg: '18px' }}>
+                  基隆客運
+                  <chakra.span fontWeight="400">
+                    788 末班22:30/ 1062 末班21:10 / 856黃金福隆線 末班15:10
+                  </chakra.span>
+                </Text>
+              </VStack>
             </VStack>
             <VStack
               align="flex-start"
@@ -264,12 +302,14 @@ const ShowInfo = () => {
                     )}
 
                     <VStack
-                      w={{ base: '100%', lg: '70%' }}
+                      align="flex-start"
+                      w={{ base: '100%', lg: '100%' }}
                       pl="16px"
                       spacing="8px"
                     >
                       <Text
                         w="100%"
+                        textAlign="left"
                         fontWeight="700"
                         fontSize="18px"
                         color="yellow.500"
@@ -279,6 +319,7 @@ const ShowInfo = () => {
                       <Text
                         fontSize={{ base: '16px', lg: '18px' }}
                         whiteSpace="pre-wrap"
+                        textAlign="left"
                       >
                         {route.content}
                       </Text>
@@ -297,15 +338,33 @@ const ShowInfo = () => {
                   <CarIcon boxSize="40px" />
                 </Flex>
                 <Text fontWeight="500" fontSize={{ base: '16px', lg: '20px' }}>
-                  自駕停車
+                  自駕前往
                 </Text>
               </HStack>
-              <Text>周邊停車空間建議：（車位數量有限，僅供參考評估）</Text>
+              <VStack spacing="2px" align="flex-start">
+                <Text>
+                  ．行駛台二線民眾可至
+                  <chakra.span color="yellow.500">
+                    大基隆駕訓班停車場
+                  </chakra.span>
+                  停車，再轉乘【基隆線】或【瑞芳線】接駁車
+                </Text>
+                <Text>
+                  ．行駛102縣道往九份方向民眾可至
+                  <chakra.span color="yellow.500">新九停車場</chakra.span>
+                  停車，再轉乘【金九線】接駁車
+                </Text>
+              </VStack>
+              <VStack spacing="2px" align="flex-start">
+                <Text color="yellow.500" fontSize="14px">
+                  車位有限請提早抵達入場 16:00-21:30
+                </Text>
+                <Text color="yellow.500" fontSize="14px">
+                  北34道路管制，僅限居民通行(需出示通行證明）
+                </Text>
+              </VStack>
               <Image src={carMap} />
-              <Text>
-                交通管制：因應8月6日鎏金時尚夜，北34九份往水湳洞路段特定時段全線管制
-              </Text>
-              <Image src={trafficControl} />
+              {/* <Image src={trafficControl} /> */}
               {/* <VStack align="flex-start" w="100%" pt="12px">
                 <Text fontWeight="700" fontSize="18px">
                   1. 活動地點水湳洞停車場開放部分車位可直接停車
