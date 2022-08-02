@@ -23,6 +23,12 @@ import carMap from 'assets/images/stagesPage/carMap.png';
 import parkMap from 'assets/images/stagesPage/parkMap.png';
 import trafficControl from 'assets/images/stagesPage/trafficControl.jpg';
 
+import t01 from 'assets/images/stagesPage/t01.png';
+import t02 from 'assets/images/stagesPage/t02.png';
+import t03 from 'assets/images/stagesPage/t03.png';
+import t04 from 'assets/images/stagesPage/t04.png';
+import t05 from 'assets/images/stagesPage/t05.png';
+
 const routeList = [
   {
     color: '#39B54A',
@@ -55,7 +61,7 @@ const routeList = [
   // },
 ];
 
-const ShowInfo = () => {
+const ShowInfo = ({ transportationInfoRef }) => {
   return (
     <>
       <Flex id="showInfo" bg="#3C627A" w="100%">
@@ -145,6 +151,7 @@ const ShowInfo = () => {
             <Stack direction={{ base: 'column', lg: 'row' }}>
               <Text fontSize={{ base: '14px', lg: '16px' }}>20:15-20:30</Text>
               <Text
+                id="transportationInfo"
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
@@ -154,7 +161,13 @@ const ShowInfo = () => {
           </VStack>
         </Flex>
       </Flex>
-      <Flex bg="#3C627A" w="100%" color="white" align="flex-start">
+      <Flex
+        ref={transportationInfoRef}
+        bg="#3C627A"
+        w="100%"
+        color="white"
+        align="flex-start"
+      >
         <Flex
           display={{ base: 'none', lg: 'flex' }}
           pt="120px"
@@ -186,7 +199,7 @@ const ShowInfo = () => {
           pl="50px"
           pr="30px"
           pt={{ base: '40px', lg: '120px' }}
-          w={{ base: '100%', lg: '80%' }}
+          w={{ base: '100%', lg: '70%' }}
           justify="flex-start"
           direction="column"
         >
@@ -276,11 +289,11 @@ const ShowInfo = () => {
                   <ShuttleIcon boxSize="40px" />
                 </Flex>
                 <Text fontWeight="500" fontSize={{ base: '16px', lg: '20px' }}>
-                  接駁巴士路線
+                  接駁車資訊
                 </Text>
               </HStack>
-              <Image src={shuttleMap} />
-              <VStack align="flex-start" w="100%">
+              <Image src={t01} />
+              {/* <VStack align="flex-start" w="100%">
                 {routeList.map(route => (
                   <Stack
                     pb="12px"
@@ -326,7 +339,7 @@ const ShowInfo = () => {
                     </VStack>
                   </Stack>
                 ))}
-              </VStack>
+              </VStack> */}
             </VStack>
             <VStack
               align="flex-start"
@@ -363,7 +376,31 @@ const ShowInfo = () => {
                   北34道路管制，僅限居民通行(需出示通行證明）
                 </Text>
               </VStack>
-              <Image src={carMap} />
+              <Image w="100%" src={t02} />
+              <Text
+                fontWeight="500"
+                fontSize={{ base: '16px', lg: '20px' }}
+                pt="32px"
+              >
+                散場指引
+              </Text>
+              <Image w="100%" src={t03} />
+              <Text
+                fontWeight="500"
+                fontSize={{ base: '16px', lg: '20px' }}
+                pt="32px"
+              >
+                場內須知
+              </Text>
+              <Image w="100%" src={t04} />
+              <Text
+                fontWeight="500"
+                fontSize={{ base: '16px', lg: '20px' }}
+                pt="32px"
+              >
+                觀展須知
+              </Text>
+              <Image w="100%" src={t05} />
               {/* <Image src={trafficControl} /> */}
               {/* <VStack align="flex-start" w="100%" pt="12px">
                 <Text fontWeight="700" fontSize="18px">
