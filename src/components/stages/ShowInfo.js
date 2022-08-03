@@ -404,14 +404,14 @@ const ShowInfo = ({ transportationInfoRef }) => {
                 散場指引
               </Text>
               <Image w="100%" src={t03} />
-              <Text
+              {/* <Text
                 fontWeight="500"
                 fontSize={{ base: '16px', lg: '20px' }}
                 pt="32px"
               >
                 場內須知
               </Text>
-              <Image w="100%" src={t04} />
+              <Image w="100%" src={t04} /> */}
               <Text
                 fontWeight="500"
                 fontSize={{ base: '16px', lg: '20px' }}
