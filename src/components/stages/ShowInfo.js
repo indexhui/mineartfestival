@@ -87,7 +87,7 @@ const ShowInfo = ({ transportationInfoRef }) => {
                 writingMode: 'vertical-lr',
               }}
             >
-              活動資訊
+              節目單
             </Text>
           </VStack>
         </Flex>
@@ -117,45 +117,63 @@ const ShowInfo = ({ transportationInfoRef }) => {
           >
             <Stack direction={{ base: 'column', lg: 'row' }}>
               <Text fontSize={{ base: '14px', lg: '16px' }}>18:30-19:00</Text>
-              <Text fontSize={{ base: '14px', lg: '16px' }}>開放入場</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>
+                入場/暖場表演
+                <br />
+                金銀之間
+                <br />
+                演出團隊：新象劇場
+              </Text>
             </Stack>
             <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text fontSize={{ base: '14px', lg: '16px' }}>18:45-19:00</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>19:00-19:10</Text>
               <Text
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
-                暖場演出-金銀之間 演出團隊：新象劇場
+                主持人引言
               </Text>
             </Stack>
             <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text fontSize={{ base: '14px', lg: '16px' }}>19:00-19:35</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>19:10-19:45</Text>
               <Text
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
-                陽歌行 演出團隊：優人神鼓
+                陽歌行
+                <br />
+                演出團隊：優人神鼓
               </Text>
             </Stack>
             <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text fontSize={{ base: '14px', lg: '16px' }}>19:35-20:15</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>19:45-20:30</Text>
               <Text
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
                 鎏金時尚
                 <br />
-                演出團隊：金田創藝、潘怡良設計師群、李翊君
+                演出團隊：金田創藝、潘怡良設計師群、李翊君、王敏淳
               </Text>
             </Stack>
             <Stack direction={{ base: 'column', lg: 'row' }}>
-              <Text fontSize={{ base: '14px', lg: '16px' }}>20:15-20:30</Text>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>20:30-20:40</Text>
               <Text
                 id="transportationInfo"
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
               >
-                市長致詞＆謝幕
+                大謝幕
+              </Text>
+            </Stack>
+            <Stack direction={{ base: 'column', lg: 'row' }}>
+              <Text fontSize={{ base: '14px', lg: '16px' }}>20:40-20:50</Text>
+              <Text
+                id="transportationInfo"
+                fontSize={{ base: '14px', lg: '16px' }}
+                whiteSpace="pre-wrap"
+              >
+                開放模特兒拍照
               </Text>
             </Stack>
           </VStack>

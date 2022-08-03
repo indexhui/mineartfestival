@@ -80,6 +80,9 @@ const Footer = () => {
           justify="center"
         >
           <Text px="5px" fontWeight="500">
+            台灣電力公司
+          </Text>
+          <Text px="5px" fontWeight="500">
             新北市猴硐礦工文史協會
           </Text>
           <Text px="5px" fontWeight="500">

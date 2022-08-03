@@ -22,7 +22,7 @@ const Stream = () => {
   if (!isLargerThan768) {
     return (
       <Flex
-        zIndex="100"
+        zIndex="10"
         position="fixed"
         top="60px"
         left="0px"
