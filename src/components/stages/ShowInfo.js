@@ -150,6 +150,7 @@ const ShowInfo = ({ transportationInfoRef }) => {
               <Text
                 fontSize={{ base: '14px', lg: '16px' }}
                 whiteSpace="pre-wrap"
+                maxW={{ base: 'unset', lg: '280px' }}
               >
                 鎏金時尚
                 <br />
