@@ -20,7 +20,7 @@ function App() {
       <Header />
       <Router />
       <Footer />
-      {/* <Stream /> */}
+      <Stream />
     </>
   );
 }
