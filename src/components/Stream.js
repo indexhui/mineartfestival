@@ -45,6 +45,8 @@ const Stream = () => {
           px="12px"
           py="4px"
           ml="14px"
+          href="https://youtu.be/AhdmQQSW90Y"
+          isExternal
           fontWeight="700"
         >
           立即前往
